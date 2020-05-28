@@ -24,7 +24,7 @@ function getStudentDetails(event) {
 
 // Load Student Details Table
 function loadDataTable(state) {
-  const tab = new TableHandler(tableHead, tableBody, state.data);
+  const tab = new TableRenderer(tableHead, tableBody, state.data);
   tab.createTableHeaderRow();
   tab.createTableBodyRow();
   resizableGrid(table);

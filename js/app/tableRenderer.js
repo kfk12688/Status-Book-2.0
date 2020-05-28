@@ -1,4 +1,4 @@
-class TableHandler {
+class TableRenderer {
   constructor(tableHead, tableBody, data) {
     this.tableHead = tableHead;
     this.tableBody = tableBody;
