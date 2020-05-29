@@ -106,6 +106,9 @@
               Student Details
             </label>
             <div class="btn-group float-right tooltip-demo">
+              <a id="loadData" class="btn btn-default btn-md no-borders">
+                <i class="fa fa-database"></i>
+              </a>
               <button
                 data-toggle="dropdown"
                 class="btn btn-default btn-md dropdown-toggle no-borders"
@@ -296,71 +299,7 @@
             </div>
           </div>
         </div>
-
-        <div class="row border-bottom white-bg">
-          <div class="col-lg-12 m-t-md">
-            <form id="loadStudentDetails">
-              <div class="form-group row">
-                <div class="col-lg-2">
-                  <select id="batch" name="batch" class="form-control">
-                    <option value="select">Select Batch</option>
-                    <option value="2017_2021">2017-2021</option>
-                    <option value="2018_2022">2018-2022</option>
-                    <option value="2019_2023">2019-2023</option>
-                    <option value="2020_2024">2020-2024</option>
-                  </select>
-                </div>
-                <div class="col-lg-4">
-                  <select
-                    multiple
-                    tabindex="4"
-                    style="width: 350px;"
-                    class="chosen-select"
-                    data-placeholder="Select Department"
-                  >
-                    <option value="selectAll">Select All</option>
-                    <option value="cse">CSE</option>
-                    <option value="ece">ECE</option>
-                    <option value="eee">EEE</option>
-                    <option value="it">IT</option>
-                    <option value="mech">MECH</option>
-                  </select>
-                </div>
-                <div class="col-lg-4" id="studentsList">
-                  <select
-                    multiple
-                    tabindex="4"
-                    style="width: 350px;"
-                    class="chosen-select"
-                    data-placeholder="Select Students..."
-                  >
-                    <option value="selectAll">Select All</option>
-                    <option value="710311104001">710311104001</option>
-                    <option value="710311104002">710311104002</option>
-                    <option value="710311104003">710311104003</option>
-                    <option value="710311104004">710311104004</option>
-                    <option value="710311104005">710311104005</option>
-                    <option value="710311104006">710311104006</option>
-                    <option value="710311104007">710311104007</option>
-                    <option value="710311104008">710311104008</option>
-                    <option value="710311104009">710311104009</option>
-                    <option value="710311104010">710311104010</option>
-                  </select>
-                </div>
-                <div class="col-lg-2">
-                  <button
-                    type="submit"
-                    id="loadData"
-                    class="btn btn-block btn-outline btn-primary btn-md"
-                  >
-                    Load Data
-                  </button>
-                </div>
-              </div>
-            </form>
-          </div>
-        </div>
-        <div class="fh-breadcrumb">
+        <div class="fh-no-breadcrumb">
           <div class="full-height">
             <div class="row full-height-scroll white-bg border-left">
               <div class="col-lg-12">
@@ -373,6 +312,10 @@
               </div>
             </div>
           </div>
+        </div>
+        <div class="footer">
+          <div class="float-right">10GB of <strong>250GB</strong> Free.</div>
+          <div><strong>Copyright</strong> Example Company &copy; 2014-2018</div>
         </div>
       </div>
     </div>

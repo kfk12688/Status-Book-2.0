@@ -28,7 +28,7 @@ class TableRenderer {
       this.createTableElem(
         "th",
         "",
-        `<h5>${currentValue.toUpperCase()}</h5><i class="fa fa-sort" id="sort"></i>`,
+        `<h5>${currentValue.toUpperCase()}</h5>`,
         tr
       );
     });
