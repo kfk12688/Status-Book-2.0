@@ -7,7 +7,6 @@
 
     <link href="css/bootstrap.min.css" rel="stylesheet" />
     <link href="font-awesome/css/font-awesome.css" rel="stylesheet" />
-    <link href="css/plugins/chosen/bootstrap-chosen.css" rel="stylesheet" />
     <link href="css/style.css" rel="stylesheet" />
   </head>
   <body class="fixed-sidebar no-skin-config full-height-layout">
@@ -153,6 +152,13 @@
                 <i class="fa fa-plus"></i>
               </a>
               <a
+                data-toggle="modal"
+                data-target="#defaultsModal"
+                class="btn btn-default btn-md no-borders"
+              >
+                <i class="fa fa-columns"></i>
+              </a>
+              <a
                 data-toggle="tooltip"
                 data-placement="bottom"
                 title="Tooltip on left"
@@ -188,98 +194,18 @@
             >
               <div class="modal-dialog">
                 <div class="modal-content">
-                  <form id="changeDefaultsForm">
+                  <form id="tableColHider">
                     <div class="modal-header">
                       <button type="button" class="close" data-dismiss="modal">
                         <span aria-hidden="true">&times;</span>
                         <span class="sr-only">Close</span>
                       </button>
-                      <h4 class="modal-title">Select Your Defaults</h4>
-                      <small>
-                        Select Default loading of batch, department, semester,
-                        subjects, exams, students
-                      </small>
+                      <h4 class="modal-title">
+                        Select Table Columns To Hide/Show
+                      </h4>
                     </div>
                     <div class="modal-body">
-                      <div class="form-group row">
-                        <div class="col-lg-8">
-                          <label>
-                            <strong>Select Your Batch</strong>
-                          </label>
-                          <select class="form-control">
-                            <option value="select">Select Batch</option>
-                            <option value="2020-2024">2020-2024</option>
-                            <option value="2019-2023">2019-2023</option>
-                            <option value="2018-2022">2018-2022</option>
-                            <option value="2017-2021">2017-2021</option>
-                          </select>
-                        </div>
-                      </div>
-                      <div class="form-group row">
-                        <div class="col-lg-8">
-                          <label>
-                            <strong>Select Your Department</strong>
-                          </label>
-                          <select class="form-control">
-                            <option value="select">
-                              Select Department
-                            </option>
-                            <option value="CSE">CSE</option>
-                            <option value="ECE">ECE</option>
-                            <option value="EEE">EEE</option>
-                            <option value="MECH">MECH</option>
-                          </select>
-                        </div>
-                      </div>
-                      <div class="form-group row">
-                        <div class="col-lg-8">
-                          <label>
-                            <strong>Select Semester</strong>
-                          </label>
-                          <select class="form-control">
-                            <option value="select">
-                              Select Semester
-                            </option>
-                            <option value="semester1">Semester 1</option>
-                            <option value="semester2">Semester 2</option>
-                            <option value="semester3">Semester 3</option>
-                            <option value="semester4">Semester 4</option>
-                            <option value="semester5">Semester 5</option>
-                            <option value="semester6">Semester 6</option>
-                            <option value="semester7">Semester 7</option>
-                            <option value="semester8">Semester 8</option>
-                          </select>
-                        </div>
-                      </div>
-                      <div class="form-group row">
-                        <div class="col-lg-8">
-                          <label>
-                            <strong>Select Your Subject</strong>
-                          </label>
-                          <select class="form-control float-right">
-                            <option value="select">Select Subject</option>
-                            <option value="sub1">Sub 1</option>
-                            <option value="sublab1">Sub Lab1</option>
-                            <option value="sub2">Sub 2</option>
-                          </select>
-                        </div>
-                      </div>
-                      <div class="form-group row">
-                        <div class="col-lg-8">
-                          <label>
-                            <strong>
-                              Name this selection for future use
-                            </strong>
-                          </label>
-                          <input
-                            type="text"
-                            id="dafaultNaming"
-                            name="dafaultNaming"
-                            class="form-control"
-                            placeholder="Eg :. 2nd Year CSE"
-                          />
-                        </div>
-                      </div>
+                      <div id="tableColList"></div>
                     </div>
                     <div class="modal-footer">
                       <button
@@ -289,7 +215,11 @@
                       >
                         Close
                       </button>
-                      <button type="button" class="btn btn-primary">
+                      <button
+                        type="submit"
+                        class="btn btn-primary"
+                        id="loadSelectedCol"
+                      >
                         Save changes
                       </button>
                     </div>
@@ -327,7 +257,6 @@
     <script src="js/inspinia.js"></script>
     <script src="js/plugins/pace/pace.min.js"></script>
     <script src="js/plugins/metisMenu/jquery.metisMenu.js"></script>
-    <script src="js/plugins/chosen/chosen.jquery.js"></script>
     <script src="js/plugins/slimscroll/jquery.slimscroll.min.js"></script>
 
     <script src="js/app/navigationMenu.js"></script>
@@ -335,11 +264,5 @@
     <script src="js/app/requestHandler.js"></script>
     <script src="js/app/TableRenderer.js"></script>
     <script src="js/app/viewStudentDetails.js"></script>
-
-    <script>
-      $(document).ready(function () {
-        $(".chosen-select").chosen({ width: "100%" });
-      });
-    </script>
   </body>
 </html>

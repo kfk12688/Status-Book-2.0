@@ -3,6 +3,8 @@ class TableRenderer {
     this.tableHead = tableHead;
     this.tableBody = tableBody;
     this.data = data;
+    this.tableColHider = document.getElementById("tableColHider");
+    this.tableColHider.addEventListener("submit", this.hideColumn);
   }
 
   createTableHeaderRow() {
@@ -18,19 +20,21 @@ class TableRenderer {
       "selectAll",
       "",
       "",
+      "",
       this.checkAll
     );
     th.appendChild(input);
 
-    this.createTableElem("th", "", `<h5>S.No</h5>`, tr);
+    this.createTableElem("th", "text-center", `<h5>S.No</h5>`, tr);
 
     theadData.map((currentValue) => {
       this.createTableElem(
         "th",
-        "",
+        `${currentValue}_col_head`,
         `<h5>${currentValue.toUpperCase()}</h5>`,
         tr
       );
+      this.listColumnNames(currentValue);
     });
 
     this.tableHead.appendChild(tr);
@@ -44,6 +48,7 @@ class TableRenderer {
       const input = this.createInputElem(
         "checkbox",
         "",
+        "rowCheckbox",
         "checkbox",
         currentValue.id,
         this.checkSelected
@@ -53,7 +58,7 @@ class TableRenderer {
       this.createTableElem("td", "", index + 1, tr);
 
       for (let key in currentValue) {
-        this.createTableElem("td", "", currentValue[key], tr);
+        this.createTableElem("td", `${key}_col`, currentValue[key], tr);
       }
 
       this.tableBody.appendChild(tr);
@@ -76,7 +81,7 @@ class TableRenderer {
 
   checkSelected() {
     let param = [];
-    const checkBoxes = document.getElementsByTagName("input");
+    const checkBoxes = document.getElementsByClassName("rowCheckbox");
 
     for (let i = 0; i < checkBoxes.length; i++) {
       if (checkBoxes[i].checked == true) {
@@ -91,6 +96,37 @@ class TableRenderer {
     // alert(param);
   }
 
+  hideColumn(event) {
+    const checkBoxes = document.getElementsByName("columnNameList");
+
+    for (let i = 0; i < checkBoxes.length; i++) {
+      if (checkBoxes[i].checked == true) {
+        let hideTableColumn = document.getElementsByClassName(
+          checkBoxes[i].value
+        );
+        let hideTableColumnHeader = document.getElementsByClassName(
+          `${checkBoxes[i].value}_head`
+        );
+        hideTableColumnHeader[0].style.display = "none";
+        for (let j = 0; j < hideTableColumn.length; j++) {
+          hideTableColumn[j].style.display = "none";
+        }
+      } else {
+        let showTableColumn = document.getElementsByClassName(
+          checkBoxes[i].value
+        );
+        let showTableColumnHeader = document.getElementsByClassName(
+          `${checkBoxes[i].value}_head`
+        );
+        showTableColumnHeader[0].style.display = "";
+        for (let j = 0; j < showTableColumn.length; j++) {
+          showTableColumn[j].style.display = "";
+        }
+      }
+    }
+    event.preventDefault();
+  }
+
   createTableElem(elemName, elemClass, elemInnerHtml, elemAppend) {
     const elem = document.createElement(elemName);
     if (elemClass) elem.className = elemClass;
@@ -99,13 +135,40 @@ class TableRenderer {
     return elem;
   }
 
-  createInputElem(elemtype, elemId, elemName, elemValue, elemClickEvent) {
+  createInputElem(
+    elemtype,
+    elemId,
+    elemClass,
+    elemName,
+    elemValue,
+    elemClickEvent
+  ) {
     const input = document.createElement("input");
     input.type = elemtype;
     if (elemId) input.id = elemId;
+    if (elemClass) input.className = elemClass;
     if (elemName) input.name = elemName;
     if (elemValue) input.value = elemValue;
     if (elemClickEvent) input.addEventListener("click", elemClickEvent);
     return input;
+  }
+
+  listColumnNames(columnName) {
+    const col = document.getElementById("tableColList");
+    const div = document.createElement("div");
+    div.className = "checkbox checkbox-primary";
+    const label = document.createElement("label");
+    label.innerHTML = columnName;
+    label.className = "m-l-sm";
+    const input = this.createInputElem(
+      "checkbox",
+      "",
+      "",
+      "columnNameList",
+      `${columnName}_col`
+    );
+    div.appendChild(input);
+    div.appendChild(label);
+    col.appendChild(div);
   }
 }
