@@ -3,8 +3,6 @@ class TableRenderer {
     this.tableHead = tableHead;
     this.tableBody = tableBody;
     this.data = data;
-    this.tableColHider = document.getElementById("tableColHider");
-    this.tableColHider.addEventListener("submit", this.hideColumn);
   }
 
   createTableHeaderRow() {
@@ -96,11 +94,11 @@ class TableRenderer {
     // alert(param);
   }
 
-  hideColumn(event) {
+  hideColumn() {
     const checkBoxes = document.getElementsByName("columnNameList");
 
     for (let i = 0; i < checkBoxes.length; i++) {
-      if (checkBoxes[i].checked == true) {
+      if (checkBoxes[i].checked == false) {
         let hideTableColumn = document.getElementsByClassName(
           checkBoxes[i].value
         );
@@ -124,7 +122,6 @@ class TableRenderer {
         }
       }
     }
-    event.preventDefault();
   }
 
   createTableElem(elemName, elemClass, elemInnerHtml, elemAppend) {
@@ -155,20 +152,22 @@ class TableRenderer {
 
   listColumnNames(columnName) {
     const col = document.getElementById("tableColList");
-    const div = document.createElement("div");
-    div.className = "checkbox checkbox-primary";
+    const list = document.createElement("li");
+    list.className = "m-t-xs";
     const label = document.createElement("label");
     label.innerHTML = columnName;
     label.className = "m-l-sm";
     const input = this.createInputElem(
       "checkbox",
       "",
-      "",
+      "m-l-sm",
       "columnNameList",
-      `${columnName}_col`
+      `${columnName}_col`,
+      this.hideColumn
     );
-    div.appendChild(input);
-    div.appendChild(label);
-    col.appendChild(div);
+    input.checked = true;
+    col.appendChild(list);
+    list.appendChild(input);
+    list.appendChild(label);
   }
 }

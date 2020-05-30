@@ -108,41 +108,43 @@
               <a id="loadData" class="btn btn-default btn-md no-borders">
                 <i class="fa fa-database"></i>
               </a>
-              <button
-                data-toggle="dropdown"
-                class="btn btn-default btn-md dropdown-toggle no-borders"
-              >
-                Action
-              </button>
-              <ul class="dropdown-menu">
-                <li>
-                  <a
-                    data-toggle="modal"
-                    class="dropdown-item"
-                    data-target="#defaultsModal"
-                  >
-                    Create New Default
-                  </a>
-                </li>
-                <li>
-                  <a
-                    data-toggle="modal"
-                    class="dropdown-item"
-                    data-target="#defaultsModal"
-                  >
-                    Customize Your Defaults
-                  </a>
-                </li>
-                <li class="dropdown-divider"></li>
-                <li><a class="dropdown-item" href="#">Select All</a></li>
-                <li>
-                  <a class="dropdown-item" href="#">Deselect All</a>
-                </li>
-                <li class="dropdown-divider"></li>
-                <li>
-                  <a class="dropdown-item" href="#">Data Export</a>
-                </li>
-              </ul>
+              <div>
+                <a
+                  data-toggle="dropdown"
+                  class="btn btn-default btn-md dropdown-toggle no-borders"
+                >
+                  Action
+                </a>
+                <ul class="dropdown-menu">
+                  <li>
+                    <a
+                      data-toggle="modal"
+                      class="dropdown-item"
+                      data-target="#defaultsModal"
+                    >
+                      Create New Default
+                    </a>
+                  </li>
+                  <li>
+                    <a
+                      data-toggle="modal"
+                      class="dropdown-item"
+                      data-target="#defaultsModal"
+                    >
+                      Customize Your Defaults
+                    </a>
+                  </li>
+                  <li class="dropdown-divider"></li>
+                  <li><a class="dropdown-item" href="#">Select All</a></li>
+                  <li>
+                    <a class="dropdown-item" href="#">Deselect All</a>
+                  </li>
+                  <li class="dropdown-divider"></li>
+                  <li>
+                    <a class="dropdown-item" href="#">Data Export</a>
+                  </li>
+                </ul>
+              </div>
               <a
                 data-toggle="tooltip"
                 data-placement="bottom"
@@ -151,13 +153,18 @@
               >
                 <i class="fa fa-plus"></i>
               </a>
-              <a
-                data-toggle="modal"
-                data-target="#defaultsModal"
-                class="btn btn-default btn-md no-borders"
-              >
-                <i class="fa fa-columns"></i>
-              </a>
+              <div>
+                <a
+                  data-toggle="dropdown"
+                  class="dropdown btn btn-default btn-md no-borders"
+                >
+                  <i class="fa fa-columns"></i>
+                </a>
+                <ul class="dropdown-menu dropdown-user" id="tableColList">
+                  <li><h5 class="text-center m-t-sm">Show/Hide Column</h5></li>
+                  <li class="dropdown-divider"></li>
+                </ul>
+              </div>
               <a
                 data-toggle="tooltip"
                 data-placement="bottom"
@@ -175,15 +182,11 @@
               >
                 <i class="fa fa-upload"></i>
               </a>
-              <a
-                href="#"
-                data-toggle="tooltip"
-                data-placement="bottom"
-                title="Tooltip on left"
-                class="btn btn-default btn-md no-borders"
-              >
-                <i class="fa fa-table"></i>
-              </a>
+              <div>
+                <a class="btn btn-default btn-md no-borders">
+                  <i class="fa fa-table"></i>
+                </a>
+              </div>
             </div>
             <div
               tabindex="-1"
@@ -194,7 +197,7 @@
             >
               <div class="modal-dialog">
                 <div class="modal-content">
-                  <form id="tableColHider">
+                  <form>
                     <div class="modal-header">
                       <button type="button" class="close" data-dismiss="modal">
                         <span aria-hidden="true">&times;</span>
