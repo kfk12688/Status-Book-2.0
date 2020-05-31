@@ -1,12 +1,13 @@
+import RequestHandler from "./RequestHandler.js";
+import TableRenderer from "./TableRenderer.js";
+import resizableGrid from "./TableResizer.js";
+
 const loadData = document.getElementById("loadData");
 const table = document.querySelector("table");
 const tableHead = document.getElementById("tableHead");
 const tableBody = document.getElementById("tableBody");
 const batch = document.getElementById("batch");
 // const department = document.getElementById("department");
-
-const reqHandler = new requestHandler();
-// const tableHandler = new TableHandler();
 
 function initializeEventListners() {
   document.querySelector("DOMContentLoaded");
@@ -15,6 +16,7 @@ function initializeEventListners() {
 
 // Fetch Student Details
 function getStudentDetails(event) {
+  const reqHandler = new RequestHandler();
   reqHandler
     .getData(`http://127.0.0.1/api/studentApi.php?batch=${batch}`)
     .then((data) => setState(data, loadDataTable))

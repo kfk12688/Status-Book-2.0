@@ -1,3 +1,4 @@
+import RequestHandler from "./RequestHandler.js";
 // Get Form Id to handle events
 const newApplicationForm = document.getElementById("newApplicationForm");
 const message = document.getElementById("message");
@@ -12,7 +13,7 @@ const address = document.getElementById("address");
 const relegion = document.getElementById("relegion");
 const nationality = document.getElementById("nationality");
 
-const reqHandler = new requestHandler();
+const reqHandler = new RequestHandler();
 
 function initializeEventListners() {
   document.querySelector("DOMContentLoaded");
