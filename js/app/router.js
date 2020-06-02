@@ -60,9 +60,11 @@ Router.prototype = {
     })(this);
   },
 
-  loadScripts: function (script) {
-    if (script === "addStudentDetail.html") {
-      new studentApplicationForm();
+  loadScripts: function (htmlFile) {
+    if (htmlFile === "addStudentDetail.html") {
+      return new studentApplicationForm();
+    } else if (htmlFile === "viewStudentsDetails.html") {
+      return new viewStudentsDetails();
     }
   },
 };
