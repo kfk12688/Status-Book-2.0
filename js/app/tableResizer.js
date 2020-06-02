@@ -4,7 +4,7 @@
 //   resizableGrid(tables[i]);
 // }
 
-export default function resizableGrid(table) {
+function resizableGrid(table) {
   var row = table.getElementsByTagName("tr")[0],
     cols = row ? row.children : undefined;
   if (!cols) return;

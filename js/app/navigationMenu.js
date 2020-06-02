@@ -4,9 +4,9 @@ const DOMLoaded = document.querySelector("DOMContentLoaded");
 
 if (1) {
   const menuObj = {
-    "Add Student": "addStudent.html",
-    "View StudentDetails": "viewStudentDetails.html",
-    "Student Mark Details": "studentMarkDetails.html",
+    "Add Student Detail": "#AddStudentDetail",
+    "View Student Details": "#ViewStudentDetails",
+    "Student Mark Details": "#StudentMarkDetails",
   };
   for (let key in menuObj) {
     const li = document.createElement("li");

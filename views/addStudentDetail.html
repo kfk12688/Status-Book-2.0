@@ -1,0 +1,148 @@
+<div class="ibox">
+  <div class="ibox-title"><h5>Add New Student</h5></div>
+  <div class="ibox-content">
+    <form id="applicationForm">
+      <div class="form-group row">
+        <div class="col-lg-4">
+          <label class="font-bold">First Name</label>
+          <div class="input-group">
+            <input
+              type="text"
+              id="first_name"
+              name="first_name"
+              class="form-control"
+              placeholder="Enter your First Name"
+            />
+          </div>
+        </div>
+        <div class="col-lg-4">
+          <label class="font-bold">Last Name</label>
+          <div class="input-group">
+            <input
+              type="text"
+              name="last_name"
+              id="last_name"
+              class="form-control"
+              placeholder="Enter your Last Name"
+            />
+          </div>
+        </div>
+      </div>
+      <div class="form-group row">
+        <div class="col-lg-4">
+          <label for="dob" class="font-bold">Date of Birth</label>
+          <div class="input-group">
+            <input
+              type="date"
+              id="dob"
+              name="dob"
+              class="form-control"
+              placeholder="Your Date of Birth"
+            />
+          </div>
+        </div>
+        <div class="col-lg-4">
+          <label for="gender" class="font-bold">Gender</label>
+          <div class="input-group">
+            <select id="gender" name="gender" class="form-control">
+              <option value="">Select Gender</option>
+              <option value="male">Male</option>
+              <option value="female">Female</option>
+            </select>
+          </div>
+        </div>
+      </div>
+      <div class="form-group row">
+        <div class="col-lg-4">
+          <label for="emailId" class="font-bold">Email ID</label>
+          <div class="input-group">
+            <input
+              type="text"
+              id="email_id"
+              name="email_id"
+              class="form-control"
+              placeholder="Enter your Email ID"
+            />
+          </div>
+        </div>
+        <div class="col-lg-4">
+          <label for="mobileNumber" class="font-bold">
+            Mobile Number
+          </label>
+          <div class="input-group">
+            <input
+              type="text"
+              id="mobile_number"
+              name="mobile_number"
+              class="form-control"
+              placeholder="Enter your Mobile Number"
+            />
+          </div>
+        </div>
+      </div>
+      <div class="form-group row">
+        <div class="col-lg-8">
+          <label for="address" class="font-bold">
+            Communication Address
+          </label>
+          <div class="input-group">
+            <input
+              type="text"
+              id="address"
+              name="address"
+              class="form-control"
+              placeholder="Enter your Communication Address"
+            />
+          </div>
+        </div>
+      </div>
+      <div class="form-group row">
+        <div class="col-lg-4">
+          <label for="relegion" class="font-bold">Relegion</label>
+          <div class="input-group">
+            <input
+              type="text"
+              name="relegion"
+              id="relegion"
+              class="form-control"
+              placeholder="Enter your Relegion"
+            />
+          </div>
+        </div>
+        <div class="col-lg-4">
+          <label for="nationality" class="font-bold">
+            Nationality
+          </label>
+          <div class="input-group">
+            <input
+              type="text"
+              id="nationality"
+              name="nationality"
+              class="form-control"
+              placeholder="Enter your Nationality"
+            />
+          </div>
+        </div>
+      </div>
+      <div id="message"></div>
+
+      <div class="form-group row">
+        <div class="col-lg-8">
+          <input
+            type="submit"
+            id="submitApplicationForm"
+            class="btn btn-md btn-primary float-right"
+            value="Submit Application"
+          />
+          <button
+            type="reset"
+            id="resetApplicationForm"
+            class="btn btn-md btn-while float-right"
+          >
+            Reset Application
+          </button>
+        </div>
+      </div>
+    </form>
+  </div>
+</div>

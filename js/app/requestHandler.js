@@ -1,4 +1,4 @@
-export default class RequestHandler {
+class RequestHandler {
   async getData(url) {
     const response = await fetch(url, {
       method: "GET",

@@ -1,4 +1,4 @@
-export default class TableRenderer {
+class TableRenderer {
   constructor(tableHead, tableBody, data) {
     this.tableHead = tableHead;
     this.tableBody = tableBody;

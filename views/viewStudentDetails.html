@@ -1,0 +1,142 @@
+<div>
+  <div class="row border-bottom white-bg">
+    <div class="col-lg-12">
+      <i class="fa fa-users m-xs"></i>
+      <label class="m-xs text-muted font-bold">
+        Student Details
+      </label>
+      <div class="btn-group float-right tooltip-demo">
+        <a id="loadData" class="btn btn-default btn-md no-borders">
+          <i class="fa fa-database"></i>
+        </a>
+        <div>
+          <a
+            data-toggle="dropdown"
+            class="btn btn-default btn-md dropdown-toggle no-borders"
+          >
+            Action
+          </a>
+          <ul class="dropdown-menu">
+            <li>
+              <a
+                data-toggle="modal"
+                class="dropdown-item"
+                data-target="#defaultsModal"
+              >
+                Create New Default
+              </a>
+            </li>
+            <li>
+              <a
+                data-toggle="modal"
+                class="dropdown-item"
+                data-target="#defaultsModal"
+              >
+                Customize Your Defaults
+              </a>
+            </li>
+            <li class="dropdown-divider"></li>
+            <li><a class="dropdown-item" href="#">Select All</a></li>
+            <li>
+              <a class="dropdown-item" href="#">Deselect All</a>
+            </li>
+            <li class="dropdown-divider"></li>
+            <li>
+              <a class="dropdown-item" href="#">Data Export</a>
+            </li>
+          </ul>
+        </div>
+        <a
+          data-toggle="tooltip"
+          data-placement="bottom"
+          title="Add Student Mark Details"
+          class="btn btn-default btn-md no-borders"
+        >
+          <i class="fa fa-plus"></i>
+        </a>
+        <div>
+          <a
+            data-toggle="dropdown"
+            class="dropdown btn btn-default btn-md no-borders"
+          >
+            <i class="fa fa-columns"></i>
+          </a>
+          <ul class="dropdown-menu dropdown-user" id="tableColList">
+            <li><h5 class="text-center m-t-sm">Show/Hide Column</h5></li>
+            <li class="dropdown-divider"></li>
+          </ul>
+        </div>
+        <a
+          data-toggle="tooltip"
+          data-placement="bottom"
+          title="Tooltip on left"
+          class="btn btn-default btn-md no-borders"
+        >
+          <i class="fa fa-server"></i>
+        </a>
+        <a
+          href="#"
+          data-toggle="tooltip"
+          data-placement="bottom"
+          title="Upload Student Mark Details"
+          class="btn btn-default btn-md no-borders"
+        >
+          <i class="fa fa-upload"></i>
+        </a>
+        <div>
+          <a class="btn btn-default btn-md no-borders">
+            <i class="fa fa-table"></i>
+          </a>
+        </div>
+      </div>
+      <div
+        tabindex="-1"
+        role="dialog"
+        aria-hidden="true"
+        id="defaultsModal"
+        class="modal inmodal"
+      >
+        <div class="modal-dialog">
+          <div class="modal-content">
+            <form>
+              <div class="modal-header">
+                <button type="button" class="close" data-dismiss="modal">
+                  <span aria-hidden="true">&times;</span>
+                  <span class="sr-only">Close</span>
+                </button>
+                <h4 class="modal-title">
+                  Select Table Columns To Hide/Show
+                </h4>
+              </div>
+              <div class="modal-body">
+                <div id="tableColList"></div>
+              </div>
+              <div class="modal-footer">
+                <button
+                  type="button"
+                  class="btn btn-white"
+                  data-dismiss="modal"
+                >
+                  Close
+                </button>
+                <button
+                  type="submit"
+                  class="btn btn-primary"
+                  id="loadSelectedCol"
+                >
+                  Save changes
+                </button>
+              </div>
+            </form>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+  <div class="table-responsive">
+    <table class="table table-hover table-bordered">
+      <thead id="tableHead"></thead>
+      <tbody id="tableBody"></tbody>
+    </table>
+  </div>
+</div>

@@ -1,51 +1,51 @@
-import RequestHandler from "./RequestHandler.js";
-// Get Form Id to handle events
-const newApplicationForm = document.getElementById("newApplicationForm");
-const message = document.getElementById("message");
-// Get Input Values From User
-const firstName = document.getElementById("firstname");
-const lastName = document.getElementById("lastname");
-const dob = document.getElementById("dob");
-const gender = document.getElementById("gender");
-const emailId = document.getElementById("emailid");
-const mobileNumber = document.getElementById("mobilenumber");
-const address = document.getElementById("address");
-const relegion = document.getElementById("relegion");
-const nationality = document.getElementById("nationality");
-
-const reqHandler = new RequestHandler();
-
-function initializeEventListners() {
-  document.querySelector("DOMContentLoaded");
-  newApplicationForm.addEventListener("submit", submitNewApplication);
+function studentApplicationForm() {
+  try {
+    this.constructor();
+    this.initializeEventListners();
+  } catch (error) {
+    console.log(error);
+  }
 }
 
-function submitNewApplication(event) {
-  let inputData = {
-    first_name: firstName.value,
-    last_name: lastName.value,
-    dob: dob.value,
-    gender: gender.value,
-    email_id: emailId.value,
-    mobile_number: mobileNumber.value,
-    address: address.value,
-    relegion: relegion.value,
-    nationality: nationality.value,
-  };
+studentApplicationForm.prototype = {
+  constructor: function () {},
 
-  reqHandler
-    .addData("http://127.0.0.1/api/studentApi.php", inputData)
-    .then((data) => showMessage(data.value))
-    .catch((error) => console.log(error));
+  initializeEventListners: function () {
+    const applicationForm = document.querySelector("#applicationForm");
+    applicationForm.addEventListener("submit", this.submitApplicationForm);
+  },
 
-  event.preventDefault();
-}
+  submitApplicationForm: function (event) {
+    const reqHandler = new RequestHandler();
+    let inputData = {
+      first_name: "",
+      last_name: "",
+      dob: "",
+      gender: "",
+      email_id: "",
+      mobile_number: "",
+      address: "",
+      relegion: "",
+      nationality: "",
+    };
 
-function showMessage(data) {
-  message.className = "alert alert-success";
-  message.innerHTML = `New Student ${data} has been created successfully`;
-  newApplicationForm.reset();
-  return;
-}
+    for (let key in inputData) {
+      inputData[key] = document.getElementById(key).value;
+    }
 
-initializeEventListners();
+    reqHandler
+      .addData("http://127.0.0.1/api/studentApi.php", inputData)
+      .then((data) => this.showResponseMessage(data.value))
+      .catch((error) => console.log(error));
+    event.preventDefault();
+  },
+
+  showResponseMessage: function (val) {
+    const message = document.getElementById("message");
+    message.className = "alert alert-success";
+    message.innerHTML = `New Student ${val} has been created successfully`;
+    const applicationForm = document.querySelector("#applicationForm");
+    applicationForm.reset();
+    return;
+  },
+};

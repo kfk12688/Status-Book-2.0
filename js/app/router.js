@@ -52,10 +52,17 @@ Router.prototype = {
       xhttp.onreadystatechange = function () {
         if (this.readyState === 4 && this.status === 200) {
           scope.rootElem.innerHTML = this.responseText;
+          scope.loadScripts(htmlName);
         }
       };
       xhttp.open("GET", url, true);
       xhttp.send();
     })(this);
+  },
+
+  loadScripts: function (script) {
+    if (script === "addStudentDetail.html") {
+      new studentApplicationForm();
+    }
   },
 };
