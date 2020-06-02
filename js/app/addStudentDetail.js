@@ -8,11 +8,16 @@ function studentApplicationForm() {
 }
 
 studentApplicationForm.prototype = {
-  constructor: function () {},
+  constructor: function () {
+    this.initializeEventListners = this.initializeEventListners.bind(this);
+    this.submitApplicationForm = this.submitApplicationForm.bind(this);
+    this.showResponseMessage = this.showResponseMessage.bind(this);
+    this.applicationForm = document.querySelector("#applicationForm");
+    this.message = document.getElementById("message");
+  },
 
   initializeEventListners: function () {
-    const applicationForm = document.querySelector("#applicationForm");
-    applicationForm.addEventListener("submit", this.submitApplicationForm);
+    this.applicationForm.addEventListener("submit", this.submitApplicationForm);
   },
 
   submitApplicationForm: function (event) {
@@ -41,11 +46,9 @@ studentApplicationForm.prototype = {
   },
 
   showResponseMessage: function (val) {
-    const message = document.getElementById("message");
-    message.className = "alert alert-success";
-    message.innerHTML = `New Student ${val} has been created successfully`;
-    const applicationForm = document.querySelector("#applicationForm");
-    applicationForm.reset();
+    this.message.className = "alert alert-success";
+    this.message.innerHTML = `New Student ${val} has been created successfully`;
+    this.applicationForm.reset();
     return;
   },
 };
