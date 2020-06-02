@@ -5,7 +5,7 @@ const DOMLoaded = document.querySelector("DOMContentLoaded");
 if (1) {
   const menuObj = {
     "Add Student Detail": "#AddStudentDetail",
-    "View Student Details": "#ViewStudentDetails",
+    "View Students Details": "#ViewStudentsDetails",
     "Student Mark Details": "#StudentMarkDetails",
   };
   for (let key in menuObj) {

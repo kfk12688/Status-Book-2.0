@@ -46,3 +46,20 @@ function stateChange(state, callback) {
 }
 
 initializeEventListners();
+
+function viewStudentsDetails() {
+  try {
+    this.constructor();
+  } catch (error) {
+    console.log(error);
+  }
+}
+
+viewStudentsDetails.prototype = {
+  constructor: function () {
+    this.getStudentsDetails = this.getStudentsDetails.bind(this);
+    this.loadStudentsDetails = this.loadStudentsDetails.bind(this);
+  },
+  getStudentsDetails: function () {},
+  loadStudentsDetails: function () {},
+};
