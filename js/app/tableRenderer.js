@@ -16,6 +16,7 @@ TableRenderer.prototype = {
     this.tableBody = this.tableBody.bind(this);
     this.checkAll = this.checkAll.bind(this);
     this.checkSelected = this.checkSelected.bind(this);
+    this.checkElement = this.checkElement.bind(this);
     this.createTableElem = this.createTableElem.bind(this);
     this.createInputElem = this.createInputElem.bind(this);
     this.listColumnNames = this.listColumnNames.bind(this);
@@ -44,7 +45,7 @@ TableRenderer.prototype = {
     const input = this.createInputElem(
       "checkbox",
       "selectAll",
-      "",
+      "headerCheckbox",
       "",
       "",
       this.checkAll
@@ -99,15 +100,17 @@ TableRenderer.prototype = {
   },
 
   checkAll: function () {
-    var checkboxes = document.getElementsByName("checkbox");
-    for (var checkbox of checkboxes) {
-      checkbox.checked = this.checked;
-      if (this.checked) {
-        checkbox.parentElement.parentElement.style.background = "#1ab394";
-        checkbox.parentElement.parentElement.style.color = "white";
-      } else {
-        checkbox.parentElement.parentElement.style.background = "white";
-        checkbox.parentElement.parentElement.style.color = "#676A6C";
+    const headercheckbox = document.getElementById("selectAll");
+    const rowCheckbox = document.getElementsByClassName("rowCheckbox");
+    if (headercheckbox.checked === true) {
+      for (let i = 0; i < rowCheckbox.length; i++) {
+        rowCheckbox[i].checked = true;
+        this.checkElement(rowCheckbox[i], true);
+      }
+    } else {
+      for (let i = 0; i < rowCheckbox.length; i++) {
+        rowCheckbox[i].checked = false;
+        this.checkElement(rowCheckbox[i], false);
       }
     }
   },
@@ -119,14 +122,22 @@ TableRenderer.prototype = {
     for (let i = 0; i < checkBoxes.length; i++) {
       if (checkBoxes[i].checked == true) {
         param.push(checkBoxes[i].value);
-        checkBoxes[i].parentElement.parentElement.style.background = "#1ab394";
-        checkBoxes[i].parentElement.parentElement.style.color = "white";
+        this.checkElement(checkBoxes[i], true);
       } else {
-        checkBoxes[i].parentElement.parentElement.style.background = "white";
-        checkBoxes[i].parentElement.parentElement.style.color = "#676A6C";
+        this.checkElement(checkBoxes[i], false);
       }
     }
     // alert(param);
+  },
+
+  checkElement: function (elem, condition) {
+    if (condition == true) {
+      elem.parentElement.parentElement.style.background = "#1ab394";
+      elem.parentElement.parentElement.style.color = "white";
+    } else {
+      elem.parentElement.parentElement.style.background = "white";
+      elem.parentElement.parentElement.style.color = "#676A6C";
+    }
   },
 
   createTableElem: function (elemName, elemClass, elemInnerHtml, elemAppend) {
