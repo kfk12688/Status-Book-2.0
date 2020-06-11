@@ -1,3 +1,5 @@
+"use strict";
+
 function TableRenderer(tableHead, tableBody, data) {
   try {
     this.constructor(tableHead, tableBody, data);

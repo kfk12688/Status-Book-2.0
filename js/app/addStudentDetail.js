@@ -1,3 +1,5 @@
+"use strict";
+
 function studentApplicationForm() {
   try {
     this.constructor();

@@ -1,3 +1,5 @@
+"use strict";
+
 function RequestHandler() {
   try {
     this.constructor();

@@ -1,3 +1,5 @@
+"use strict";
+
 function viewStudentsDetails() {
   try {
     this.constructor();
