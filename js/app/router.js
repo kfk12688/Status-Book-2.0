@@ -65,6 +65,8 @@ Router.prototype = {
       return new studentApplicationForm();
     } else if (htmlFile === "viewStudentsDetails.html") {
       return new viewStudentsDetails();
+    } else if (htmlFile === "viewStudentsMarkDetails.html") {
+      return new viewStudentsMarkDetails();
     }
   },
 };

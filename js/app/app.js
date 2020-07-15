@@ -5,6 +5,7 @@
     var router = new Router([
       new Route("AddStudentDetail", "addStudentDetail.html", true),
       new Route("ViewStudentsDetails", "viewStudentsDetails.html"),
+      new Route("ViewStudentsMarkDetails", "viewStudentsMarkDetails.html"),
     ]);
   }
   init();

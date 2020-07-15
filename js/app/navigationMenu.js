@@ -6,7 +6,7 @@ if (1) {
   const menuObj = {
     "Add Student Detail": "#AddStudentDetail",
     "View Students Details": "#ViewStudentsDetails",
-    "Student Mark Details": "#StudentMarkDetails",
+    "Student Mark Details": "#ViewStudentsMarkDetails",
   };
   for (let key in menuObj) {
     const li = document.createElement("li");
