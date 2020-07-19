@@ -18,7 +18,14 @@ function loadHTML(url, id) {
 // use #! to hash
 router = new Navigo(null, true, "#!");
 router.on({
-  // 'view' is the id of the div element inside which we render the HTML
+  // 'app' is the id of the div element inside which we render the HTML
+  StudentProfiles: () => {
+    loadHTML("./views/studentProfiles.html", "app");
+  },
+  "StudentProfile/:id/": (params) => {
+    loadHTML("./views/studentProfile.html", "app");
+    console.log(params.id);
+  },
   AddStudent: () => {
     loadHTML("./views/addStudentDetail.html", "app");
   },
