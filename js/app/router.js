@@ -19,8 +19,8 @@ function loadHTML(url, id) {
 router = new Navigo(null, true, "#!");
 router.on({
   // 'app' is the id of the div element inside which we render the HTML
-  StudentProfiles: () => {
-    loadHTML("./views/studentProfiles.html", "app");
+  StudentsProfiles: () => {
+    loadHTML("./views/studentsProfiles.html", "app");
   },
   "StudentProfile/:id/": (params) => {
     loadHTML("./views/studentProfile.html", "app");
