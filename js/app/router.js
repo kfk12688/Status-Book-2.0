@@ -44,6 +44,9 @@ router.on({
   StudentsAttendanceData: () => {
     loadHTML("./views/studentsAttendanceData.html", "app");
   },
+  StudentsAcademicData: () => {
+    loadHTML("./views/studentsAcademicData.html", "app");
+  },
 });
 
 // set the default route
