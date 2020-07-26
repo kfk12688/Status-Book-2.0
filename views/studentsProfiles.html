@@ -1,74 +1,68 @@
 <div>
-  <div class="white-bg">
-    <div class="row border-bottom m-l-xs">
-      <i class="fa fa-users m-sm"></i>
-      <label class="m-sm m-l-xs text-muted font-bold">
-        Search Student Profiles
-      </label>
+  <div class="row border-bottom white-bg">
+    <div class="col-lg-12 m-t-xs border-bottom m-b-sm">
+      <i class="fa fa-group m-r-sm"></i>
+      <label class="font-bold">Search Students Profiles</label>
     </div>
-    <form id="searchStudentProfileForm">
-      <div class="row border-bottom m-l-xs m-t-md">
-        <div class="col-lg-2">
-          <div class="form-group">
-            <select id="searchBatch" name="searchBatch" class="form-control">
-              <option value="">Select Batch</option>
-              <option value="" disabled class="text-danger">B.E/B.Tech</option>
-              <option value="2017_2021_be_btech">2017-2021</option>
-              <option value="2018_2022_be_btech">2018-2022</option>
-              <option value="2019_2023_be_btech">2019-2023</option>
-              <option value="2020_2024_be_btech">2020-2024</option>
-              <option value="" disabled class="text-danger">M.E/M.Tech</option>
-              <option value="2020_2024_me_mtech">2017-2019</option>
-              <option value="2020_2024_me_mtech">2018-2020</option>
-            </select>
-          </div>
-        </div>
-        <div class="col-lg-3">
-          <div class="form-group">
-            <select
-              id="searchDepartment"
-              name="searchDepartment"
-              class="form-control"
-            >
-              <option value="">Select Department</option>
-              <option value="" disabled class="text-danger">B.E/B.Tech</option>
-              <option value="be_cse">CSE</option>
-              <option value="be_ece">ECE</option>
-              <option value="be_eee">EEE</option>
-              <option value="btech_mech">MECH</option>
-              <option value="btech_it">IT</option>
-              <option value="" disabled class="text-danger">M.E/M.Tech</option>
-              <option value="me_cse">CSE</option>
-            </select>
-          </div>
-        </div>
-        <span class="m-t-sm"><strong>or</strong></span>
-        <div class="col-lg-3">
-          <div class="form-group">
-            <input
-              type="number"
-              id="searchRegno"
-              name="searchRegno"
-              class="form-control"
-              placeholder="Search With Register Number"
-            />
-          </div>
-        </div>
-        <div class="col-lg-3">
-          <div class="form-group">
-            <button type="submit" class="btn btn-md btn-primary">
-              <strong>Search Profiles</strong>
-            </button>
-            <button type="reset" class="btn btn-md btn-default">
-              <strong>Reset</strong>
-            </button>
-          </div>
-        </div>
+    <div class="col-lg-2">
+      <div class="form-group">
+        <select id="searchBatch" name="searchBatch" class="form-control">
+          <option value="">Select Batch</option>
+          <option value="" disabled class="text-danger">B.E/B.Tech</option>
+          <option value="2017_2021_be_btech">2017-2021</option>
+          <option value="2018_2022_be_btech">2018-2022</option>
+          <option value="2019_2023_be_btech">2019-2023</option>
+          <option value="2020_2024_be_btech">2020-2024</option>
+          <option value="" disabled class="text-danger">M.E/M.Tech</option>
+          <option value="2020_2024_me_mtech">2017-2019</option>
+          <option value="2020_2024_me_mtech">2018-2020</option>
+        </select>
       </div>
-    </form>
+    </div>
+    <div class="col-lg-3">
+      <div class="form-group">
+        <select
+          id="searchDepartment"
+          name="searchDepartment"
+          class="form-control"
+        >
+          <option value="">Select Department</option>
+          <option value="" disabled class="text-danger">B.E/B.Tech</option>
+          <option value="be_cse">CSE</option>
+          <option value="be_ece">ECE</option>
+          <option value="be_eee">EEE</option>
+          <option value="btech_mech">MECH</option>
+          <option value="btech_it">IT</option>
+          <option value="" disabled class="text-danger">M.E/M.Tech</option>
+          <option value="me_cse">CSE</option>
+        </select>
+      </div>
+    </div>
+    <span class="font-bold">Or</span>
+    <div class="col-lg-3">
+      <div class="form-group">
+        <input
+          type="number"
+          id="searchRegno"
+          name="searchRegno"
+          class="form-control"
+          placeholder="Search With Register Number"
+        />
+      </div>
+    </div>
+    <div class="col-lg-3">
+      <div class="form-group">
+        <button type="submit" class="btn btn-md btn-primary">
+          <strong>Search Profiles</strong>
+        </button>
+        <button type="reset" class="btn btn-md btn-default">
+          <strong>Reset</strong>
+        </button>
+      </div>
+    </div>
   </div>
   <div class="wrapper wrapper-content">
-    <div class="row m-l-xs m-r-xs">
+    <div class="row">
       <div class="col-lg-4">
         <div class="contact-box">
           <a class="row" href="#!StudentProfile/710311104035">
@@ -77,28 +71,21 @@
                 <img
                   alt="image"
                   class="rounded-circle m-t-xs img-fluid"
-                  src="../img/student-male-icon.jpg"
+                  src="img/boy.png"
                 />
-                <div class="m-t-sm">
-                  2017-2021 B.E CSE 710311104035
-                </div>
+                <div class="m-t-xs font-bold">BE - CSE 2017-2021</div>
               </div>
             </div>
             <div class="col-8">
-              <h3 class="text-info"><strong>Sathishkumar</strong></h3>
-              <h5><strong>Subramaniam</strong></h5>
-              <label><i class="fa fa-phone m-r-sm"></i>+91 8344335123</label>
-              <label>
-                <i class="fa fa-envelope m-r-sm"></i>sathishk746@gmail.com
-              </label>
+              <h3><strong>Sathishkumar</strong></h3>
+              <p>Subramaniam</p>
+              <p class="font-bold">
+                <i class="fa fa-id-card-o"></i> <span>:</span> 710311104035
+              </p>
               <div>
-                <strong>Credits</strong><br />
-                <span for="academics">
-                  Score : 78%
-                </span>
-                <span for="attendance">
-                  Attendance : 90%
-                </span>
+                <strong>Student Progress.</strong><br />
+                Academic Score : 78%<br />
+                Attendance : 90%<br />
               </div>
             </div>
           </a>
@@ -106,34 +93,27 @@
       </div>
       <div class="col-lg-4">
         <div class="contact-box">
-          <a class="row" href="#!StudentProfile?id=710311104035">
+          <a class="row" href="profile.html">
             <div class="col-4">
               <div class="text-center">
                 <img
                   alt="image"
                   class="rounded-circle m-t-xs img-fluid"
-                  src="img/student-male-icon.jpg"
+                  src="img/girl.png"
                 />
-                <div class="m-t-sm">
-                  2017-2021 B.Tech IT 710311104035
-                </div>
+                <div class="m-t-xs font-bold">BE - CSE 2017-2021</div>
               </div>
             </div>
             <div class="col-8">
-              <h3 class="text-info"><strong>Sathishkumar</strong></h3>
-              <h5><strong>Subramaniam</strong></h5>
-              <label><i class="fa fa-phone m-r-sm"></i>+91 8344335123</label>
-              <label>
-                <i class="fa fa-envelope m-r-sm"></i>sathishk746@gmail.com
-              </label>
+              <h3><strong>Sathishkumar</strong></h3>
+              <p>Subramaniam</p>
+              <p class="font-bold">
+                <i class="fa fa-id-card-o"></i> <span>:</span> 710311104035
+              </p>
               <div>
-                <strong>Credits</strong><br />
-                <span for="academics">
-                  Score : 78%
-                </span>
-                <span for="attendance">
-                  Attendance : 90%
-                </span>
+                <strong>Student Progress.</strong><br />
+                Academic Score : 78%<br />
+                Attendance : 90%<br />
               </div>
             </div>
           </a>
@@ -141,34 +121,27 @@
       </div>
       <div class="col-lg-4">
         <div class="contact-box">
-          <a class="row" href="#!StudentProfile?id=710311104035">
+          <a class="row" href="profile.html">
             <div class="col-4">
               <div class="text-center">
                 <img
                   alt="image"
                   class="rounded-circle m-t-xs img-fluid"
-                  src="img/student-male-icon.jpg"
+                  src="img/boy.png"
                 />
-                <div class="m-t-sm">
-                  2017-2021 B.E CSE 710311104035
-                </div>
+                <div class="m-t-xs font-bold">BE - CSE 2017-2021</div>
               </div>
             </div>
             <div class="col-8">
-              <h3 class="text-info"><strong>Sathishkumar</strong></h3>
-              <h5><strong>Subramaniam</strong></h5>
-              <label><i class="fa fa-phone m-r-sm"></i>+91 8344335123</label>
-              <label>
-                <i class="fa fa-envelope m-r-sm"></i>sathishk746@gmail.com
-              </label>
+              <h3><strong>Sathishkumar</strong></h3>
+              <p>Subramaniam</p>
+              <p class="font-bold">
+                <i class="fa fa-id-card-o"></i> <span>:</span> 710311104035
+              </p>
               <div>
-                <strong>Credits</strong><br />
-                <span for="academics">
-                  Score : 78%
-                </span>
-                <span for="attendance">
-                  Attendance : 90%
-                </span>
+                <strong>Student Progress.</strong><br />
+                Academic Score : 78%<br />
+                Attendance : 90%<br />
               </div>
             </div>
           </a>
@@ -176,34 +149,27 @@
       </div>
       <div class="col-lg-4">
         <div class="contact-box">
-          <a class="row" href="#!StudentProfile?id=710311104035">
+          <a class="row" href="profile.html">
             <div class="col-4">
               <div class="text-center">
                 <img
                   alt="image"
                   class="rounded-circle m-t-xs img-fluid"
-                  src="img/student-female-icon.jpg"
+                  src="img/girl.png"
                 />
-                <div class="m-t-sm">
-                  2017-2021 B.E CSE 710311104035
-                </div>
+                <div class="m-t-xs font-bold">BE - CSE 2017-2021</div>
               </div>
             </div>
             <div class="col-8">
-              <h3 class="text-info"><strong>Sathishkumar</strong></h3>
-              <h5><strong>Subramaniam</strong></h5>
-              <label><i class="fa fa-phone m-r-sm"></i>+91 8344335123</label>
-              <label>
-                <i class="fa fa-envelope m-r-sm"></i>sathishk746@gmail.com
-              </label>
+              <h3><strong>Sathishkumar</strong></h3>
+              <p>Subramaniam</p>
+              <p class="font-bold">
+                <i class="fa fa-id-card-o"></i> <span>:</span> 710311104035
+              </p>
               <div>
-                <strong>Credits</strong><br />
-                <span for="academics">
-                  Score : 78%
-                </span>
-                <span for="attendance">
-                  Attendance : 90%
-                </span>
+                <strong>Student Progress.</strong><br />
+                Academic Score : 78%<br />
+                Attendance : 90%<br />
               </div>
             </div>
           </a>
@@ -211,34 +177,27 @@
       </div>
       <div class="col-lg-4">
         <div class="contact-box">
-          <a class="row" href="#!StudentProfile?id=710311104035">
+          <a class="row" href="profile.html">
             <div class="col-4">
               <div class="text-center">
                 <img
                   alt="image"
                   class="rounded-circle m-t-xs img-fluid"
-                  src="img/student-female-icon.jpg"
+                  src="img/boy.png"
                 />
-                <div class="m-t-sm">
-                  2017-2021 B.E CSE 710311104035
-                </div>
+                <div class="m-t-xs font-bold">BE - CSE 2017-2021</div>
               </div>
             </div>
             <div class="col-8">
-              <h3 class="text-info"><strong>Sathishkumar</strong></h3>
-              <h5><strong>Subramaniam</strong></h5>
-              <label><i class="fa fa-phone m-r-sm"></i>+91 8344335123</label>
-              <label>
-                <i class="fa fa-envelope m-r-sm"></i>sathishk746@gmail.com
-              </label>
+              <h3><strong>Sathishkumar</strong></h3>
+              <p>Subramaniam</p>
+              <p class="font-bold">
+                <i class="fa fa-id-card-o"></i> <span>:</span> 710311104035
+              </p>
               <div>
-                <strong>Credits</strong><br />
-                <span for="academics">
-                  Score : 78%
-                </span>
-                <span for="attendance">
-                  Attendance : 90%
-                </span>
+                <strong>Student Progress.</strong><br />
+                Academic Score : 78%<br />
+                Attendance : 90%<br />
               </div>
             </div>
           </a>
@@ -246,34 +205,27 @@
       </div>
       <div class="col-lg-4">
         <div class="contact-box">
-          <a class="row" href="#!StudentProfile?id=710311104035">
+          <a class="row" href="profile.html">
             <div class="col-4">
               <div class="text-center">
                 <img
                   alt="image"
                   class="rounded-circle m-t-xs img-fluid"
-                  src="img/student-male-icon.jpg"
+                  src="img/girl.png"
                 />
-                <div class="m-t-sm">
-                  2017-2021 B.E CSE 710311104035
-                </div>
+                <div class="m-t-xs font-bold">BE - CSE 2017-2021</div>
               </div>
             </div>
             <div class="col-8">
-              <h3 class="text-info"><strong>Sathishkumar</strong></h3>
-              <h5><strong>Subramaniam</strong></h5>
-              <label><i class="fa fa-phone m-r-sm"></i>+91 8344335123</label>
-              <label>
-                <i class="fa fa-envelope m-r-sm"></i>sathishk746@gmail.com
-              </label>
+              <h3><strong>Sathishkumar</strong></h3>
+              <p>Subramaniam</p>
+              <p class="font-bold">
+                <i class="fa fa-id-card-o"></i> <span>:</span> 710311104035
+              </p>
               <div>
-                <strong>Credits</strong><br />
-                <span for="academics">
-                  Score : 78%
-                </span>
-                <span for="attendance">
-                  Attendance : 90%
-                </span>
+                <strong>Student Progress.</strong><br />
+                Academic Score : 78%<br />
+                Attendance : 90%<br />
               </div>
             </div>
           </a>
@@ -281,34 +233,27 @@
       </div>
       <div class="col-lg-4">
         <div class="contact-box">
-          <a class="row" href="#!StudentProfile?id=710311104035">
+          <a class="row" href="profile.html">
             <div class="col-4">
               <div class="text-center">
                 <img
                   alt="image"
                   class="rounded-circle m-t-xs img-fluid"
-                  src="img/student-female-icon.jpg"
+                  src="img/boy.png"
                 />
-                <div class="m-t-sm">
-                  2017-2021 B.E CSE 710311104035
-                </div>
+                <div class="m-t-xs font-bold">BE - CSE 2017-2021</div>
               </div>
             </div>
             <div class="col-8">
-              <h3 class="text-info"><strong>Sathishkumar</strong></h3>
-              <h5><strong>Subramaniam</strong></h5>
-              <label><i class="fa fa-phone m-r-sm"></i>+91 8344335123</label>
-              <label>
-                <i class="fa fa-envelope m-r-sm"></i>sathishk746@gmail.com
-              </label>
+              <h3><strong>Sathishkumar</strong></h3>
+              <p>Subramaniam</p>
+              <p class="font-bold">
+                <i class="fa fa-id-card-o"></i> <span>:</span> 710311104035
+              </p>
               <div>
-                <strong>Credits</strong><br />
-                <span for="academics">
-                  Score : 78%
-                </span>
-                <span for="attendance">
-                  Attendance : 90%
-                </span>
+                <strong>Student Progress.</strong><br />
+                Academic Score : 78%<br />
+                Attendance : 90%<br />
               </div>
             </div>
           </a>
@@ -316,34 +261,27 @@
       </div>
       <div class="col-lg-4">
         <div class="contact-box">
-          <a class="row" href="#!StudentProfile?id=710311104035">
+          <a class="row" href="profile.html">
             <div class="col-4">
               <div class="text-center">
                 <img
                   alt="image"
                   class="rounded-circle m-t-xs img-fluid"
-                  src="img/student-male-icon.jpg"
+                  src="img/girl.png"
                 />
-                <div class="m-t-sm">
-                  2017-2021 B.E CSE 710311104035
-                </div>
+                <div class="m-t-xs font-bold">BE - CSE 2017-2021</div>
               </div>
             </div>
             <div class="col-8">
-              <h3 class="text-info"><strong>Sathishkumar</strong></h3>
-              <h5><strong>Subramaniam</strong></h5>
-              <label><i class="fa fa-phone m-r-sm"></i>+91 8344335123</label>
-              <label>
-                <i class="fa fa-envelope m-r-sm"></i>sathishk746@gmail.com
-              </label>
+              <h3><strong>Sathishkumar</strong></h3>
+              <p>Subramaniam</p>
+              <p class="font-bold">
+                <i class="fa fa-id-card-o"></i> <span>:</span> 710311104035
+              </p>
               <div>
-                <strong>Credits</strong><br />
-                <span for="academics">
-                  Score : 78%
-                </span>
-                <span for="attendance">
-                  Attendance : 90%
-                </span>
+                <strong>Student Progress.</strong><br />
+                Academic Score : 78%<br />
+                Attendance : 90%<br />
               </div>
             </div>
           </a>
@@ -351,34 +289,27 @@
       </div>
       <div class="col-lg-4">
         <div class="contact-box">
-          <a class="row" href="#!StudentProfile?id=710311104035">
+          <a class="row" href="profile.html">
             <div class="col-4">
               <div class="text-center">
                 <img
                   alt="image"
                   class="rounded-circle m-t-xs img-fluid"
-                  src="img/student-male-icon.jpg"
+                  src="img/boy.png"
                 />
-                <div class="m-t-sm">
-                  2017-2021 B.E CSE 710311104035
-                </div>
+                <div class="m-t-xs font-bold">BE - CSE 2017-2021</div>
               </div>
             </div>
             <div class="col-8">
-              <h3 class="text-info"><strong>Sathishkumar</strong></h3>
-              <h5><strong>Subramaniam</strong></h5>
-              <label><i class="fa fa-phone m-r-sm"></i>+91 8344335123</label>
-              <label>
-                <i class="fa fa-envelope m-r-sm"></i>sathishk746@gmail.com
-              </label>
+              <h3><strong>Sathishkumar</strong></h3>
+              <p>Subramaniam</p>
+              <p class="font-bold">
+                <i class="fa fa-id-card-o"></i> <span>:</span> 710311104035
+              </p>
               <div>
-                <strong>Credits</strong><br />
-                <span for="academics">
-                  Score : 78%
-                </span>
-                <span for="attendance">
-                  Attendance : 90%
-                </span>
+                <strong>Student Progress.</strong><br />
+                Academic Score : 78%<br />
+                Attendance : 90%<br />
               </div>
             </div>
           </a>
@@ -386,34 +317,27 @@
       </div>
       <div class="col-lg-4">
         <div class="contact-box">
-          <a class="row" href="#!StudentProfile?id=710311104035">
+          <a class="row" href="profile.html">
             <div class="col-4">
               <div class="text-center">
                 <img
                   alt="image"
                   class="rounded-circle m-t-xs img-fluid"
-                  src="img/student-female-icon.jpg"
+                  src="img/girl.png"
                 />
-                <div class="m-t-sm">
-                  2017-2021 B.E CSE 710311104035
-                </div>
+                <div class="m-t-xs font-bold">BE - CSE 2017-2021</div>
               </div>
             </div>
             <div class="col-8">
-              <h3 class="text-info"><strong>Sathishkumar</strong></h3>
-              <h5><strong>Subramaniam</strong></h5>
-              <label><i class="fa fa-phone m-r-sm"></i>+91 8344335123</label>
-              <label>
-                <i class="fa fa-envelope m-r-sm"></i>sathishk746@gmail.com
-              </label>
+              <h3><strong>Sathishkumar</strong></h3>
+              <p>Subramaniam</p>
+              <p class="font-bold">
+                <i class="fa fa-id-card-o"></i> <span>:</span> 710311104035
+              </p>
               <div>
-                <strong>Credits</strong><br />
-                <span for="academics">
-                  Score : 78%
-                </span>
-                <span for="attendance">
-                  Attendance : 90%
-                </span>
+                <strong>Student Progress.</strong><br />
+                Academic Score : 78%<br />
+                Attendance : 90%<br />
               </div>
             </div>
           </a>
@@ -421,34 +345,27 @@
       </div>
       <div class="col-lg-4">
         <div class="contact-box">
-          <a class="row" href="#!StudentProfile?id=710311104035">
+          <a class="row" href="profile.html">
             <div class="col-4">
               <div class="text-center">
                 <img
                   alt="image"
                   class="rounded-circle m-t-xs img-fluid"
-                  src="img/student-male-icon.jpg"
+                  src="img/boy.png"
                 />
-                <div class="m-t-sm">
-                  2017-2021 B.E CSE 710311104035
-                </div>
+                <div class="m-t-xs font-bold">BE - CSE 2017-2021</div>
               </div>
             </div>
             <div class="col-8">
-              <h3 class="text-info"><strong>Sathishkumar</strong></h3>
-              <h5><strong>Subramaniam</strong></h5>
-              <label><i class="fa fa-phone m-r-sm"></i>+91 8344335123</label>
-              <label>
-                <i class="fa fa-envelope m-r-sm"></i>sathishk746@gmail.com
-              </label>
+              <h3><strong>Sathishkumar</strong></h3>
+              <p>Subramaniam</p>
+              <p class="font-bold">
+                <i class="fa fa-id-card-o"></i> <span>:</span> 710311104035
+              </p>
               <div>
-                <strong>Credits</strong><br />
-                <span for="academics">
-                  Score : 78%
-                </span>
-                <span for="attendance">
-                  Attendance : 90%
-                </span>
+                <strong>Student Progress.</strong><br />
+                Academic Score : 78%<br />
+                Attendance : 90%<br />
               </div>
             </div>
           </a>
@@ -456,69 +373,27 @@
       </div>
       <div class="col-lg-4">
         <div class="contact-box">
-          <a class="row" href="#!StudentProfile?id=710311104035">
+          <a class="row" href="profile.html">
             <div class="col-4">
               <div class="text-center">
                 <img
                   alt="image"
                   class="rounded-circle m-t-xs img-fluid"
-                  src="img/student-female-icon.jpg"
+                  src="img/girl.png"
                 />
-                <div class="m-t-sm">
-                  2017-2021 B.E CSE 710311104035
-                </div>
+                <div class="m-t-xs font-bold">BE - CSE 2017-2021</div>
               </div>
             </div>
             <div class="col-8">
-              <h3 class="text-info"><strong>Sathishkumar</strong></h3>
-              <h5><strong>Subramaniam</strong></h5>
-              <label><i class="fa fa-phone m-r-sm"></i>+91 8344335123</label>
-              <label>
-                <i class="fa fa-envelope m-r-sm"></i>sathishk746@gmail.com
-              </label>
+              <h3><strong>Sathishkumar</strong></h3>
+              <p>Subramaniam</p>
+              <p class="font-bold">
+                <i class="fa fa-id-card-o"></i> <span>:</span> 710311104035
+              </p>
               <div>
-                <strong>Credits</strong><br />
-                <span for="academics">
-                  Score : 78%
-                </span>
-                <span for="attendance">
-                  Attendance : 90%
-                </span>
-              </div>
-            </div>
-          </a>
-        </div>
-      </div>
-      <div class="col-lg-4">
-        <div class="contact-box">
-          <a class="row" href="#!StudentProfile?id=710311104035">
-            <div class="col-4">
-              <div class="text-center">
-                <img
-                  alt="image"
-                  class="rounded-circle m-t-xs img-fluid"
-                  src="img/student-male-icon.jpg"
-                />
-                <div class="m-t-sm">
-                  2017-2021 B.E CSE 710311104035
-                </div>
-              </div>
-            </div>
-            <div class="col-8">
-              <h3 class="text-info"><strong>Sathishkumar</strong></h3>
-              <h5><strong>Subramaniam</strong></h5>
-              <label><i class="fa fa-phone m-r-sm"></i>+91 8344335123</label>
-              <label>
-                <i class="fa fa-envelope m-r-sm"></i>sathishk746@gmail.com
-              </label>
-              <div>
-                <strong>Credits</strong><br />
-                <span for="academics">
-                  Score : 78%
-                </span>
-                <span for="attendance">
-                  Attendance : 90%
-                </span>
+                <strong>Student Progress.</strong><br />
+                Academic Score : 78%<br />
+                Attendance : 90%<br />
               </div>
             </div>
           </a>

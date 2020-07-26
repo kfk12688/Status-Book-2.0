@@ -35,6 +35,12 @@ router.on({
   StudentsMarkDetails: () => {
     loadHTML("./views/viewStudentMarkDetails.html", "app");
   },
+  Article: () => {
+    loadHTML("./views/article.html", "app");
+  },
+  Paper: () => {
+    loadHTML("./views/paper.html", "app");
+  },
 });
 
 // set the default route
