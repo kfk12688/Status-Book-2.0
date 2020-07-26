@@ -41,6 +41,9 @@ router.on({
   Paper: () => {
     loadHTML("./views/paper.html", "app");
   },
+  StudentsAttendanceData: () => {
+    loadHTML("./views/studentsAttendanceData.html", "app");
+  },
 });
 
 // set the default route
