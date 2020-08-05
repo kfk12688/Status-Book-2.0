@@ -1,63 +1,57 @@
 <div>
   <div class="row border-bottom white-bg">
-    <div class="col-lg-12 m-t-xs border-bottom m-b-sm">
+    <div class="col-lg-12 m-t-xs">
       <i class="fa fa-group m-r-sm"></i>
       <label class="font-bold">Search Students Profiles</label>
-    </div>
-    <div class="col-lg-2">
-      <div class="form-group">
-        <select id="searchBatch" name="searchBatch" class="form-control">
-          <option value="">Select Batch</option>
-          <option value="" disabled class="text-danger">B.E/B.Tech</option>
-          <option value="2017_2021_be_btech">2017-2021</option>
-          <option value="2018_2022_be_btech">2018-2022</option>
-          <option value="2019_2023_be_btech">2019-2023</option>
-          <option value="2020_2024_be_btech">2020-2024</option>
-          <option value="" disabled class="text-danger">M.E/M.Tech</option>
-          <option value="2020_2024_me_mtech">2017-2019</option>
-          <option value="2020_2024_me_mtech">2018-2020</option>
-        </select>
+      <div class="float-right">
+        <a href="#" class="btn btn-primary btn-xs">
+          <i class="fa fa-angle-double-left m-r-xs"></i>
+          Back to Main
+        </a>
       </div>
     </div>
-    <div class="col-lg-3">
-      <div class="form-group">
-        <select
-          id="searchDepartment"
-          name="searchDepartment"
-          class="form-control"
+  </div>
+  <div class="row border-bottom white-bg">
+    <div class="col-lg-12 m-t-xs m-b-xs">
+      <div class="float-right">
+        <div class="input-group">
+          <input
+            type="search"
+            class="form-control form-control-sm"
+            title="Search Regno or Name"
+            placeholder="Search Here.."
+          />
+          <span class="input-group-append">
+            <button type="button" class="btn btn-primary btn-sm">
+              <i class="fa fa-search"></i>
+            </button>
+          </span>
+        </div>
+      </div>
+      <div class="float-right">
+        <a class="btn btn-white btn-sm" title="Refresh all Profiles">
+          <i class="fa fa-refresh"></i>
+        </a>
+        <a class="btn btn-white btn-sm" title="Academic Details of this Batch">
+          <i class="fa fa-book"></i>
+        </a>
+        <a
+          class="btn btn-white btn-sm"
+          title="Attendance Details of this Batch"
         >
-          <option value="">Select Department</option>
-          <option value="" disabled class="text-danger">B.E/B.Tech</option>
-          <option value="be_cse">CSE</option>
-          <option value="be_ece">ECE</option>
-          <option value="be_eee">EEE</option>
-          <option value="btech_mech">MECH</option>
-          <option value="btech_it">IT</option>
-          <option value="" disabled class="text-danger">M.E/M.Tech</option>
-          <option value="me_cse">CSE</option>
-        </select>
-      </div>
-    </div>
-    <span class="font-bold">Or</span>
-    <div class="col-lg-3">
-      <div class="form-group">
-        <input
-          type="number"
-          id="searchRegno"
-          name="searchRegno"
-          class="form-control"
-          placeholder="Search With Register Number"
-        />
-      </div>
-    </div>
-    <div class="col-lg-3">
-      <div class="form-group">
-        <button type="submit" class="btn btn-md btn-primary">
-          <strong>Search Profiles</strong>
-        </button>
-        <button type="reset" class="btn btn-md btn-default">
-          <strong>Reset</strong>
-        </button>
+          <i class="fa fa-calendar"></i>
+        </a>
+
+        <a class="btn btn-white btn-sm" title="Send Mail to this Batch">
+          <i class="fa fa-envelope"></i>
+        </a>
+
+        <a
+          class="btn btn-white btn-sm m-r-xs"
+          title="Download this profiles as CSV"
+        >
+          <i class="fa fa-download"></i>
+        </a>
       </div>
     </div>
   </div>
