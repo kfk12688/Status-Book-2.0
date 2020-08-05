@@ -179,7 +179,7 @@ function loadScript() {
 router = new Navigo(null, true, "#!");
 router.on({
   // 'app' is the id of the div element inside which we render the HTML
-  StudentsProfileList: () => {
+  "StudentsProfileList/:id/": () => {
     loadHTML("./views/studentsProfileList.html", "app");
   },
   StudentsProfiles: () => {
