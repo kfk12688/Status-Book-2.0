@@ -1,2469 +1,2436 @@
-<div class="row border-bottom white-bg">
-  <div class="col-lg-12 m-t-xs">
-    <i class="fa fa-group m-r-sm"></i>
-    <label class="font-bold">Students Attendance Data</label>
-  </div>
-</div>
-<div class="row border-bottom white-bg">
-  <div class="col-lg-12 m-t-xs">
-    <label class="font-bold">
-      <i class="fa fa-filter m-r-sm"></i>
-      Apply Filters to view Students Attendance Details
-    </label>
-  </div>
-  <div class="col-lg-2">
-    <div class="form-group">
-      <select id="searchBatch" name="searchBatch" class="form-control">
-        <option value="">Select Batch</option>
-        <option value="" disabled class="text-danger">B.E/B.Tech</option>
-        <option value="2017_2021_be_btech">2017-2021</option>
-        <option value="2018_2022_be_btech">2018-2022</option>
-        <option value="2019_2023_be_btech">2019-2023</option>
-        <option value="2020_2024_be_btech">2020-2024</option>
-        <option value="" disabled class="text-danger">M.E/M.Tech</option>
-        <option value="2020_2024_me_mtech">2017-2019</option>
-        <option value="2020_2024_me_mtech">2018-2020</option>
-      </select>
+<div>
+  <div class="row border-bottom white-bg">
+    <div class="col-lg-12 m-t-xs">
+      <i class="fa fa-group m-r-sm"></i>
+      <label class="font-bold">
+        Students Attendance - 2017-2021 CSE Department Attendance Details
+      </label>
+      <div class="float-right">
+        <a href="#" class="btn btn-primary btn-xs">
+          <i class="fa fa-angle-double-left m-r-xs"></i>
+          Back to Main
+        </a>
+      </div>
     </div>
   </div>
-  <div class="col-lg-2">
-    <div class="form-group">
-      <select
-        id="searchDepartment"
-        name="searchDepartment"
-        class="form-control"
-      >
-        <option value="">Select Dept</option>
-        <option value="" disabled class="text-danger">B.E/B.Tech</option>
-        <option value="be_cse">CSE</option>
-        <option value="be_ece">ECE</option>
-        <option value="be_eee">EEE</option>
-        <option value="btech_mech">MECH</option>
-        <option value="btech_it">IT</option>
-        <option value="" disabled class="text-danger">M.E/M.Tech</option>
-        <option value="me_cse">CSE</option>
-      </select>
-    </div>
-  </div>
-  <div class="col-lg-2">
-    <div class="form-group">
-      <select id="searchSemester" name="searchSemester" class="form-control">
-        <option value="">Select Semester</option>
-        <option value="be_cse">Sem 1</option>
-        <option value="be_cse">Sem 2</option>
-        <option value="be_cse">Sem 3</option>
-        <option value="be_cse">Sem 4</option>
-        <option value="be_cse">Sem 5</option>
-        <option value="be_cse">Sem 6</option>
-        <option value="be_cse">Sem 7</option>
-        <option value="be_cse">Sem 8</option>
-      </select>
-    </div>
-  </div>
-  <div class="col-lg-2">
-    <div class="form-group">
-      <select id="searchMonth" name="searchMonth" class="form-control">
-        <option value="">Select Month</option>
-        <option value="">Month 1</option>
-        <option value="">Month 2</option>
-        <option value="">Month 3</option>
-        <option value="">Month 4</option>
-        <option value="">Month 5</option>
-        <option value="">Month 6</option>
-      </select>
-    </div>
-  </div>
-  <div class="col-lg-3">
-    <div class="form-group">
-      <button type="submit" class="btn btn-md btn-primary">
-        <i class="fa fa-filter m-r-xs"></i>
-        <strong>Apply Filter</strong>
-      </button>
-      <button type="reset" class="btn btn-md btn-default">
-        <strong>Reset</strong>
-      </button>
-    </div>
-  </div>
-</div>
-<div class="wrapper wrapper-content">
-  <div class="row">
-    <div class="col-lg-12">
-      <div class="ibox">
-        <div class="ibox-title">
-          <h5>Students Attendance Details</h5>
+  <div class="row border-bottom white-bg">
+    <div class="col-lg-12 m-t-xs m-b-xs">
+      <div class="btn-group m-l-sm">
+        <button type="button" class="btn btn-primary btn-sm btn-outline">
+          <i class="fa fa-angle-left m-r-xs"></i>
+          Prev Sem
+        </button>
+        <button
+          data-toggle="dropdown"
+          class="btn btn-primary btn-sm btn-outline dropdown-toggle"
+        >
+          Select Sem
+        </button>
+        <ul class="dropdown-menu">
+          <li><a class="dropdown-item" href="#">Sem 1</a></li>
+          <li><a class="dropdown-item" href="#">Sem 2</a></li>
+          <li><a class="dropdown-item" href="#">Sem 3</a></li>
+          <li><a class="dropdown-item" href="#">Sem 4</a></li>
+          <li><a class="dropdown-item" href="#">Sem 5</a></li>
+          <li><a class="dropdown-item" href="#">Sem 6</a></li>
+          <li><a class="dropdown-item" href="#">Sem 7</a></li>
+        </ul>
+        <button type="button" class="btn btn-primary btn-sm btn-outline">
+          Next Sem
+          <i class="fa fa-angle-right m-l-xs"></i>
+        </button>
+      </div>
+      <div class="btn-group">
+        <button class="btn btn-success btn-outline btn-sm" type="button">
+          <i class="fa fa-angle-left m-r-xs"></i>
+          Prev Month
+        </button>
+        <button
+          data-toggle="dropdown"
+          class="btn btn-success dropdown-toggle btn-outline btn-sm"
+        >
+          Select Month
+        </button>
+        <ul class="dropdown-menu">
+          <li><a class="dropdown-item" href="#">2017-Aug</a></li>
+          <li><a class="dropdown-item" href="#">2017-Aug</a></li>
+          <li><a class="dropdown-item" href="#">2017-Sep</a></li>
+          <li><a class="dropdown-item" href="#">2017-Oct</a></li>
+          <li><a class="dropdown-item" href="#">2017-Nov</a></li>
+          <li><a class="dropdown-item" href="#">2017-Dec</a></li>
+          <li><a class="dropdown-item" href="#">2017-Jan</a></li>
+          <li><a class="dropdown-item" href="#">2017-Feb</a></li>
+        </ul>
+        <button class="btn btn-success btn-outline btn-sm" type="button">
+          Next Month
+          <i class="fa fa-angle-right m-l-xs"></i>
+        </button>
+      </div>
+      <div class="float-right">
+        <div class="input-group">
+          <input
+            type="search"
+            title="Search Regno or Name"
+            placeholder="Search Here.."
+            class="form-control form-control-sm"
+          />
+          <span class="input-group-append">
+            <button type="button" class="btn btn-primary btn-sm">
+              <i class="fa fa-search"></i>
+            </button>
+          </span>
         </div>
-        <div class="ibox-content">
-          <div class="row border-bottom">
-            <div class="col-sm-4 m-b-sm">
-              <div class="btn-group">
-                <button class="btn btn-primary" type="button">
-                  <i class="fa fa-angle-left m-r-xs"></i>
-                  Prev Month
-                </button>
-                <button
-                  data-toggle="dropdown"
-                  class="btn btn-primary dropdown-toggle"
-                >
-                  2017 - Nov
-                </button>
-                <ul class="dropdown-menu">
-                  <li><a class="dropdown-item" href="#">2017-Aug</a></li>
-                  <li><a class="dropdown-item" href="#">2017-Sep</a></li>
-                  <li><a class="dropdown-item" href="#">2017-Oct</a></li>
-                  <li><a class="dropdown-item" href="#">2017-Nov</a></li>
-                  <li><a class="dropdown-item" href="#">2017-Dec</a></li>
-                  <li><a class="dropdown-item" href="#">2017-Jan</a></li>
-                  <li><a class="dropdown-item" href="#">2017-Feb</a></li>
-                </ul>
-                <button class="btn btn-primary" type="button">
-                  Next Month
-                  <i class="fa fa-angle-right m-l-xs"></i>
-                </button>
-              </div>
-            </div>
-            <div class="col-sm-4">
-              <div class="float-right">
-                <button class="btn btn-outline btn-default">
-                  <i class="fa fa-refresh"></i>
-                </button>
-                <button class="btn btn-outline btn-default">
-                  <i class="fa fa-columns"></i>
-                </button>
-                <button class="btn btn-outline btn-default">
-                  <i class="fa fa-print"></i>
-                </button>
-                <button class="btn btn-outline btn-default">
-                  <i class="fa fa-download"></i>
-                </button>
-              </div>
-            </div>
-            <div class="col-sm-4">
-              <div class="input-group">
-                <input
-                  placeholder="Search"
-                  type="text"
-                  class="form-control form-control-md"
-                />
-                <span class="input-group-append">
-                  <button type="button" class="btn btn-sm btn-primary">
-                    Go!
-                  </button>
-                </span>
-              </div>
-            </div>
+      </div>
+      <div class="float-right">
+        <a class="btn btn-white btn-sm" title="Refresh Profile">
+          <i class="fa fa-refresh"></i>
+        </a>
+        <a
+          class="btn btn-white btn-sm"
+          title="Academic Details of this Student"
+        >
+          <i class="fa fa-book"></i>
+        </a>
+        <a
+          class="btn btn-white btn-sm"
+          title="Attendance Details of this Student"
+        >
+          <i class="fa fa-calendar"></i>
+        </a>
+        <a class="btn btn-white btn-sm" title="Send Mail to this Student">
+          <i class="fa fa-envelope"></i>
+        </a>
+        <a
+          class="btn btn-white btn-sm m-r-xs"
+          title="Download this profile as CSV"
+        >
+          <i class="fa fa-download"></i>
+        </a>
+      </div>
+    </div>
+  </div>
+  <div class="wrapper wrapper-content">
+    <div class="row">
+      <div class="col-lg-12">
+        <div class="ibox">
+          <div class="ibox-title">
+            <i class="fa fa-folder m-r-sm"></i>
+            <h5>Students Overall Attendance Details</h5>
           </div>
-          <div class="table-responsive m-t-sm">
-            <table class="table table-striped">
-              <thead>
-                <tr>
-                  <th><input type="checkbox" class="i-checks" name="" /></th>
-                  <th>Reg No</th>
-                  <th>Student Name</th>
-                  <th>Days Present</th>
-                  <th>Days Absent</th>
-                  <th>Days OnDuty</th>
-                  <th>1 M</th>
-                  <th>2 T</th>
-                  <th>3 W</th>
-                  <th>4 T</th>
-                  <th>5 F</th>
-                  <th>6 S</th>
-                  <th>7 S</th>
-                  <th>8 M</th>
-                  <th>9 T</th>
-                  <th>10 W</th>
-                  <th>11 T</th>
-                  <th>12 F</th>
-                  <th>13 S</th>
-                  <th>14 S</th>
-                  <th>15 M</th>
-                  <th>16 T</th>
-                  <th>17 W</th>
-                  <th>18 T</th>
-                  <th>19 F</th>
-                  <th>20 S</th>
-                  <th>21 S</th>
-                  <th>22 M</th>
-                  <th>23 T</th>
-                  <th>24 W</th>
-                  <th>25 T</th>
-                  <th>26 F</th>
-                  <th>27 S</th>
-                  <th>28 S</th>
-                  <th>29 M</th>
-                  <th>30 T</th>
-                  <th>31 W</th>
-                </tr>
-              </thead>
-              <tbody>
-                <tr>
-                  <td>
-                    <input type="checkbox" class="i-checks" name="" />
-                  </td>
-                  <td>710311104035</td>
-                  <td>Sathishkumar</td>
-                  <td>25</td>
-                  <td>1</td>
-                  <td>0</td>
-                  <td>
-                    <i class="fa fa-check text-navy"></i>
-                  </td>
-                  <td>
-                    <i class="fa fa-check text-navy"></i>
-                  </td>
-                  <td>
-                    <i class="fa fa-times text-danger"></i>
-                  </td>
-                  <td>
-                    <i class="fa fa-circle-o text-warning"></i>
-                  </td>
-                  <td>
-                    <i class="fa fa-check text-navy"></i>
-                  </td>
-                  <td>
-                    <i class="fa fa-check text-navy"></i>
-                  </td>
-                  <td>
-                    <i class="fa fa-header text-warning"></i>
-                  </td>
-                  <td>
-                    <i class="fa fa-check text-navy"></i>
-                  </td>
-                  <td>
-                    <i class="fa fa-check text-navy"></i>
-                  </td>
-                  <td>
-                    <i class="fa fa-check text-navy"></i>
-                  </td>
-                  <td>
-                    <i class="fa fa-check text-navy"></i>
-                  </td>
-                  <td>
-                    <i class="fa fa-check text-navy"></i>
-                  </td>
-                  <td>
-                    <i class="fa fa-check text-navy"></i>
-                  </td>
-                  <td>
-                    <i class="fa fa-header text-warning"></i>
-                  </td>
-                  <td>
-                    <i class="fa fa-check text-navy"></i>
-                  </td>
-                  <td>
-                    <i class="fa fa-check text-navy"></i>
-                  </td>
-                  <td>
-                    <i class="fa fa-check text-navy"></i>
-                  </td>
-                  <td>
-                    <i class="fa fa-check text-navy"></i>
-                  </td>
-                  <td>
-                    <i class="fa fa-check text-navy"></i>
-                  </td>
-                  <td>
-                    <i class="fa fa-check text-navy"></i>
-                  </td>
-                  <td>
-                    <i class="fa fa-header text-warning"></i>
-                  </td>
-                  <td>
-                    <i class="fa fa-check text-navy"></i>
-                  </td>
-                  <td>
-                    <i class="fa fa-check text-navy"></i>
-                  </td>
-                  <td>
-                    <i class="fa fa-check text-navy"></i>
-                  </td>
-                  <td>
-                    <i class="fa fa-check text-navy"></i>
-                  </td>
-                  <td>
-                    <i class="fa fa-check text-navy"></i>
-                  </td>
-                  <td>
-                    <i class="fa fa-check text-navy"></i>
-                  </td>
-                  <td>
-                    <i class="fa fa-header text-warning"></i>
-                  </td>
-                  <td>
-                    <i class="fa fa-check text-navy"></i>
-                  </td>
-                  <td>
-                    <i class="fa fa-check text-navy"></i>
-                  </td>
-                  <td>
-                    <i class="fa fa-check text-navy"></i>
-                  </td>
-                </tr>
-                <tr>
-                  <td>
-                    <input type="checkbox" class="i-checks" name="" />
-                  </td>
-                  <td>710311104035</td>
-                  <td>Sathishkumar</td>
-                  <td>25</td>
-                  <td>1</td>
-                  <td>0</td>
-                  <td>
-                    <i class="fa fa-check text-navy"></i>
-                  </td>
-                  <td>
-                    <i class="fa fa-check text-navy"></i>
-                  </td>
-                  <td>
-                    <i class="fa fa-times text-danger"></i>
-                  </td>
-                  <td>
-                    <i class="fa fa-check text-navy"></i>
-                  </td>
-                  <td>
-                    <i class="fa fa-check text-navy"></i>
-                  </td>
-                  <td>
-                    <i class="fa fa-check text-navy"></i>
-                  </td>
-                  <td>
-                    <i class="fa fa-header text-warning"></i>
-                  </td>
-                  <td>
-                    <i class="fa fa-check text-navy"></i>
-                  </td>
-                  <td>
-                    <i class="fa fa-check text-navy"></i>
-                  </td>
-                  <td>
-                    <i class="fa fa-check text-navy"></i>
-                  </td>
-                  <td>
-                    <i class="fa fa-check text-navy"></i>
-                  </td>
-                  <td>
-                    <i class="fa fa-check text-navy"></i>
-                  </td>
-                  <td>
-                    <i class="fa fa-check text-navy"></i>
-                  </td>
-                  <td>
-                    <i class="fa fa-header text-warning"></i>
-                  </td>
-                  <td>
-                    <i class="fa fa-check text-navy"></i>
-                  </td>
-                  <td>
-                    <i class="fa fa-check text-navy"></i>
-                  </td>
-                  <td>
-                    <i class="fa fa-check text-navy"></i>
-                  </td>
-                  <td>
-                    <i class="fa fa-check text-navy"></i>
-                  </td>
-                  <td>
-                    <i class="fa fa-check text-navy"></i>
-                  </td>
-                  <td>
-                    <i class="fa fa-check text-navy"></i>
-                  </td>
-                  <td>
-                    <i class="fa fa-header text-warning"></i>
-                  </td>
-                  <td>
-                    <i class="fa fa-check text-navy"></i>
-                  </td>
-                  <td>
-                    <i class="fa fa-check text-navy"></i>
-                  </td>
-                  <td>
-                    <i class="fa fa-check text-navy"></i>
-                  </td>
-                  <td>
-                    <i class="fa fa-check text-navy"></i>
-                  </td>
-                  <td>
-                    <i class="fa fa-check text-navy"></i>
-                  </td>
-                  <td>
-                    <i class="fa fa-check text-navy"></i>
-                  </td>
-                  <td>
-                    <i class="fa fa-header text-warning"></i>
-                  </td>
-                  <td>
-                    <i class="fa fa-check text-navy"></i>
-                  </td>
-                  <td>
-                    <i class="fa fa-check text-navy"></i>
-                  </td>
-                  <td>
-                    <i class="fa fa-check text-navy"></i>
-                  </td>
-                </tr>
-                <tr>
-                  <td>
-                    <input type="checkbox" class="i-checks" name="" />
-                  </td>
-                  <td>710311104035</td>
-                  <td>Sathishkumar</td>
-                  <td>25</td>
-                  <td>1</td>
-                  <td>0</td>
-                  <td>
-                    <i class="fa fa-check text-navy"></i>
-                  </td>
-                  <td>
-                    <i class="fa fa-check text-navy"></i>
-                  </td>
-                  <td>
-                    <i class="fa fa-times text-danger"></i>
-                  </td>
-                  <td>
-                    <i class="fa fa-check text-navy"></i>
-                  </td>
-                  <td>
-                    <i class="fa fa-check text-navy"></i>
-                  </td>
-                  <td>
-                    <i class="fa fa-check text-navy"></i>
-                  </td>
-                  <td>
-                    <i class="fa fa-header text-warning"></i>
-                  </td>
-                  <td>
-                    <i class="fa fa-check text-navy"></i>
-                  </td>
-                  <td>
-                    <i class="fa fa-check text-navy"></i>
-                  </td>
-                  <td>
-                    <i class="fa fa-check text-navy"></i>
-                  </td>
-                  <td>
-                    <i class="fa fa-check text-navy"></i>
-                  </td>
-                  <td>
-                    <i class="fa fa-check text-navy"></i>
-                  </td>
-                  <td>
-                    <i class="fa fa-check text-navy"></i>
-                  </td>
-                  <td>
-                    <i class="fa fa-header text-warning"></i>
-                  </td>
-                  <td>
-                    <i class="fa fa-check text-navy"></i>
-                  </td>
-                  <td>
-                    <i class="fa fa-check text-navy"></i>
-                  </td>
-                  <td>
-                    <i class="fa fa-check text-navy"></i>
-                  </td>
-                  <td>
-                    <i class="fa fa-check text-navy"></i>
-                  </td>
-                  <td>
-                    <i class="fa fa-check text-navy"></i>
-                  </td>
-                  <td>
-                    <i class="fa fa-check text-navy"></i>
-                  </td>
-                  <td>
-                    <i class="fa fa-header text-warning"></i>
-                  </td>
-                  <td>
-                    <i class="fa fa-check text-navy"></i>
-                  </td>
-                  <td>
-                    <i class="fa fa-check text-navy"></i>
-                  </td>
-                  <td>
-                    <i class="fa fa-check text-navy"></i>
-                  </td>
-                  <td>
-                    <i class="fa fa-check text-navy"></i>
-                  </td>
-                  <td>
-                    <i class="fa fa-check text-navy"></i>
-                  </td>
-                  <td>
-                    <i class="fa fa-check text-navy"></i>
-                  </td>
-                  <td>
-                    <i class="fa fa-header text-warning"></i>
-                  </td>
-                  <td>
-                    <i class="fa fa-check text-navy"></i>
-                  </td>
-                  <td>
-                    <i class="fa fa-check text-navy"></i>
-                  </td>
-                  <td>
-                    <i class="fa fa-check text-navy"></i>
-                  </td>
-                </tr>
-                <tr>
-                  <td>
-                    <input type="checkbox" class="i-checks" name="" />
-                  </td>
-                  <td>710311104035</td>
-                  <td>Sathishkumar</td>
-                  <td>25</td>
-                  <td>1</td>
-                  <td>0</td>
-                  <td>
-                    <i class="fa fa-check text-navy"></i>
-                  </td>
-                  <td>
-                    <i class="fa fa-check text-navy"></i>
-                  </td>
-                  <td>
-                    <i class="fa fa-times text-danger"></i>
-                  </td>
-                  <td>
-                    <i class="fa fa-check text-navy"></i>
-                  </td>
-                  <td>
-                    <i class="fa fa-check text-navy"></i>
-                  </td>
-                  <td>
-                    <i class="fa fa-check text-navy"></i>
-                  </td>
-                  <td>
-                    <i class="fa fa-header text-warning"></i>
-                  </td>
-                  <td>
-                    <i class="fa fa-check text-navy"></i>
-                  </td>
-                  <td>
-                    <i class="fa fa-check text-navy"></i>
-                  </td>
-                  <td>
-                    <i class="fa fa-check text-navy"></i>
-                  </td>
-                  <td>
-                    <i class="fa fa-check text-navy"></i>
-                  </td>
-                  <td>
-                    <i class="fa fa-check text-navy"></i>
-                  </td>
-                  <td>
-                    <i class="fa fa-check text-navy"></i>
-                  </td>
-                  <td>
-                    <i class="fa fa-header text-warning"></i>
-                  </td>
-                  <td>
-                    <i class="fa fa-check text-navy"></i>
-                  </td>
-                  <td>
-                    <i class="fa fa-check text-navy"></i>
-                  </td>
-                  <td>
-                    <i class="fa fa-check text-navy"></i>
-                  </td>
-                  <td>
-                    <i class="fa fa-check text-navy"></i>
-                  </td>
-                  <td>
-                    <i class="fa fa-check text-navy"></i>
-                  </td>
-                  <td>
-                    <i class="fa fa-check text-navy"></i>
-                  </td>
-                  <td>
-                    <i class="fa fa-header text-warning"></i>
-                  </td>
-                  <td>
-                    <i class="fa fa-check text-navy"></i>
-                  </td>
-                  <td>
-                    <i class="fa fa-check text-navy"></i>
-                  </td>
-                  <td>
-                    <i class="fa fa-check text-navy"></i>
-                  </td>
-                  <td>
-                    <i class="fa fa-check text-navy"></i>
-                  </td>
-                  <td>
-                    <i class="fa fa-check text-navy"></i>
-                  </td>
-                  <td>
-                    <i class="fa fa-check text-navy"></i>
-                  </td>
-                  <td>
-                    <i class="fa fa-header text-warning"></i>
-                  </td>
-                  <td>
-                    <i class="fa fa-check text-navy"></i>
-                  </td>
-                  <td>
-                    <i class="fa fa-check text-navy"></i>
-                  </td>
-                  <td>
-                    <i class="fa fa-check text-navy"></i>
-                  </td>
-                </tr>
-                <tr>
-                  <td>
-                    <input type="checkbox" class="i-checks" name="" />
-                  </td>
-                  <td>710311104035</td>
-                  <td>Sathishkumar</td>
-                  <td>25</td>
-                  <td>1</td>
-                  <td>0</td>
-                  <td>
-                    <i class="fa fa-check text-navy"></i>
-                  </td>
-                  <td>
-                    <i class="fa fa-check text-navy"></i>
-                  </td>
-                  <td>
-                    <i class="fa fa-times text-danger"></i>
-                  </td>
-                  <td>
-                    <i class="fa fa-check text-navy"></i>
-                  </td>
-                  <td>
-                    <i class="fa fa-check text-navy"></i>
-                  </td>
-                  <td>
-                    <i class="fa fa-check text-navy"></i>
-                  </td>
-                  <td>
-                    <i class="fa fa-header text-warning"></i>
-                  </td>
-                  <td>
-                    <i class="fa fa-check text-navy"></i>
-                  </td>
-                  <td>
-                    <i class="fa fa-check text-navy"></i>
-                  </td>
-                  <td>
-                    <i class="fa fa-check text-navy"></i>
-                  </td>
-                  <td>
-                    <i class="fa fa-check text-navy"></i>
-                  </td>
-                  <td>
-                    <i class="fa fa-check text-navy"></i>
-                  </td>
-                  <td>
-                    <i class="fa fa-check text-navy"></i>
-                  </td>
-                  <td>
-                    <i class="fa fa-header text-warning"></i>
-                  </td>
-                  <td>
-                    <i class="fa fa-check text-navy"></i>
-                  </td>
-                  <td>
-                    <i class="fa fa-check text-navy"></i>
-                  </td>
-                  <td>
-                    <i class="fa fa-check text-navy"></i>
-                  </td>
-                  <td>
-                    <i class="fa fa-check text-navy"></i>
-                  </td>
-                  <td>
-                    <i class="fa fa-check text-navy"></i>
-                  </td>
-                  <td>
-                    <i class="fa fa-check text-navy"></i>
-                  </td>
-                  <td>
-                    <i class="fa fa-header text-warning"></i>
-                  </td>
-                  <td>
-                    <i class="fa fa-check text-navy"></i>
-                  </td>
-                  <td>
-                    <i class="fa fa-check text-navy"></i>
-                  </td>
-                  <td>
-                    <i class="fa fa-check text-navy"></i>
-                  </td>
-                  <td>
-                    <i class="fa fa-check text-navy"></i>
-                  </td>
-                  <td>
-                    <i class="fa fa-check text-navy"></i>
-                  </td>
-                  <td>
-                    <i class="fa fa-check text-navy"></i>
-                  </td>
-                  <td>
-                    <i class="fa fa-header text-warning"></i>
-                  </td>
-                  <td>
-                    <i class="fa fa-check text-navy"></i>
-                  </td>
-                  <td>
-                    <i class="fa fa-check text-navy"></i>
-                  </td>
-                  <td>
-                    <i class="fa fa-check text-navy"></i>
-                  </td>
-                </tr>
-                <tr>
-                  <td>
-                    <input type="checkbox" class="i-checks" name="" />
-                  </td>
-                  <td>710311104035</td>
-                  <td>Sathishkumar</td>
-                  <td>25</td>
-                  <td>1</td>
-                  <td>0</td>
-                  <td>
-                    <i class="fa fa-check text-navy"></i>
-                  </td>
-                  <td>
-                    <i class="fa fa-check text-navy"></i>
-                  </td>
-                  <td>
-                    <i class="fa fa-times text-danger"></i>
-                  </td>
-                  <td>
-                    <i class="fa fa-check text-navy"></i>
-                  </td>
-                  <td>
-                    <i class="fa fa-check text-navy"></i>
-                  </td>
-                  <td>
-                    <i class="fa fa-check text-navy"></i>
-                  </td>
-                  <td>
-                    <i class="fa fa-header text-warning"></i>
-                  </td>
-                  <td>
-                    <i class="fa fa-check text-navy"></i>
-                  </td>
-                  <td>
-                    <i class="fa fa-check text-navy"></i>
-                  </td>
-                  <td>
-                    <i class="fa fa-check text-navy"></i>
-                  </td>
-                  <td>
-                    <i class="fa fa-check text-navy"></i>
-                  </td>
-                  <td>
-                    <i class="fa fa-check text-navy"></i>
-                  </td>
-                  <td>
-                    <i class="fa fa-check text-navy"></i>
-                  </td>
-                  <td>
-                    <i class="fa fa-header text-warning"></i>
-                  </td>
-                  <td>
-                    <i class="fa fa-check text-navy"></i>
-                  </td>
-                  <td>
-                    <i class="fa fa-check text-navy"></i>
-                  </td>
-                  <td>
-                    <i class="fa fa-check text-navy"></i>
-                  </td>
-                  <td>
-                    <i class="fa fa-check text-navy"></i>
-                  </td>
-                  <td>
-                    <i class="fa fa-check text-navy"></i>
-                  </td>
-                  <td>
-                    <i class="fa fa-check text-navy"></i>
-                  </td>
-                  <td>
-                    <i class="fa fa-header text-warning"></i>
-                  </td>
-                  <td>
-                    <i class="fa fa-check text-navy"></i>
-                  </td>
-                  <td>
-                    <i class="fa fa-check text-navy"></i>
-                  </td>
-                  <td>
-                    <i class="fa fa-check text-navy"></i>
-                  </td>
-                  <td>
-                    <i class="fa fa-check text-navy"></i>
-                  </td>
-                  <td>
-                    <i class="fa fa-check text-navy"></i>
-                  </td>
-                  <td>
-                    <i class="fa fa-check text-navy"></i>
-                  </td>
-                  <td>
-                    <i class="fa fa-header text-warning"></i>
-                  </td>
-                  <td>
-                    <i class="fa fa-check text-navy"></i>
-                  </td>
-                  <td>
-                    <i class="fa fa-check text-navy"></i>
-                  </td>
-                  <td>
-                    <i class="fa fa-check text-navy"></i>
-                  </td>
-                </tr>
-                <tr>
-                  <td>
-                    <input type="checkbox" class="i-checks" name="" />
-                  </td>
-                  <td>710311104035</td>
-                  <td>Sathishkumar</td>
-                  <td>25</td>
-                  <td>1</td>
-                  <td>0</td>
-                  <td>
-                    <i class="fa fa-check text-navy"></i>
-                  </td>
-                  <td>
-                    <i class="fa fa-check text-navy"></i>
-                  </td>
-                  <td>
-                    <i class="fa fa-times text-danger"></i>
-                  </td>
-                  <td>
-                    <i class="fa fa-check text-navy"></i>
-                  </td>
-                  <td>
-                    <i class="fa fa-check text-navy"></i>
-                  </td>
-                  <td>
-                    <i class="fa fa-check text-navy"></i>
-                  </td>
-                  <td>
-                    <i class="fa fa-header text-warning"></i>
-                  </td>
-                  <td>
-                    <i class="fa fa-check text-navy"></i>
-                  </td>
-                  <td>
-                    <i class="fa fa-check text-navy"></i>
-                  </td>
-                  <td>
-                    <i class="fa fa-check text-navy"></i>
-                  </td>
-                  <td>
-                    <i class="fa fa-check text-navy"></i>
-                  </td>
-                  <td>
-                    <i class="fa fa-check text-navy"></i>
-                  </td>
-                  <td>
-                    <i class="fa fa-check text-navy"></i>
-                  </td>
-                  <td>
-                    <i class="fa fa-header text-warning"></i>
-                  </td>
-                  <td>
-                    <i class="fa fa-check text-navy"></i>
-                  </td>
-                  <td>
-                    <i class="fa fa-check text-navy"></i>
-                  </td>
-                  <td>
-                    <i class="fa fa-check text-navy"></i>
-                  </td>
-                  <td>
-                    <i class="fa fa-check text-navy"></i>
-                  </td>
-                  <td>
-                    <i class="fa fa-check text-navy"></i>
-                  </td>
-                  <td>
-                    <i class="fa fa-check text-navy"></i>
-                  </td>
-                  <td>
-                    <i class="fa fa-header text-warning"></i>
-                  </td>
-                  <td>
-                    <i class="fa fa-check text-navy"></i>
-                  </td>
-                  <td>
-                    <i class="fa fa-check text-navy"></i>
-                  </td>
-                  <td>
-                    <i class="fa fa-check text-navy"></i>
-                  </td>
-                  <td>
-                    <i class="fa fa-check text-navy"></i>
-                  </td>
-                  <td>
-                    <i class="fa fa-check text-navy"></i>
-                  </td>
-                  <td>
-                    <i class="fa fa-check text-navy"></i>
-                  </td>
-                  <td>
-                    <i class="fa fa-header text-warning"></i>
-                  </td>
-                  <td>
-                    <i class="fa fa-check text-navy"></i>
-                  </td>
-                  <td>
-                    <i class="fa fa-check text-navy"></i>
-                  </td>
-                  <td>
-                    <i class="fa fa-check text-navy"></i>
-                  </td>
-                </tr>
-                <tr>
-                  <td>
-                    <input type="checkbox" class="i-checks" name="" />
-                  </td>
-                  <td>710311104035</td>
-                  <td>Sathishkumar</td>
-                  <td>25</td>
-                  <td>1</td>
-                  <td>0</td>
-                  <td>
-                    <i class="fa fa-check text-navy"></i>
-                  </td>
-                  <td>
-                    <i class="fa fa-check text-navy"></i>
-                  </td>
-                  <td>
-                    <i class="fa fa-times text-danger"></i>
-                  </td>
-                  <td>
-                    <i class="fa fa-check text-navy"></i>
-                  </td>
-                  <td>
-                    <i class="fa fa-check text-navy"></i>
-                  </td>
-                  <td>
-                    <i class="fa fa-check text-navy"></i>
-                  </td>
-                  <td>
-                    <i class="fa fa-header text-warning"></i>
-                  </td>
-                  <td>
-                    <i class="fa fa-check text-navy"></i>
-                  </td>
-                  <td>
-                    <i class="fa fa-check text-navy"></i>
-                  </td>
-                  <td>
-                    <i class="fa fa-check text-navy"></i>
-                  </td>
-                  <td>
-                    <i class="fa fa-check text-navy"></i>
-                  </td>
-                  <td>
-                    <i class="fa fa-check text-navy"></i>
-                  </td>
-                  <td>
-                    <i class="fa fa-check text-navy"></i>
-                  </td>
-                  <td>
-                    <i class="fa fa-header text-warning"></i>
-                  </td>
-                  <td>
-                    <i class="fa fa-check text-navy"></i>
-                  </td>
-                  <td>
-                    <i class="fa fa-check text-navy"></i>
-                  </td>
-                  <td>
-                    <i class="fa fa-check text-navy"></i>
-                  </td>
-                  <td>
-                    <i class="fa fa-check text-navy"></i>
-                  </td>
-                  <td>
-                    <i class="fa fa-check text-navy"></i>
-                  </td>
-                  <td>
-                    <i class="fa fa-check text-navy"></i>
-                  </td>
-                  <td>
-                    <i class="fa fa-header text-warning"></i>
-                  </td>
-                  <td>
-                    <i class="fa fa-check text-navy"></i>
-                  </td>
-                  <td>
-                    <i class="fa fa-check text-navy"></i>
-                  </td>
-                  <td>
-                    <i class="fa fa-check text-navy"></i>
-                  </td>
-                  <td>
-                    <i class="fa fa-check text-navy"></i>
-                  </td>
-                  <td>
-                    <i class="fa fa-check text-navy"></i>
-                  </td>
-                  <td>
-                    <i class="fa fa-check text-navy"></i>
-                  </td>
-                  <td>
-                    <i class="fa fa-header text-warning"></i>
-                  </td>
-                  <td>
-                    <i class="fa fa-check text-navy"></i>
-                  </td>
-                  <td>
-                    <i class="fa fa-check text-navy"></i>
-                  </td>
-                  <td>
-                    <i class="fa fa-check text-navy"></i>
-                  </td>
-                </tr>
-                <tr>
-                  <td>
-                    <input type="checkbox" class="i-checks" name="" />
-                  </td>
-                  <td>710311104035</td>
-                  <td>Sathishkumar</td>
-                  <td>25</td>
-                  <td>1</td>
-                  <td>0</td>
-                  <td>
-                    <i class="fa fa-check text-navy"></i>
-                  </td>
-                  <td>
-                    <i class="fa fa-check text-navy"></i>
-                  </td>
-                  <td>
-                    <i class="fa fa-times text-danger"></i>
-                  </td>
-                  <td>
-                    <i class="fa fa-check text-navy"></i>
-                  </td>
-                  <td>
-                    <i class="fa fa-check text-navy"></i>
-                  </td>
-                  <td>
-                    <i class="fa fa-check text-navy"></i>
-                  </td>
-                  <td>
-                    <i class="fa fa-header text-warning"></i>
-                  </td>
-                  <td>
-                    <i class="fa fa-check text-navy"></i>
-                  </td>
-                  <td>
-                    <i class="fa fa-check text-navy"></i>
-                  </td>
-                  <td>
-                    <i class="fa fa-check text-navy"></i>
-                  </td>
-                  <td>
-                    <i class="fa fa-check text-navy"></i>
-                  </td>
-                  <td>
-                    <i class="fa fa-check text-navy"></i>
-                  </td>
-                  <td>
-                    <i class="fa fa-check text-navy"></i>
-                  </td>
-                  <td>
-                    <i class="fa fa-header text-warning"></i>
-                  </td>
-                  <td>
-                    <i class="fa fa-check text-navy"></i>
-                  </td>
-                  <td>
-                    <i class="fa fa-check text-navy"></i>
-                  </td>
-                  <td>
-                    <i class="fa fa-check text-navy"></i>
-                  </td>
-                  <td>
-                    <i class="fa fa-check text-navy"></i>
-                  </td>
-                  <td>
-                    <i class="fa fa-check text-navy"></i>
-                  </td>
-                  <td>
-                    <i class="fa fa-check text-navy"></i>
-                  </td>
-                  <td>
-                    <i class="fa fa-header text-warning"></i>
-                  </td>
-                  <td>
-                    <i class="fa fa-check text-navy"></i>
-                  </td>
-                  <td>
-                    <i class="fa fa-check text-navy"></i>
-                  </td>
-                  <td>
-                    <i class="fa fa-check text-navy"></i>
-                  </td>
-                  <td>
-                    <i class="fa fa-check text-navy"></i>
-                  </td>
-                  <td>
-                    <i class="fa fa-check text-navy"></i>
-                  </td>
-                  <td>
-                    <i class="fa fa-check text-navy"></i>
-                  </td>
-                  <td>
-                    <i class="fa fa-header text-warning"></i>
-                  </td>
-                  <td>
-                    <i class="fa fa-check text-navy"></i>
-                  </td>
-                  <td>
-                    <i class="fa fa-check text-navy"></i>
-                  </td>
-                  <td>
-                    <i class="fa fa-check text-navy"></i>
-                  </td>
-                </tr>
-                <tr>
-                  <td>
-                    <input type="checkbox" class="i-checks" name="" />
-                  </td>
-                  <td>710311104035</td>
-                  <td>Sathishkumar</td>
-                  <td>25</td>
-                  <td>1</td>
-                  <td>0</td>
-                  <td>
-                    <i class="fa fa-check text-navy"></i>
-                  </td>
-                  <td>
-                    <i class="fa fa-check text-navy"></i>
-                  </td>
-                  <td>
-                    <i class="fa fa-times text-danger"></i>
-                  </td>
-                  <td>
-                    <i class="fa fa-check text-navy"></i>
-                  </td>
-                  <td>
-                    <i class="fa fa-check text-navy"></i>
-                  </td>
-                  <td>
-                    <i class="fa fa-check text-navy"></i>
-                  </td>
-                  <td>
-                    <i class="fa fa-header text-warning"></i>
-                  </td>
-                  <td>
-                    <i class="fa fa-check text-navy"></i>
-                  </td>
-                  <td>
-                    <i class="fa fa-check text-navy"></i>
-                  </td>
-                  <td>
-                    <i class="fa fa-check text-navy"></i>
-                  </td>
-                  <td>
-                    <i class="fa fa-check text-navy"></i>
-                  </td>
-                  <td>
-                    <i class="fa fa-check text-navy"></i>
-                  </td>
-                  <td>
-                    <i class="fa fa-check text-navy"></i>
-                  </td>
-                  <td>
-                    <i class="fa fa-header text-warning"></i>
-                  </td>
-                  <td>
-                    <i class="fa fa-check text-navy"></i>
-                  </td>
-                  <td>
-                    <i class="fa fa-check text-navy"></i>
-                  </td>
-                  <td>
-                    <i class="fa fa-check text-navy"></i>
-                  </td>
-                  <td>
-                    <i class="fa fa-check text-navy"></i>
-                  </td>
-                  <td>
-                    <i class="fa fa-check text-navy"></i>
-                  </td>
-                  <td>
-                    <i class="fa fa-check text-navy"></i>
-                  </td>
-                  <td>
-                    <i class="fa fa-header text-warning"></i>
-                  </td>
-                  <td>
-                    <i class="fa fa-check text-navy"></i>
-                  </td>
-                  <td>
-                    <i class="fa fa-check text-navy"></i>
-                  </td>
-                  <td>
-                    <i class="fa fa-check text-navy"></i>
-                  </td>
-                  <td>
-                    <i class="fa fa-check text-navy"></i>
-                  </td>
-                  <td>
-                    <i class="fa fa-check text-navy"></i>
-                  </td>
-                  <td>
-                    <i class="fa fa-check text-navy"></i>
-                  </td>
-                  <td>
-                    <i class="fa fa-header text-warning"></i>
-                  </td>
-                  <td>
-                    <i class="fa fa-check text-navy"></i>
-                  </td>
-                  <td>
-                    <i class="fa fa-check text-navy"></i>
-                  </td>
-                  <td>
-                    <i class="fa fa-check text-navy"></i>
-                  </td>
-                </tr>
-                <tr>
-                  <td>
-                    <input type="checkbox" class="i-checks" name="" />
-                  </td>
-                  <td>710311104035</td>
-                  <td>Sathishkumar</td>
-                  <td>25</td>
-                  <td>1</td>
-                  <td>0</td>
-                  <td>
-                    <i class="fa fa-check text-navy"></i>
-                  </td>
-                  <td>
-                    <i class="fa fa-check text-navy"></i>
-                  </td>
-                  <td>
-                    <i class="fa fa-times text-danger"></i>
-                  </td>
-                  <td>
-                    <i class="fa fa-check text-navy"></i>
-                  </td>
-                  <td>
-                    <i class="fa fa-check text-navy"></i>
-                  </td>
-                  <td>
-                    <i class="fa fa-check text-navy"></i>
-                  </td>
-                  <td>
-                    <i class="fa fa-header text-warning"></i>
-                  </td>
-                  <td>
-                    <i class="fa fa-check text-navy"></i>
-                  </td>
-                  <td>
-                    <i class="fa fa-check text-navy"></i>
-                  </td>
-                  <td>
-                    <i class="fa fa-check text-navy"></i>
-                  </td>
-                  <td>
-                    <i class="fa fa-check text-navy"></i>
-                  </td>
-                  <td>
-                    <i class="fa fa-check text-navy"></i>
-                  </td>
-                  <td>
-                    <i class="fa fa-check text-navy"></i>
-                  </td>
-                  <td>
-                    <i class="fa fa-header text-warning"></i>
-                  </td>
-                  <td>
-                    <i class="fa fa-check text-navy"></i>
-                  </td>
-                  <td>
-                    <i class="fa fa-check text-navy"></i>
-                  </td>
-                  <td>
-                    <i class="fa fa-check text-navy"></i>
-                  </td>
-                  <td>
-                    <i class="fa fa-check text-navy"></i>
-                  </td>
-                  <td>
-                    <i class="fa fa-check text-navy"></i>
-                  </td>
-                  <td>
-                    <i class="fa fa-check text-navy"></i>
-                  </td>
-                  <td>
-                    <i class="fa fa-header text-warning"></i>
-                  </td>
-                  <td>
-                    <i class="fa fa-check text-navy"></i>
-                  </td>
-                  <td>
-                    <i class="fa fa-check text-navy"></i>
-                  </td>
-                  <td>
-                    <i class="fa fa-check text-navy"></i>
-                  </td>
-                  <td>
-                    <i class="fa fa-check text-navy"></i>
-                  </td>
-                  <td>
-                    <i class="fa fa-check text-navy"></i>
-                  </td>
-                  <td>
-                    <i class="fa fa-check text-navy"></i>
-                  </td>
-                  <td>
-                    <i class="fa fa-header text-warning"></i>
-                  </td>
-                  <td>
-                    <i class="fa fa-check text-navy"></i>
-                  </td>
-                  <td>
-                    <i class="fa fa-check text-navy"></i>
-                  </td>
-                  <td>
-                    <i class="fa fa-check text-navy"></i>
-                  </td>
-                </tr>
-                <tr>
-                  <td>
-                    <input type="checkbox" class="i-checks" name="" />
-                  </td>
-                  <td>710311104035</td>
-                  <td>Sathishkumar</td>
-                  <td>25</td>
-                  <td>1</td>
-                  <td>0</td>
-                  <td>
-                    <i class="fa fa-check text-navy"></i>
-                  </td>
-                  <td>
-                    <i class="fa fa-check text-navy"></i>
-                  </td>
-                  <td>
-                    <i class="fa fa-times text-danger"></i>
-                  </td>
-                  <td>
-                    <i class="fa fa-check text-navy"></i>
-                  </td>
-                  <td>
-                    <i class="fa fa-check text-navy"></i>
-                  </td>
-                  <td>
-                    <i class="fa fa-check text-navy"></i>
-                  </td>
-                  <td>
-                    <i class="fa fa-header text-warning"></i>
-                  </td>
-                  <td>
-                    <i class="fa fa-check text-navy"></i>
-                  </td>
-                  <td>
-                    <i class="fa fa-check text-navy"></i>
-                  </td>
-                  <td>
-                    <i class="fa fa-check text-navy"></i>
-                  </td>
-                  <td>
-                    <i class="fa fa-check text-navy"></i>
-                  </td>
-                  <td>
-                    <i class="fa fa-check text-navy"></i>
-                  </td>
-                  <td>
-                    <i class="fa fa-check text-navy"></i>
-                  </td>
-                  <td>
-                    <i class="fa fa-header text-warning"></i>
-                  </td>
-                  <td>
-                    <i class="fa fa-check text-navy"></i>
-                  </td>
-                  <td>
-                    <i class="fa fa-check text-navy"></i>
-                  </td>
-                  <td>
-                    <i class="fa fa-check text-navy"></i>
-                  </td>
-                  <td>
-                    <i class="fa fa-check text-navy"></i>
-                  </td>
-                  <td>
-                    <i class="fa fa-check text-navy"></i>
-                  </td>
-                  <td>
-                    <i class="fa fa-check text-navy"></i>
-                  </td>
-                  <td>
-                    <i class="fa fa-header text-warning"></i>
-                  </td>
-                  <td>
-                    <i class="fa fa-check text-navy"></i>
-                  </td>
-                  <td>
-                    <i class="fa fa-check text-navy"></i>
-                  </td>
-                  <td>
-                    <i class="fa fa-check text-navy"></i>
-                  </td>
-                  <td>
-                    <i class="fa fa-check text-navy"></i>
-                  </td>
-                  <td>
-                    <i class="fa fa-check text-navy"></i>
-                  </td>
-                  <td>
-                    <i class="fa fa-check text-navy"></i>
-                  </td>
-                  <td>
-                    <i class="fa fa-header text-warning"></i>
-                  </td>
-                  <td>
-                    <i class="fa fa-check text-navy"></i>
-                  </td>
-                  <td>
-                    <i class="fa fa-check text-navy"></i>
-                  </td>
-                  <td>
-                    <i class="fa fa-check text-navy"></i>
-                  </td>
-                </tr>
-                <tr>
-                  <td>
-                    <input type="checkbox" class="i-checks" name="" />
-                  </td>
-                  <td>710311104035</td>
-                  <td>Sathishkumar</td>
-                  <td>25</td>
-                  <td>1</td>
-                  <td>0</td>
-                  <td>
-                    <i class="fa fa-check text-navy"></i>
-                  </td>
-                  <td>
-                    <i class="fa fa-check text-navy"></i>
-                  </td>
-                  <td>
-                    <i class="fa fa-times text-danger"></i>
-                  </td>
-                  <td>
-                    <i class="fa fa-check text-navy"></i>
-                  </td>
-                  <td>
-                    <i class="fa fa-check text-navy"></i>
-                  </td>
-                  <td>
-                    <i class="fa fa-check text-navy"></i>
-                  </td>
-                  <td>
-                    <i class="fa fa-header text-warning"></i>
-                  </td>
-                  <td>
-                    <i class="fa fa-check text-navy"></i>
-                  </td>
-                  <td>
-                    <i class="fa fa-check text-navy"></i>
-                  </td>
-                  <td>
-                    <i class="fa fa-check text-navy"></i>
-                  </td>
-                  <td>
-                    <i class="fa fa-check text-navy"></i>
-                  </td>
-                  <td>
-                    <i class="fa fa-check text-navy"></i>
-                  </td>
-                  <td>
-                    <i class="fa fa-check text-navy"></i>
-                  </td>
-                  <td>
-                    <i class="fa fa-header text-warning"></i>
-                  </td>
-                  <td>
-                    <i class="fa fa-check text-navy"></i>
-                  </td>
-                  <td>
-                    <i class="fa fa-check text-navy"></i>
-                  </td>
-                  <td>
-                    <i class="fa fa-check text-navy"></i>
-                  </td>
-                  <td>
-                    <i class="fa fa-check text-navy"></i>
-                  </td>
-                  <td>
-                    <i class="fa fa-check text-navy"></i>
-                  </td>
-                  <td>
-                    <i class="fa fa-check text-navy"></i>
-                  </td>
-                  <td>
-                    <i class="fa fa-header text-warning"></i>
-                  </td>
-                  <td>
-                    <i class="fa fa-check text-navy"></i>
-                  </td>
-                  <td>
-                    <i class="fa fa-check text-navy"></i>
-                  </td>
-                  <td>
-                    <i class="fa fa-check text-navy"></i>
-                  </td>
-                  <td>
-                    <i class="fa fa-check text-navy"></i>
-                  </td>
-                  <td>
-                    <i class="fa fa-check text-navy"></i>
-                  </td>
-                  <td>
-                    <i class="fa fa-check text-navy"></i>
-                  </td>
-                  <td>
-                    <i class="fa fa-header text-warning"></i>
-                  </td>
-                  <td>
-                    <i class="fa fa-check text-navy"></i>
-                  </td>
-                  <td>
-                    <i class="fa fa-check text-navy"></i>
-                  </td>
-                  <td>
-                    <i class="fa fa-check text-navy"></i>
-                  </td>
-                </tr>
-                <tr>
-                  <td>
-                    <input type="checkbox" class="i-checks" name="" />
-                  </td>
-                  <td>710311104035</td>
-                  <td>Sathishkumar</td>
-                  <td>25</td>
-                  <td>1</td>
-                  <td>0</td>
-                  <td>
-                    <i class="fa fa-check text-navy"></i>
-                  </td>
-                  <td>
-                    <i class="fa fa-check text-navy"></i>
-                  </td>
-                  <td>
-                    <i class="fa fa-times text-danger"></i>
-                  </td>
-                  <td>
-                    <i class="fa fa-check text-navy"></i>
-                  </td>
-                  <td>
-                    <i class="fa fa-check text-navy"></i>
-                  </td>
-                  <td>
-                    <i class="fa fa-check text-navy"></i>
-                  </td>
-                  <td>
-                    <i class="fa fa-header text-warning"></i>
-                  </td>
-                  <td>
-                    <i class="fa fa-check text-navy"></i>
-                  </td>
-                  <td>
-                    <i class="fa fa-check text-navy"></i>
-                  </td>
-                  <td>
-                    <i class="fa fa-check text-navy"></i>
-                  </td>
-                  <td>
-                    <i class="fa fa-check text-navy"></i>
-                  </td>
-                  <td>
-                    <i class="fa fa-check text-navy"></i>
-                  </td>
-                  <td>
-                    <i class="fa fa-check text-navy"></i>
-                  </td>
-                  <td>
-                    <i class="fa fa-header text-warning"></i>
-                  </td>
-                  <td>
-                    <i class="fa fa-check text-navy"></i>
-                  </td>
-                  <td>
-                    <i class="fa fa-check text-navy"></i>
-                  </td>
-                  <td>
-                    <i class="fa fa-check text-navy"></i>
-                  </td>
-                  <td>
-                    <i class="fa fa-check text-navy"></i>
-                  </td>
-                  <td>
-                    <i class="fa fa-check text-navy"></i>
-                  </td>
-                  <td>
-                    <i class="fa fa-check text-navy"></i>
-                  </td>
-                  <td>
-                    <i class="fa fa-header text-warning"></i>
-                  </td>
-                  <td>
-                    <i class="fa fa-check text-navy"></i>
-                  </td>
-                  <td>
-                    <i class="fa fa-check text-navy"></i>
-                  </td>
-                  <td>
-                    <i class="fa fa-check text-navy"></i>
-                  </td>
-                  <td>
-                    <i class="fa fa-check text-navy"></i>
-                  </td>
-                  <td>
-                    <i class="fa fa-check text-navy"></i>
-                  </td>
-                  <td>
-                    <i class="fa fa-check text-navy"></i>
-                  </td>
-                  <td>
-                    <i class="fa fa-header text-warning"></i>
-                  </td>
-                  <td>
-                    <i class="fa fa-check text-navy"></i>
-                  </td>
-                  <td>
-                    <i class="fa fa-check text-navy"></i>
-                  </td>
-                  <td>
-                    <i class="fa fa-check text-navy"></i>
-                  </td>
-                </tr>
-                <tr>
-                  <td>
-                    <input type="checkbox" class="i-checks" name="" />
-                  </td>
-                  <td>710311104035</td>
-                  <td>Sathishkumar</td>
-                  <td>25</td>
-                  <td>1</td>
-                  <td>0</td>
-                  <td>
-                    <i class="fa fa-check text-navy"></i>
-                  </td>
-                  <td>
-                    <i class="fa fa-check text-navy"></i>
-                  </td>
-                  <td>
-                    <i class="fa fa-times text-danger"></i>
-                  </td>
-                  <td>
-                    <i class="fa fa-check text-navy"></i>
-                  </td>
-                  <td>
-                    <i class="fa fa-check text-navy"></i>
-                  </td>
-                  <td>
-                    <i class="fa fa-check text-navy"></i>
-                  </td>
-                  <td>
-                    <i class="fa fa-header text-warning"></i>
-                  </td>
-                  <td>
-                    <i class="fa fa-check text-navy"></i>
-                  </td>
-                  <td>
-                    <i class="fa fa-check text-navy"></i>
-                  </td>
-                  <td>
-                    <i class="fa fa-check text-navy"></i>
-                  </td>
-                  <td>
-                    <i class="fa fa-check text-navy"></i>
-                  </td>
-                  <td>
-                    <i class="fa fa-check text-navy"></i>
-                  </td>
-                  <td>
-                    <i class="fa fa-check text-navy"></i>
-                  </td>
-                  <td>
-                    <i class="fa fa-header text-warning"></i>
-                  </td>
-                  <td>
-                    <i class="fa fa-check text-navy"></i>
-                  </td>
-                  <td>
-                    <i class="fa fa-check text-navy"></i>
-                  </td>
-                  <td>
-                    <i class="fa fa-check text-navy"></i>
-                  </td>
-                  <td>
-                    <i class="fa fa-check text-navy"></i>
-                  </td>
-                  <td>
-                    <i class="fa fa-check text-navy"></i>
-                  </td>
-                  <td>
-                    <i class="fa fa-check text-navy"></i>
-                  </td>
-                  <td>
-                    <i class="fa fa-header text-warning"></i>
-                  </td>
-                  <td>
-                    <i class="fa fa-check text-navy"></i>
-                  </td>
-                  <td>
-                    <i class="fa fa-check text-navy"></i>
-                  </td>
-                  <td>
-                    <i class="fa fa-check text-navy"></i>
-                  </td>
-                  <td>
-                    <i class="fa fa-check text-navy"></i>
-                  </td>
-                  <td>
-                    <i class="fa fa-check text-navy"></i>
-                  </td>
-                  <td>
-                    <i class="fa fa-check text-navy"></i>
-                  </td>
-                  <td>
-                    <i class="fa fa-header text-warning"></i>
-                  </td>
-                  <td>
-                    <i class="fa fa-check text-navy"></i>
-                  </td>
-                  <td>
-                    <i class="fa fa-check text-navy"></i>
-                  </td>
-                  <td>
-                    <i class="fa fa-check text-navy"></i>
-                  </td>
-                </tr>
-                <tr>
-                  <td>
-                    <input type="checkbox" class="i-checks" name="" />
-                  </td>
-                  <td>710311104035</td>
-                  <td>Sathishkumar</td>
-                  <td>25</td>
-                  <td>1</td>
-                  <td>0</td>
-                  <td>
-                    <i class="fa fa-check text-navy"></i>
-                  </td>
-                  <td>
-                    <i class="fa fa-check text-navy"></i>
-                  </td>
-                  <td>
-                    <i class="fa fa-times text-danger"></i>
-                  </td>
-                  <td>
-                    <i class="fa fa-check text-navy"></i>
-                  </td>
-                  <td>
-                    <i class="fa fa-check text-navy"></i>
-                  </td>
-                  <td>
-                    <i class="fa fa-check text-navy"></i>
-                  </td>
-                  <td>
-                    <i class="fa fa-header text-warning"></i>
-                  </td>
-                  <td>
-                    <i class="fa fa-check text-navy"></i>
-                  </td>
-                  <td>
-                    <i class="fa fa-check text-navy"></i>
-                  </td>
-                  <td>
-                    <i class="fa fa-check text-navy"></i>
-                  </td>
-                  <td>
-                    <i class="fa fa-check text-navy"></i>
-                  </td>
-                  <td>
-                    <i class="fa fa-check text-navy"></i>
-                  </td>
-                  <td>
-                    <i class="fa fa-check text-navy"></i>
-                  </td>
-                  <td>
-                    <i class="fa fa-header text-warning"></i>
-                  </td>
-                  <td>
-                    <i class="fa fa-check text-navy"></i>
-                  </td>
-                  <td>
-                    <i class="fa fa-check text-navy"></i>
-                  </td>
-                  <td>
-                    <i class="fa fa-check text-navy"></i>
-                  </td>
-                  <td>
-                    <i class="fa fa-check text-navy"></i>
-                  </td>
-                  <td>
-                    <i class="fa fa-check text-navy"></i>
-                  </td>
-                  <td>
-                    <i class="fa fa-check text-navy"></i>
-                  </td>
-                  <td>
-                    <i class="fa fa-header text-warning"></i>
-                  </td>
-                  <td>
-                    <i class="fa fa-check text-navy"></i>
-                  </td>
-                  <td>
-                    <i class="fa fa-check text-navy"></i>
-                  </td>
-                  <td>
-                    <i class="fa fa-check text-navy"></i>
-                  </td>
-                  <td>
-                    <i class="fa fa-check text-navy"></i>
-                  </td>
-                  <td>
-                    <i class="fa fa-check text-navy"></i>
-                  </td>
-                  <td>
-                    <i class="fa fa-check text-navy"></i>
-                  </td>
-                  <td>
-                    <i class="fa fa-header text-warning"></i>
-                  </td>
-                  <td>
-                    <i class="fa fa-check text-navy"></i>
-                  </td>
-                  <td>
-                    <i class="fa fa-check text-navy"></i>
-                  </td>
-                  <td>
-                    <i class="fa fa-check text-navy"></i>
-                  </td>
-                </tr>
-                <tr>
-                  <td>
-                    <input type="checkbox" class="i-checks" name="" />
-                  </td>
-                  <td>710311104035</td>
-                  <td>Sathishkumar</td>
-                  <td>25</td>
-                  <td>1</td>
-                  <td>0</td>
-                  <td>
-                    <i class="fa fa-check text-navy"></i>
-                  </td>
-                  <td>
-                    <i class="fa fa-check text-navy"></i>
-                  </td>
-                  <td>
-                    <i class="fa fa-times text-danger"></i>
-                  </td>
-                  <td>
-                    <i class="fa fa-check text-navy"></i>
-                  </td>
-                  <td>
-                    <i class="fa fa-check text-navy"></i>
-                  </td>
-                  <td>
-                    <i class="fa fa-check text-navy"></i>
-                  </td>
-                  <td>
-                    <i class="fa fa-header text-warning"></i>
-                  </td>
-                  <td>
-                    <i class="fa fa-check text-navy"></i>
-                  </td>
-                  <td>
-                    <i class="fa fa-check text-navy"></i>
-                  </td>
-                  <td>
-                    <i class="fa fa-check text-navy"></i>
-                  </td>
-                  <td>
-                    <i class="fa fa-check text-navy"></i>
-                  </td>
-                  <td>
-                    <i class="fa fa-check text-navy"></i>
-                  </td>
-                  <td>
-                    <i class="fa fa-check text-navy"></i>
-                  </td>
-                  <td>
-                    <i class="fa fa-header text-warning"></i>
-                  </td>
-                  <td>
-                    <i class="fa fa-check text-navy"></i>
-                  </td>
-                  <td>
-                    <i class="fa fa-check text-navy"></i>
-                  </td>
-                  <td>
-                    <i class="fa fa-check text-navy"></i>
-                  </td>
-                  <td>
-                    <i class="fa fa-check text-navy"></i>
-                  </td>
-                  <td>
-                    <i class="fa fa-check text-navy"></i>
-                  </td>
-                  <td>
-                    <i class="fa fa-check text-navy"></i>
-                  </td>
-                  <td>
-                    <i class="fa fa-header text-warning"></i>
-                  </td>
-                  <td>
-                    <i class="fa fa-check text-navy"></i>
-                  </td>
-                  <td>
-                    <i class="fa fa-check text-navy"></i>
-                  </td>
-                  <td>
-                    <i class="fa fa-check text-navy"></i>
-                  </td>
-                  <td>
-                    <i class="fa fa-check text-navy"></i>
-                  </td>
-                  <td>
-                    <i class="fa fa-check text-navy"></i>
-                  </td>
-                  <td>
-                    <i class="fa fa-check text-navy"></i>
-                  </td>
-                  <td>
-                    <i class="fa fa-header text-warning"></i>
-                  </td>
-                  <td>
-                    <i class="fa fa-check text-navy"></i>
-                  </td>
-                  <td>
-                    <i class="fa fa-check text-navy"></i>
-                  </td>
-                  <td>
-                    <i class="fa fa-check text-navy"></i>
-                  </td>
-                </tr>
-                <tr>
-                  <td>
-                    <input type="checkbox" class="i-checks" name="" />
-                  </td>
-                  <td>710311104035</td>
-                  <td>Sathishkumar</td>
-                  <td>25</td>
-                  <td>1</td>
-                  <td>0</td>
-                  <td>
-                    <i class="fa fa-check text-navy"></i>
-                  </td>
-                  <td>
-                    <i class="fa fa-check text-navy"></i>
-                  </td>
-                  <td>
-                    <i class="fa fa-times text-danger"></i>
-                  </td>
-                  <td>
-                    <i class="fa fa-check text-navy"></i>
-                  </td>
-                  <td>
-                    <i class="fa fa-check text-navy"></i>
-                  </td>
-                  <td>
-                    <i class="fa fa-check text-navy"></i>
-                  </td>
-                  <td>
-                    <i class="fa fa-header text-warning"></i>
-                  </td>
-                  <td>
-                    <i class="fa fa-check text-navy"></i>
-                  </td>
-                  <td>
-                    <i class="fa fa-check text-navy"></i>
-                  </td>
-                  <td>
-                    <i class="fa fa-check text-navy"></i>
-                  </td>
-                  <td>
-                    <i class="fa fa-check text-navy"></i>
-                  </td>
-                  <td>
-                    <i class="fa fa-check text-navy"></i>
-                  </td>
-                  <td>
-                    <i class="fa fa-check text-navy"></i>
-                  </td>
-                  <td>
-                    <i class="fa fa-header text-warning"></i>
-                  </td>
-                  <td>
-                    <i class="fa fa-check text-navy"></i>
-                  </td>
-                  <td>
-                    <i class="fa fa-check text-navy"></i>
-                  </td>
-                  <td>
-                    <i class="fa fa-check text-navy"></i>
-                  </td>
-                  <td>
-                    <i class="fa fa-check text-navy"></i>
-                  </td>
-                  <td>
-                    <i class="fa fa-check text-navy"></i>
-                  </td>
-                  <td>
-                    <i class="fa fa-check text-navy"></i>
-                  </td>
-                  <td>
-                    <i class="fa fa-header text-warning"></i>
-                  </td>
-                  <td>
-                    <i class="fa fa-check text-navy"></i>
-                  </td>
-                  <td>
-                    <i class="fa fa-check text-navy"></i>
-                  </td>
-                  <td>
-                    <i class="fa fa-check text-navy"></i>
-                  </td>
-                  <td>
-                    <i class="fa fa-check text-navy"></i>
-                  </td>
-                  <td>
-                    <i class="fa fa-check text-navy"></i>
-                  </td>
-                  <td>
-                    <i class="fa fa-check text-navy"></i>
-                  </td>
-                  <td>
-                    <i class="fa fa-header text-warning"></i>
-                  </td>
-                  <td>
-                    <i class="fa fa-check text-navy"></i>
-                  </td>
-                  <td>
-                    <i class="fa fa-check text-navy"></i>
-                  </td>
-                  <td>
-                    <i class="fa fa-check text-navy"></i>
-                  </td>
-                </tr>
-                <tr>
-                  <td>
-                    <input type="checkbox" class="i-checks" name="" />
-                  </td>
-                  <td>710311104035</td>
-                  <td>Sathishkumar</td>
-                  <td>25</td>
-                  <td>1</td>
-                  <td>0</td>
-                  <td>
-                    <i class="fa fa-check text-navy"></i>
-                  </td>
-                  <td>
-                    <i class="fa fa-check text-navy"></i>
-                  </td>
-                  <td>
-                    <i class="fa fa-times text-danger"></i>
-                  </td>
-                  <td>
-                    <i class="fa fa-check text-navy"></i>
-                  </td>
-                  <td>
-                    <i class="fa fa-check text-navy"></i>
-                  </td>
-                  <td>
-                    <i class="fa fa-check text-navy"></i>
-                  </td>
-                  <td>
-                    <i class="fa fa-header text-warning"></i>
-                  </td>
-                  <td>
-                    <i class="fa fa-check text-navy"></i>
-                  </td>
-                  <td>
-                    <i class="fa fa-check text-navy"></i>
-                  </td>
-                  <td>
-                    <i class="fa fa-check text-navy"></i>
-                  </td>
-                  <td>
-                    <i class="fa fa-check text-navy"></i>
-                  </td>
-                  <td>
-                    <i class="fa fa-check text-navy"></i>
-                  </td>
-                  <td>
-                    <i class="fa fa-check text-navy"></i>
-                  </td>
-                  <td>
-                    <i class="fa fa-header text-warning"></i>
-                  </td>
-                  <td>
-                    <i class="fa fa-check text-navy"></i>
-                  </td>
-                  <td>
-                    <i class="fa fa-check text-navy"></i>
-                  </td>
-                  <td>
-                    <i class="fa fa-check text-navy"></i>
-                  </td>
-                  <td>
-                    <i class="fa fa-check text-navy"></i>
-                  </td>
-                  <td>
-                    <i class="fa fa-check text-navy"></i>
-                  </td>
-                  <td>
-                    <i class="fa fa-check text-navy"></i>
-                  </td>
-                  <td>
-                    <i class="fa fa-header text-warning"></i>
-                  </td>
-                  <td>
-                    <i class="fa fa-check text-navy"></i>
-                  </td>
-                  <td>
-                    <i class="fa fa-check text-navy"></i>
-                  </td>
-                  <td>
-                    <i class="fa fa-check text-navy"></i>
-                  </td>
-                  <td>
-                    <i class="fa fa-check text-navy"></i>
-                  </td>
-                  <td>
-                    <i class="fa fa-check text-navy"></i>
-                  </td>
-                  <td>
-                    <i class="fa fa-check text-navy"></i>
-                  </td>
-                  <td>
-                    <i class="fa fa-header text-warning"></i>
-                  </td>
-                  <td>
-                    <i class="fa fa-check text-navy"></i>
-                  </td>
-                  <td>
-                    <i class="fa fa-check text-navy"></i>
-                  </td>
-                  <td>
-                    <i class="fa fa-check text-navy"></i>
-                  </td>
-                </tr>
-                <tr>
-                  <td>
-                    <input type="checkbox" class="i-checks" name="" />
-                  </td>
-                  <td>710311104035</td>
-                  <td>Sathishkumar</td>
-                  <td>25</td>
-                  <td>1</td>
-                  <td>0</td>
-                  <td>
-                    <i class="fa fa-check text-navy"></i>
-                  </td>
-                  <td>
-                    <i class="fa fa-check text-navy"></i>
-                  </td>
-                  <td>
-                    <i class="fa fa-times text-danger"></i>
-                  </td>
-                  <td>
-                    <i class="fa fa-check text-navy"></i>
-                  </td>
-                  <td>
-                    <i class="fa fa-check text-navy"></i>
-                  </td>
-                  <td>
-                    <i class="fa fa-check text-navy"></i>
-                  </td>
-                  <td>
-                    <i class="fa fa-header text-warning"></i>
-                  </td>
-                  <td>
-                    <i class="fa fa-check text-navy"></i>
-                  </td>
-                  <td>
-                    <i class="fa fa-check text-navy"></i>
-                  </td>
-                  <td>
-                    <i class="fa fa-check text-navy"></i>
-                  </td>
-                  <td>
-                    <i class="fa fa-check text-navy"></i>
-                  </td>
-                  <td>
-                    <i class="fa fa-check text-navy"></i>
-                  </td>
-                  <td>
-                    <i class="fa fa-check text-navy"></i>
-                  </td>
-                  <td>
-                    <i class="fa fa-header text-warning"></i>
-                  </td>
-                  <td>
-                    <i class="fa fa-check text-navy"></i>
-                  </td>
-                  <td>
-                    <i class="fa fa-check text-navy"></i>
-                  </td>
-                  <td>
-                    <i class="fa fa-check text-navy"></i>
-                  </td>
-                  <td>
-                    <i class="fa fa-check text-navy"></i>
-                  </td>
-                  <td>
-                    <i class="fa fa-check text-navy"></i>
-                  </td>
-                  <td>
-                    <i class="fa fa-check text-navy"></i>
-                  </td>
-                  <td>
-                    <i class="fa fa-header text-warning"></i>
-                  </td>
-                  <td>
-                    <i class="fa fa-check text-navy"></i>
-                  </td>
-                  <td>
-                    <i class="fa fa-check text-navy"></i>
-                  </td>
-                  <td>
-                    <i class="fa fa-check text-navy"></i>
-                  </td>
-                  <td>
-                    <i class="fa fa-check text-navy"></i>
-                  </td>
-                  <td>
-                    <i class="fa fa-check text-navy"></i>
-                  </td>
-                  <td>
-                    <i class="fa fa-check text-navy"></i>
-                  </td>
-                  <td>
-                    <i class="fa fa-header text-warning"></i>
-                  </td>
-                  <td>
-                    <i class="fa fa-check text-navy"></i>
-                  </td>
-                  <td>
-                    <i class="fa fa-check text-navy"></i>
-                  </td>
-                  <td>
-                    <i class="fa fa-check text-navy"></i>
-                  </td>
-                </tr>
-                <tr>
-                  <td>
-                    <input type="checkbox" class="i-checks" name="" />
-                  </td>
-                  <td>710311104035</td>
-                  <td>Sathishkumar</td>
-                  <td>25</td>
-                  <td>1</td>
-                  <td>0</td>
-                  <td>
-                    <i class="fa fa-check text-navy"></i>
-                  </td>
-                  <td>
-                    <i class="fa fa-check text-navy"></i>
-                  </td>
-                  <td>
-                    <i class="fa fa-times text-danger"></i>
-                  </td>
-                  <td>
-                    <i class="fa fa-check text-navy"></i>
-                  </td>
-                  <td>
-                    <i class="fa fa-check text-navy"></i>
-                  </td>
-                  <td>
-                    <i class="fa fa-check text-navy"></i>
-                  </td>
-                  <td>
-                    <i class="fa fa-header text-warning"></i>
-                  </td>
-                  <td>
-                    <i class="fa fa-check text-navy"></i>
-                  </td>
-                  <td>
-                    <i class="fa fa-check text-navy"></i>
-                  </td>
-                  <td>
-                    <i class="fa fa-check text-navy"></i>
-                  </td>
-                  <td>
-                    <i class="fa fa-check text-navy"></i>
-                  </td>
-                  <td>
-                    <i class="fa fa-check text-navy"></i>
-                  </td>
-                  <td>
-                    <i class="fa fa-check text-navy"></i>
-                  </td>
-                  <td>
-                    <i class="fa fa-header text-warning"></i>
-                  </td>
-                  <td>
-                    <i class="fa fa-check text-navy"></i>
-                  </td>
-                  <td>
-                    <i class="fa fa-check text-navy"></i>
-                  </td>
-                  <td>
-                    <i class="fa fa-check text-navy"></i>
-                  </td>
-                  <td>
-                    <i class="fa fa-check text-navy"></i>
-                  </td>
-                  <td>
-                    <i class="fa fa-check text-navy"></i>
-                  </td>
-                  <td>
-                    <i class="fa fa-check text-navy"></i>
-                  </td>
-                  <td>
-                    <i class="fa fa-header text-warning"></i>
-                  </td>
-                  <td>
-                    <i class="fa fa-check text-navy"></i>
-                  </td>
-                  <td>
-                    <i class="fa fa-check text-navy"></i>
-                  </td>
-                  <td>
-                    <i class="fa fa-check text-navy"></i>
-                  </td>
-                  <td>
-                    <i class="fa fa-check text-navy"></i>
-                  </td>
-                  <td>
-                    <i class="fa fa-check text-navy"></i>
-                  </td>
-                  <td>
-                    <i class="fa fa-check text-navy"></i>
-                  </td>
-                  <td>
-                    <i class="fa fa-header text-warning"></i>
-                  </td>
-                  <td>
-                    <i class="fa fa-check text-navy"></i>
-                  </td>
-                  <td>
-                    <i class="fa fa-check text-navy"></i>
-                  </td>
-                  <td>
-                    <i class="fa fa-check text-navy"></i>
-                  </td>
-                </tr>
-                <tr>
-                  <td>
-                    <input type="checkbox" class="i-checks" name="" />
-                  </td>
-                  <td>710311104035</td>
-                  <td>Sathishkumar</td>
-                  <td>25</td>
-                  <td>1</td>
-                  <td>0</td>
-                  <td>
-                    <i class="fa fa-check text-navy"></i>
-                  </td>
-                  <td>
-                    <i class="fa fa-check text-navy"></i>
-                  </td>
-                  <td>
-                    <i class="fa fa-times text-danger"></i>
-                  </td>
-                  <td>
-                    <i class="fa fa-check text-navy"></i>
-                  </td>
-                  <td>
-                    <i class="fa fa-check text-navy"></i>
-                  </td>
-                  <td>
-                    <i class="fa fa-check text-navy"></i>
-                  </td>
-                  <td>
-                    <i class="fa fa-header text-warning"></i>
-                  </td>
-                  <td>
-                    <i class="fa fa-check text-navy"></i>
-                  </td>
-                  <td>
-                    <i class="fa fa-check text-navy"></i>
-                  </td>
-                  <td>
-                    <i class="fa fa-check text-navy"></i>
-                  </td>
-                  <td>
-                    <i class="fa fa-check text-navy"></i>
-                  </td>
-                  <td>
-                    <i class="fa fa-check text-navy"></i>
-                  </td>
-                  <td>
-                    <i class="fa fa-check text-navy"></i>
-                  </td>
-                  <td>
-                    <i class="fa fa-header text-warning"></i>
-                  </td>
-                  <td>
-                    <i class="fa fa-check text-navy"></i>
-                  </td>
-                  <td>
-                    <i class="fa fa-check text-navy"></i>
-                  </td>
-                  <td>
-                    <i class="fa fa-check text-navy"></i>
-                  </td>
-                  <td>
-                    <i class="fa fa-check text-navy"></i>
-                  </td>
-                  <td>
-                    <i class="fa fa-check text-navy"></i>
-                  </td>
-                  <td>
-                    <i class="fa fa-check text-navy"></i>
-                  </td>
-                  <td>
-                    <i class="fa fa-header text-warning"></i>
-                  </td>
-                  <td>
-                    <i class="fa fa-check text-navy"></i>
-                  </td>
-                  <td>
-                    <i class="fa fa-check text-navy"></i>
-                  </td>
-                  <td>
-                    <i class="fa fa-check text-navy"></i>
-                  </td>
-                  <td>
-                    <i class="fa fa-check text-navy"></i>
-                  </td>
-                  <td>
-                    <i class="fa fa-check text-navy"></i>
-                  </td>
-                  <td>
-                    <i class="fa fa-check text-navy"></i>
-                  </td>
-                  <td>
-                    <i class="fa fa-header text-warning"></i>
-                  </td>
-                  <td>
-                    <i class="fa fa-check text-navy"></i>
-                  </td>
-                  <td>
-                    <i class="fa fa-check text-navy"></i>
-                  </td>
-                  <td>
-                    <i class="fa fa-check text-navy"></i>
-                  </td>
-                </tr>
-              </tbody>
-            </table>
+          <div class="ibox-content">
+            <div class="table-responsive m-t-sm">
+              <table class="table table-striped">
+                <thead>
+                  <tr>
+                    <th><input type="checkbox" class="i-checks" name="" /></th>
+                    <th>Reg No</th>
+                    <th>Student Name</th>
+                    <th>Days Present</th>
+                    <th>Days Absent</th>
+                    <th>Days OnDuty</th>
+                    <th>1 M</th>
+                    <th>2 T</th>
+                    <th>3 W</th>
+                    <th>4 T</th>
+                    <th>5 F</th>
+                    <th>6 S</th>
+                    <th>7 S</th>
+                    <th>8 M</th>
+                    <th>9 T</th>
+                    <th>10 W</th>
+                    <th>11 T</th>
+                    <th>12 F</th>
+                    <th>13 S</th>
+                    <th>14 S</th>
+                    <th>15 M</th>
+                    <th>16 T</th>
+                    <th>17 W</th>
+                    <th>18 T</th>
+                    <th>19 F</th>
+                    <th>20 S</th>
+                    <th>21 S</th>
+                    <th>22 M</th>
+                    <th>23 T</th>
+                    <th>24 W</th>
+                    <th>25 T</th>
+                    <th>26 F</th>
+                    <th>27 S</th>
+                    <th>28 S</th>
+                    <th>29 M</th>
+                    <th>30 T</th>
+                    <th>31 W</th>
+                  </tr>
+                </thead>
+                <tbody>
+                  <tr>
+                    <td>
+                      <input type="checkbox" class="i-checks" name="" />
+                    </td>
+                    <td>710311104035</td>
+                    <td>Sathishkumar</td>
+                    <td>25</td>
+                    <td>1</td>
+                    <td>0</td>
+                    <td>
+                      <i class="fa fa-check text-navy"></i>
+                    </td>
+                    <td>
+                      <i class="fa fa-check text-navy"></i>
+                    </td>
+                    <td>
+                      <i class="fa fa-times text-danger"></i>
+                    </td>
+                    <td>
+                      <i class="fa fa-circle-o text-warning"></i>
+                    </td>
+                    <td>
+                      <i class="fa fa-check text-navy"></i>
+                    </td>
+                    <td>
+                      <i class="fa fa-check text-navy"></i>
+                    </td>
+                    <td>
+                      <i class="fa fa-header text-warning"></i>
+                    </td>
+                    <td>
+                      <i class="fa fa-check text-navy"></i>
+                    </td>
+                    <td>
+                      <i class="fa fa-check text-navy"></i>
+                    </td>
+                    <td>
+                      <i class="fa fa-check text-navy"></i>
+                    </td>
+                    <td>
+                      <i class="fa fa-check text-navy"></i>
+                    </td>
+                    <td>
+                      <i class="fa fa-check text-navy"></i>
+                    </td>
+                    <td>
+                      <i class="fa fa-check text-navy"></i>
+                    </td>
+                    <td>
+                      <i class="fa fa-header text-warning"></i>
+                    </td>
+                    <td>
+                      <i class="fa fa-check text-navy"></i>
+                    </td>
+                    <td>
+                      <i class="fa fa-check text-navy"></i>
+                    </td>
+                    <td>
+                      <i class="fa fa-check text-navy"></i>
+                    </td>
+                    <td>
+                      <i class="fa fa-check text-navy"></i>
+                    </td>
+                    <td>
+                      <i class="fa fa-check text-navy"></i>
+                    </td>
+                    <td>
+                      <i class="fa fa-check text-navy"></i>
+                    </td>
+                    <td>
+                      <i class="fa fa-header text-warning"></i>
+                    </td>
+                    <td>
+                      <i class="fa fa-check text-navy"></i>
+                    </td>
+                    <td>
+                      <i class="fa fa-check text-navy"></i>
+                    </td>
+                    <td>
+                      <i class="fa fa-check text-navy"></i>
+                    </td>
+                    <td>
+                      <i class="fa fa-check text-navy"></i>
+                    </td>
+                    <td>
+                      <i class="fa fa-check text-navy"></i>
+                    </td>
+                    <td>
+                      <i class="fa fa-check text-navy"></i>
+                    </td>
+                    <td>
+                      <i class="fa fa-header text-warning"></i>
+                    </td>
+                    <td>
+                      <i class="fa fa-check text-navy"></i>
+                    </td>
+                    <td>
+                      <i class="fa fa-check text-navy"></i>
+                    </td>
+                    <td>
+                      <i class="fa fa-check text-navy"></i>
+                    </td>
+                  </tr>
+                  <tr>
+                    <td>
+                      <input type="checkbox" class="i-checks" name="" />
+                    </td>
+                    <td>710311104035</td>
+                    <td>Sathishkumar</td>
+                    <td>25</td>
+                    <td>1</td>
+                    <td>0</td>
+                    <td>
+                      <i class="fa fa-check text-navy"></i>
+                    </td>
+                    <td>
+                      <i class="fa fa-check text-navy"></i>
+                    </td>
+                    <td>
+                      <i class="fa fa-times text-danger"></i>
+                    </td>
+                    <td>
+                      <i class="fa fa-check text-navy"></i>
+                    </td>
+                    <td>
+                      <i class="fa fa-check text-navy"></i>
+                    </td>
+                    <td>
+                      <i class="fa fa-check text-navy"></i>
+                    </td>
+                    <td>
+                      <i class="fa fa-header text-warning"></i>
+                    </td>
+                    <td>
+                      <i class="fa fa-check text-navy"></i>
+                    </td>
+                    <td>
+                      <i class="fa fa-check text-navy"></i>
+                    </td>
+                    <td>
+                      <i class="fa fa-check text-navy"></i>
+                    </td>
+                    <td>
+                      <i class="fa fa-check text-navy"></i>
+                    </td>
+                    <td>
+                      <i class="fa fa-check text-navy"></i>
+                    </td>
+                    <td>
+                      <i class="fa fa-check text-navy"></i>
+                    </td>
+                    <td>
+                      <i class="fa fa-header text-warning"></i>
+                    </td>
+                    <td>
+                      <i class="fa fa-check text-navy"></i>
+                    </td>
+                    <td>
+                      <i class="fa fa-check text-navy"></i>
+                    </td>
+                    <td>
+                      <i class="fa fa-check text-navy"></i>
+                    </td>
+                    <td>
+                      <i class="fa fa-check text-navy"></i>
+                    </td>
+                    <td>
+                      <i class="fa fa-check text-navy"></i>
+                    </td>
+                    <td>
+                      <i class="fa fa-check text-navy"></i>
+                    </td>
+                    <td>
+                      <i class="fa fa-header text-warning"></i>
+                    </td>
+                    <td>
+                      <i class="fa fa-check text-navy"></i>
+                    </td>
+                    <td>
+                      <i class="fa fa-check text-navy"></i>
+                    </td>
+                    <td>
+                      <i class="fa fa-check text-navy"></i>
+                    </td>
+                    <td>
+                      <i class="fa fa-check text-navy"></i>
+                    </td>
+                    <td>
+                      <i class="fa fa-check text-navy"></i>
+                    </td>
+                    <td>
+                      <i class="fa fa-check text-navy"></i>
+                    </td>
+                    <td>
+                      <i class="fa fa-header text-warning"></i>
+                    </td>
+                    <td>
+                      <i class="fa fa-check text-navy"></i>
+                    </td>
+                    <td>
+                      <i class="fa fa-check text-navy"></i>
+                    </td>
+                    <td>
+                      <i class="fa fa-check text-navy"></i>
+                    </td>
+                  </tr>
+                  <tr>
+                    <td>
+                      <input type="checkbox" class="i-checks" name="" />
+                    </td>
+                    <td>710311104035</td>
+                    <td>Sathishkumar</td>
+                    <td>25</td>
+                    <td>1</td>
+                    <td>0</td>
+                    <td>
+                      <i class="fa fa-check text-navy"></i>
+                    </td>
+                    <td>
+                      <i class="fa fa-check text-navy"></i>
+                    </td>
+                    <td>
+                      <i class="fa fa-times text-danger"></i>
+                    </td>
+                    <td>
+                      <i class="fa fa-check text-navy"></i>
+                    </td>
+                    <td>
+                      <i class="fa fa-check text-navy"></i>
+                    </td>
+                    <td>
+                      <i class="fa fa-check text-navy"></i>
+                    </td>
+                    <td>
+                      <i class="fa fa-header text-warning"></i>
+                    </td>
+                    <td>
+                      <i class="fa fa-check text-navy"></i>
+                    </td>
+                    <td>
+                      <i class="fa fa-check text-navy"></i>
+                    </td>
+                    <td>
+                      <i class="fa fa-check text-navy"></i>
+                    </td>
+                    <td>
+                      <i class="fa fa-check text-navy"></i>
+                    </td>
+                    <td>
+                      <i class="fa fa-check text-navy"></i>
+                    </td>
+                    <td>
+                      <i class="fa fa-check text-navy"></i>
+                    </td>
+                    <td>
+                      <i class="fa fa-header text-warning"></i>
+                    </td>
+                    <td>
+                      <i class="fa fa-check text-navy"></i>
+                    </td>
+                    <td>
+                      <i class="fa fa-check text-navy"></i>
+                    </td>
+                    <td>
+                      <i class="fa fa-check text-navy"></i>
+                    </td>
+                    <td>
+                      <i class="fa fa-check text-navy"></i>
+                    </td>
+                    <td>
+                      <i class="fa fa-check text-navy"></i>
+                    </td>
+                    <td>
+                      <i class="fa fa-check text-navy"></i>
+                    </td>
+                    <td>
+                      <i class="fa fa-header text-warning"></i>
+                    </td>
+                    <td>
+                      <i class="fa fa-check text-navy"></i>
+                    </td>
+                    <td>
+                      <i class="fa fa-check text-navy"></i>
+                    </td>
+                    <td>
+                      <i class="fa fa-check text-navy"></i>
+                    </td>
+                    <td>
+                      <i class="fa fa-check text-navy"></i>
+                    </td>
+                    <td>
+                      <i class="fa fa-check text-navy"></i>
+                    </td>
+                    <td>
+                      <i class="fa fa-check text-navy"></i>
+                    </td>
+                    <td>
+                      <i class="fa fa-header text-warning"></i>
+                    </td>
+                    <td>
+                      <i class="fa fa-check text-navy"></i>
+                    </td>
+                    <td>
+                      <i class="fa fa-check text-navy"></i>
+                    </td>
+                    <td>
+                      <i class="fa fa-check text-navy"></i>
+                    </td>
+                  </tr>
+                  <tr>
+                    <td>
+                      <input type="checkbox" class="i-checks" name="" />
+                    </td>
+                    <td>710311104035</td>
+                    <td>Sathishkumar</td>
+                    <td>25</td>
+                    <td>1</td>
+                    <td>0</td>
+                    <td>
+                      <i class="fa fa-check text-navy"></i>
+                    </td>
+                    <td>
+                      <i class="fa fa-check text-navy"></i>
+                    </td>
+                    <td>
+                      <i class="fa fa-times text-danger"></i>
+                    </td>
+                    <td>
+                      <i class="fa fa-check text-navy"></i>
+                    </td>
+                    <td>
+                      <i class="fa fa-check text-navy"></i>
+                    </td>
+                    <td>
+                      <i class="fa fa-check text-navy"></i>
+                    </td>
+                    <td>
+                      <i class="fa fa-header text-warning"></i>
+                    </td>
+                    <td>
+                      <i class="fa fa-check text-navy"></i>
+                    </td>
+                    <td>
+                      <i class="fa fa-check text-navy"></i>
+                    </td>
+                    <td>
+                      <i class="fa fa-check text-navy"></i>
+                    </td>
+                    <td>
+                      <i class="fa fa-check text-navy"></i>
+                    </td>
+                    <td>
+                      <i class="fa fa-check text-navy"></i>
+                    </td>
+                    <td>
+                      <i class="fa fa-check text-navy"></i>
+                    </td>
+                    <td>
+                      <i class="fa fa-header text-warning"></i>
+                    </td>
+                    <td>
+                      <i class="fa fa-check text-navy"></i>
+                    </td>
+                    <td>
+                      <i class="fa fa-check text-navy"></i>
+                    </td>
+                    <td>
+                      <i class="fa fa-check text-navy"></i>
+                    </td>
+                    <td>
+                      <i class="fa fa-check text-navy"></i>
+                    </td>
+                    <td>
+                      <i class="fa fa-check text-navy"></i>
+                    </td>
+                    <td>
+                      <i class="fa fa-check text-navy"></i>
+                    </td>
+                    <td>
+                      <i class="fa fa-header text-warning"></i>
+                    </td>
+                    <td>
+                      <i class="fa fa-check text-navy"></i>
+                    </td>
+                    <td>
+                      <i class="fa fa-check text-navy"></i>
+                    </td>
+                    <td>
+                      <i class="fa fa-check text-navy"></i>
+                    </td>
+                    <td>
+                      <i class="fa fa-check text-navy"></i>
+                    </td>
+                    <td>
+                      <i class="fa fa-check text-navy"></i>
+                    </td>
+                    <td>
+                      <i class="fa fa-check text-navy"></i>
+                    </td>
+                    <td>
+                      <i class="fa fa-header text-warning"></i>
+                    </td>
+                    <td>
+                      <i class="fa fa-check text-navy"></i>
+                    </td>
+                    <td>
+                      <i class="fa fa-check text-navy"></i>
+                    </td>
+                    <td>
+                      <i class="fa fa-check text-navy"></i>
+                    </td>
+                  </tr>
+                  <tr>
+                    <td>
+                      <input type="checkbox" class="i-checks" name="" />
+                    </td>
+                    <td>710311104035</td>
+                    <td>Sathishkumar</td>
+                    <td>25</td>
+                    <td>1</td>
+                    <td>0</td>
+                    <td>
+                      <i class="fa fa-check text-navy"></i>
+                    </td>
+                    <td>
+                      <i class="fa fa-check text-navy"></i>
+                    </td>
+                    <td>
+                      <i class="fa fa-times text-danger"></i>
+                    </td>
+                    <td>
+                      <i class="fa fa-check text-navy"></i>
+                    </td>
+                    <td>
+                      <i class="fa fa-check text-navy"></i>
+                    </td>
+                    <td>
+                      <i class="fa fa-check text-navy"></i>
+                    </td>
+                    <td>
+                      <i class="fa fa-header text-warning"></i>
+                    </td>
+                    <td>
+                      <i class="fa fa-check text-navy"></i>
+                    </td>
+                    <td>
+                      <i class="fa fa-check text-navy"></i>
+                    </td>
+                    <td>
+                      <i class="fa fa-check text-navy"></i>
+                    </td>
+                    <td>
+                      <i class="fa fa-check text-navy"></i>
+                    </td>
+                    <td>
+                      <i class="fa fa-check text-navy"></i>
+                    </td>
+                    <td>
+                      <i class="fa fa-check text-navy"></i>
+                    </td>
+                    <td>
+                      <i class="fa fa-header text-warning"></i>
+                    </td>
+                    <td>
+                      <i class="fa fa-check text-navy"></i>
+                    </td>
+                    <td>
+                      <i class="fa fa-check text-navy"></i>
+                    </td>
+                    <td>
+                      <i class="fa fa-check text-navy"></i>
+                    </td>
+                    <td>
+                      <i class="fa fa-check text-navy"></i>
+                    </td>
+                    <td>
+                      <i class="fa fa-check text-navy"></i>
+                    </td>
+                    <td>
+                      <i class="fa fa-check text-navy"></i>
+                    </td>
+                    <td>
+                      <i class="fa fa-header text-warning"></i>
+                    </td>
+                    <td>
+                      <i class="fa fa-check text-navy"></i>
+                    </td>
+                    <td>
+                      <i class="fa fa-check text-navy"></i>
+                    </td>
+                    <td>
+                      <i class="fa fa-check text-navy"></i>
+                    </td>
+                    <td>
+                      <i class="fa fa-check text-navy"></i>
+                    </td>
+                    <td>
+                      <i class="fa fa-check text-navy"></i>
+                    </td>
+                    <td>
+                      <i class="fa fa-check text-navy"></i>
+                    </td>
+                    <td>
+                      <i class="fa fa-header text-warning"></i>
+                    </td>
+                    <td>
+                      <i class="fa fa-check text-navy"></i>
+                    </td>
+                    <td>
+                      <i class="fa fa-check text-navy"></i>
+                    </td>
+                    <td>
+                      <i class="fa fa-check text-navy"></i>
+                    </td>
+                  </tr>
+                  <tr>
+                    <td>
+                      <input type="checkbox" class="i-checks" name="" />
+                    </td>
+                    <td>710311104035</td>
+                    <td>Sathishkumar</td>
+                    <td>25</td>
+                    <td>1</td>
+                    <td>0</td>
+                    <td>
+                      <i class="fa fa-check text-navy"></i>
+                    </td>
+                    <td>
+                      <i class="fa fa-check text-navy"></i>
+                    </td>
+                    <td>
+                      <i class="fa fa-times text-danger"></i>
+                    </td>
+                    <td>
+                      <i class="fa fa-check text-navy"></i>
+                    </td>
+                    <td>
+                      <i class="fa fa-check text-navy"></i>
+                    </td>
+                    <td>
+                      <i class="fa fa-check text-navy"></i>
+                    </td>
+                    <td>
+                      <i class="fa fa-header text-warning"></i>
+                    </td>
+                    <td>
+                      <i class="fa fa-check text-navy"></i>
+                    </td>
+                    <td>
+                      <i class="fa fa-check text-navy"></i>
+                    </td>
+                    <td>
+                      <i class="fa fa-check text-navy"></i>
+                    </td>
+                    <td>
+                      <i class="fa fa-check text-navy"></i>
+                    </td>
+                    <td>
+                      <i class="fa fa-check text-navy"></i>
+                    </td>
+                    <td>
+                      <i class="fa fa-check text-navy"></i>
+                    </td>
+                    <td>
+                      <i class="fa fa-header text-warning"></i>
+                    </td>
+                    <td>
+                      <i class="fa fa-check text-navy"></i>
+                    </td>
+                    <td>
+                      <i class="fa fa-check text-navy"></i>
+                    </td>
+                    <td>
+                      <i class="fa fa-check text-navy"></i>
+                    </td>
+                    <td>
+                      <i class="fa fa-check text-navy"></i>
+                    </td>
+                    <td>
+                      <i class="fa fa-check text-navy"></i>
+                    </td>
+                    <td>
+                      <i class="fa fa-check text-navy"></i>
+                    </td>
+                    <td>
+                      <i class="fa fa-header text-warning"></i>
+                    </td>
+                    <td>
+                      <i class="fa fa-check text-navy"></i>
+                    </td>
+                    <td>
+                      <i class="fa fa-check text-navy"></i>
+                    </td>
+                    <td>
+                      <i class="fa fa-check text-navy"></i>
+                    </td>
+                    <td>
+                      <i class="fa fa-check text-navy"></i>
+                    </td>
+                    <td>
+                      <i class="fa fa-check text-navy"></i>
+                    </td>
+                    <td>
+                      <i class="fa fa-check text-navy"></i>
+                    </td>
+                    <td>
+                      <i class="fa fa-header text-warning"></i>
+                    </td>
+                    <td>
+                      <i class="fa fa-check text-navy"></i>
+                    </td>
+                    <td>
+                      <i class="fa fa-check text-navy"></i>
+                    </td>
+                    <td>
+                      <i class="fa fa-check text-navy"></i>
+                    </td>
+                  </tr>
+                  <tr>
+                    <td>
+                      <input type="checkbox" class="i-checks" name="" />
+                    </td>
+                    <td>710311104035</td>
+                    <td>Sathishkumar</td>
+                    <td>25</td>
+                    <td>1</td>
+                    <td>0</td>
+                    <td>
+                      <i class="fa fa-check text-navy"></i>
+                    </td>
+                    <td>
+                      <i class="fa fa-check text-navy"></i>
+                    </td>
+                    <td>
+                      <i class="fa fa-times text-danger"></i>
+                    </td>
+                    <td>
+                      <i class="fa fa-check text-navy"></i>
+                    </td>
+                    <td>
+                      <i class="fa fa-check text-navy"></i>
+                    </td>
+                    <td>
+                      <i class="fa fa-check text-navy"></i>
+                    </td>
+                    <td>
+                      <i class="fa fa-header text-warning"></i>
+                    </td>
+                    <td>
+                      <i class="fa fa-check text-navy"></i>
+                    </td>
+                    <td>
+                      <i class="fa fa-check text-navy"></i>
+                    </td>
+                    <td>
+                      <i class="fa fa-check text-navy"></i>
+                    </td>
+                    <td>
+                      <i class="fa fa-check text-navy"></i>
+                    </td>
+                    <td>
+                      <i class="fa fa-check text-navy"></i>
+                    </td>
+                    <td>
+                      <i class="fa fa-check text-navy"></i>
+                    </td>
+                    <td>
+                      <i class="fa fa-header text-warning"></i>
+                    </td>
+                    <td>
+                      <i class="fa fa-check text-navy"></i>
+                    </td>
+                    <td>
+                      <i class="fa fa-check text-navy"></i>
+                    </td>
+                    <td>
+                      <i class="fa fa-check text-navy"></i>
+                    </td>
+                    <td>
+                      <i class="fa fa-check text-navy"></i>
+                    </td>
+                    <td>
+                      <i class="fa fa-check text-navy"></i>
+                    </td>
+                    <td>
+                      <i class="fa fa-check text-navy"></i>
+                    </td>
+                    <td>
+                      <i class="fa fa-header text-warning"></i>
+                    </td>
+                    <td>
+                      <i class="fa fa-check text-navy"></i>
+                    </td>
+                    <td>
+                      <i class="fa fa-check text-navy"></i>
+                    </td>
+                    <td>
+                      <i class="fa fa-check text-navy"></i>
+                    </td>
+                    <td>
+                      <i class="fa fa-check text-navy"></i>
+                    </td>
+                    <td>
+                      <i class="fa fa-check text-navy"></i>
+                    </td>
+                    <td>
+                      <i class="fa fa-check text-navy"></i>
+                    </td>
+                    <td>
+                      <i class="fa fa-header text-warning"></i>
+                    </td>
+                    <td>
+                      <i class="fa fa-check text-navy"></i>
+                    </td>
+                    <td>
+                      <i class="fa fa-check text-navy"></i>
+                    </td>
+                    <td>
+                      <i class="fa fa-check text-navy"></i>
+                    </td>
+                  </tr>
+                  <tr>
+                    <td>
+                      <input type="checkbox" class="i-checks" name="" />
+                    </td>
+                    <td>710311104035</td>
+                    <td>Sathishkumar</td>
+                    <td>25</td>
+                    <td>1</td>
+                    <td>0</td>
+                    <td>
+                      <i class="fa fa-check text-navy"></i>
+                    </td>
+                    <td>
+                      <i class="fa fa-check text-navy"></i>
+                    </td>
+                    <td>
+                      <i class="fa fa-times text-danger"></i>
+                    </td>
+                    <td>
+                      <i class="fa fa-check text-navy"></i>
+                    </td>
+                    <td>
+                      <i class="fa fa-check text-navy"></i>
+                    </td>
+                    <td>
+                      <i class="fa fa-check text-navy"></i>
+                    </td>
+                    <td>
+                      <i class="fa fa-header text-warning"></i>
+                    </td>
+                    <td>
+                      <i class="fa fa-check text-navy"></i>
+                    </td>
+                    <td>
+                      <i class="fa fa-check text-navy"></i>
+                    </td>
+                    <td>
+                      <i class="fa fa-check text-navy"></i>
+                    </td>
+                    <td>
+                      <i class="fa fa-check text-navy"></i>
+                    </td>
+                    <td>
+                      <i class="fa fa-check text-navy"></i>
+                    </td>
+                    <td>
+                      <i class="fa fa-check text-navy"></i>
+                    </td>
+                    <td>
+                      <i class="fa fa-header text-warning"></i>
+                    </td>
+                    <td>
+                      <i class="fa fa-check text-navy"></i>
+                    </td>
+                    <td>
+                      <i class="fa fa-check text-navy"></i>
+                    </td>
+                    <td>
+                      <i class="fa fa-check text-navy"></i>
+                    </td>
+                    <td>
+                      <i class="fa fa-check text-navy"></i>
+                    </td>
+                    <td>
+                      <i class="fa fa-check text-navy"></i>
+                    </td>
+                    <td>
+                      <i class="fa fa-check text-navy"></i>
+                    </td>
+                    <td>
+                      <i class="fa fa-header text-warning"></i>
+                    </td>
+                    <td>
+                      <i class="fa fa-check text-navy"></i>
+                    </td>
+                    <td>
+                      <i class="fa fa-check text-navy"></i>
+                    </td>
+                    <td>
+                      <i class="fa fa-check text-navy"></i>
+                    </td>
+                    <td>
+                      <i class="fa fa-check text-navy"></i>
+                    </td>
+                    <td>
+                      <i class="fa fa-check text-navy"></i>
+                    </td>
+                    <td>
+                      <i class="fa fa-check text-navy"></i>
+                    </td>
+                    <td>
+                      <i class="fa fa-header text-warning"></i>
+                    </td>
+                    <td>
+                      <i class="fa fa-check text-navy"></i>
+                    </td>
+                    <td>
+                      <i class="fa fa-check text-navy"></i>
+                    </td>
+                    <td>
+                      <i class="fa fa-check text-navy"></i>
+                    </td>
+                  </tr>
+                  <tr>
+                    <td>
+                      <input type="checkbox" class="i-checks" name="" />
+                    </td>
+                    <td>710311104035</td>
+                    <td>Sathishkumar</td>
+                    <td>25</td>
+                    <td>1</td>
+                    <td>0</td>
+                    <td>
+                      <i class="fa fa-check text-navy"></i>
+                    </td>
+                    <td>
+                      <i class="fa fa-check text-navy"></i>
+                    </td>
+                    <td>
+                      <i class="fa fa-times text-danger"></i>
+                    </td>
+                    <td>
+                      <i class="fa fa-check text-navy"></i>
+                    </td>
+                    <td>
+                      <i class="fa fa-check text-navy"></i>
+                    </td>
+                    <td>
+                      <i class="fa fa-check text-navy"></i>
+                    </td>
+                    <td>
+                      <i class="fa fa-header text-warning"></i>
+                    </td>
+                    <td>
+                      <i class="fa fa-check text-navy"></i>
+                    </td>
+                    <td>
+                      <i class="fa fa-check text-navy"></i>
+                    </td>
+                    <td>
+                      <i class="fa fa-check text-navy"></i>
+                    </td>
+                    <td>
+                      <i class="fa fa-check text-navy"></i>
+                    </td>
+                    <td>
+                      <i class="fa fa-check text-navy"></i>
+                    </td>
+                    <td>
+                      <i class="fa fa-check text-navy"></i>
+                    </td>
+                    <td>
+                      <i class="fa fa-header text-warning"></i>
+                    </td>
+                    <td>
+                      <i class="fa fa-check text-navy"></i>
+                    </td>
+                    <td>
+                      <i class="fa fa-check text-navy"></i>
+                    </td>
+                    <td>
+                      <i class="fa fa-check text-navy"></i>
+                    </td>
+                    <td>
+                      <i class="fa fa-check text-navy"></i>
+                    </td>
+                    <td>
+                      <i class="fa fa-check text-navy"></i>
+                    </td>
+                    <td>
+                      <i class="fa fa-check text-navy"></i>
+                    </td>
+                    <td>
+                      <i class="fa fa-header text-warning"></i>
+                    </td>
+                    <td>
+                      <i class="fa fa-check text-navy"></i>
+                    </td>
+                    <td>
+                      <i class="fa fa-check text-navy"></i>
+                    </td>
+                    <td>
+                      <i class="fa fa-check text-navy"></i>
+                    </td>
+                    <td>
+                      <i class="fa fa-check text-navy"></i>
+                    </td>
+                    <td>
+                      <i class="fa fa-check text-navy"></i>
+                    </td>
+                    <td>
+                      <i class="fa fa-check text-navy"></i>
+                    </td>
+                    <td>
+                      <i class="fa fa-header text-warning"></i>
+                    </td>
+                    <td>
+                      <i class="fa fa-check text-navy"></i>
+                    </td>
+                    <td>
+                      <i class="fa fa-check text-navy"></i>
+                    </td>
+                    <td>
+                      <i class="fa fa-check text-navy"></i>
+                    </td>
+                  </tr>
+                  <tr>
+                    <td>
+                      <input type="checkbox" class="i-checks" name="" />
+                    </td>
+                    <td>710311104035</td>
+                    <td>Sathishkumar</td>
+                    <td>25</td>
+                    <td>1</td>
+                    <td>0</td>
+                    <td>
+                      <i class="fa fa-check text-navy"></i>
+                    </td>
+                    <td>
+                      <i class="fa fa-check text-navy"></i>
+                    </td>
+                    <td>
+                      <i class="fa fa-times text-danger"></i>
+                    </td>
+                    <td>
+                      <i class="fa fa-check text-navy"></i>
+                    </td>
+                    <td>
+                      <i class="fa fa-check text-navy"></i>
+                    </td>
+                    <td>
+                      <i class="fa fa-check text-navy"></i>
+                    </td>
+                    <td>
+                      <i class="fa fa-header text-warning"></i>
+                    </td>
+                    <td>
+                      <i class="fa fa-check text-navy"></i>
+                    </td>
+                    <td>
+                      <i class="fa fa-check text-navy"></i>
+                    </td>
+                    <td>
+                      <i class="fa fa-check text-navy"></i>
+                    </td>
+                    <td>
+                      <i class="fa fa-check text-navy"></i>
+                    </td>
+                    <td>
+                      <i class="fa fa-check text-navy"></i>
+                    </td>
+                    <td>
+                      <i class="fa fa-check text-navy"></i>
+                    </td>
+                    <td>
+                      <i class="fa fa-header text-warning"></i>
+                    </td>
+                    <td>
+                      <i class="fa fa-check text-navy"></i>
+                    </td>
+                    <td>
+                      <i class="fa fa-check text-navy"></i>
+                    </td>
+                    <td>
+                      <i class="fa fa-check text-navy"></i>
+                    </td>
+                    <td>
+                      <i class="fa fa-check text-navy"></i>
+                    </td>
+                    <td>
+                      <i class="fa fa-check text-navy"></i>
+                    </td>
+                    <td>
+                      <i class="fa fa-check text-navy"></i>
+                    </td>
+                    <td>
+                      <i class="fa fa-header text-warning"></i>
+                    </td>
+                    <td>
+                      <i class="fa fa-check text-navy"></i>
+                    </td>
+                    <td>
+                      <i class="fa fa-check text-navy"></i>
+                    </td>
+                    <td>
+                      <i class="fa fa-check text-navy"></i>
+                    </td>
+                    <td>
+                      <i class="fa fa-check text-navy"></i>
+                    </td>
+                    <td>
+                      <i class="fa fa-check text-navy"></i>
+                    </td>
+                    <td>
+                      <i class="fa fa-check text-navy"></i>
+                    </td>
+                    <td>
+                      <i class="fa fa-header text-warning"></i>
+                    </td>
+                    <td>
+                      <i class="fa fa-check text-navy"></i>
+                    </td>
+                    <td>
+                      <i class="fa fa-check text-navy"></i>
+                    </td>
+                    <td>
+                      <i class="fa fa-check text-navy"></i>
+                    </td>
+                  </tr>
+                  <tr>
+                    <td>
+                      <input type="checkbox" class="i-checks" name="" />
+                    </td>
+                    <td>710311104035</td>
+                    <td>Sathishkumar</td>
+                    <td>25</td>
+                    <td>1</td>
+                    <td>0</td>
+                    <td>
+                      <i class="fa fa-check text-navy"></i>
+                    </td>
+                    <td>
+                      <i class="fa fa-check text-navy"></i>
+                    </td>
+                    <td>
+                      <i class="fa fa-times text-danger"></i>
+                    </td>
+                    <td>
+                      <i class="fa fa-check text-navy"></i>
+                    </td>
+                    <td>
+                      <i class="fa fa-check text-navy"></i>
+                    </td>
+                    <td>
+                      <i class="fa fa-check text-navy"></i>
+                    </td>
+                    <td>
+                      <i class="fa fa-header text-warning"></i>
+                    </td>
+                    <td>
+                      <i class="fa fa-check text-navy"></i>
+                    </td>
+                    <td>
+                      <i class="fa fa-check text-navy"></i>
+                    </td>
+                    <td>
+                      <i class="fa fa-check text-navy"></i>
+                    </td>
+                    <td>
+                      <i class="fa fa-check text-navy"></i>
+                    </td>
+                    <td>
+                      <i class="fa fa-check text-navy"></i>
+                    </td>
+                    <td>
+                      <i class="fa fa-check text-navy"></i>
+                    </td>
+                    <td>
+                      <i class="fa fa-header text-warning"></i>
+                    </td>
+                    <td>
+                      <i class="fa fa-check text-navy"></i>
+                    </td>
+                    <td>
+                      <i class="fa fa-check text-navy"></i>
+                    </td>
+                    <td>
+                      <i class="fa fa-check text-navy"></i>
+                    </td>
+                    <td>
+                      <i class="fa fa-check text-navy"></i>
+                    </td>
+                    <td>
+                      <i class="fa fa-check text-navy"></i>
+                    </td>
+                    <td>
+                      <i class="fa fa-check text-navy"></i>
+                    </td>
+                    <td>
+                      <i class="fa fa-header text-warning"></i>
+                    </td>
+                    <td>
+                      <i class="fa fa-check text-navy"></i>
+                    </td>
+                    <td>
+                      <i class="fa fa-check text-navy"></i>
+                    </td>
+                    <td>
+                      <i class="fa fa-check text-navy"></i>
+                    </td>
+                    <td>
+                      <i class="fa fa-check text-navy"></i>
+                    </td>
+                    <td>
+                      <i class="fa fa-check text-navy"></i>
+                    </td>
+                    <td>
+                      <i class="fa fa-check text-navy"></i>
+                    </td>
+                    <td>
+                      <i class="fa fa-header text-warning"></i>
+                    </td>
+                    <td>
+                      <i class="fa fa-check text-navy"></i>
+                    </td>
+                    <td>
+                      <i class="fa fa-check text-navy"></i>
+                    </td>
+                    <td>
+                      <i class="fa fa-check text-navy"></i>
+                    </td>
+                  </tr>
+                  <tr>
+                    <td>
+                      <input type="checkbox" class="i-checks" name="" />
+                    </td>
+                    <td>710311104035</td>
+                    <td>Sathishkumar</td>
+                    <td>25</td>
+                    <td>1</td>
+                    <td>0</td>
+                    <td>
+                      <i class="fa fa-check text-navy"></i>
+                    </td>
+                    <td>
+                      <i class="fa fa-check text-navy"></i>
+                    </td>
+                    <td>
+                      <i class="fa fa-times text-danger"></i>
+                    </td>
+                    <td>
+                      <i class="fa fa-check text-navy"></i>
+                    </td>
+                    <td>
+                      <i class="fa fa-check text-navy"></i>
+                    </td>
+                    <td>
+                      <i class="fa fa-check text-navy"></i>
+                    </td>
+                    <td>
+                      <i class="fa fa-header text-warning"></i>
+                    </td>
+                    <td>
+                      <i class="fa fa-check text-navy"></i>
+                    </td>
+                    <td>
+                      <i class="fa fa-check text-navy"></i>
+                    </td>
+                    <td>
+                      <i class="fa fa-check text-navy"></i>
+                    </td>
+                    <td>
+                      <i class="fa fa-check text-navy"></i>
+                    </td>
+                    <td>
+                      <i class="fa fa-check text-navy"></i>
+                    </td>
+                    <td>
+                      <i class="fa fa-check text-navy"></i>
+                    </td>
+                    <td>
+                      <i class="fa fa-header text-warning"></i>
+                    </td>
+                    <td>
+                      <i class="fa fa-check text-navy"></i>
+                    </td>
+                    <td>
+                      <i class="fa fa-check text-navy"></i>
+                    </td>
+                    <td>
+                      <i class="fa fa-check text-navy"></i>
+                    </td>
+                    <td>
+                      <i class="fa fa-check text-navy"></i>
+                    </td>
+                    <td>
+                      <i class="fa fa-check text-navy"></i>
+                    </td>
+                    <td>
+                      <i class="fa fa-check text-navy"></i>
+                    </td>
+                    <td>
+                      <i class="fa fa-header text-warning"></i>
+                    </td>
+                    <td>
+                      <i class="fa fa-check text-navy"></i>
+                    </td>
+                    <td>
+                      <i class="fa fa-check text-navy"></i>
+                    </td>
+                    <td>
+                      <i class="fa fa-check text-navy"></i>
+                    </td>
+                    <td>
+                      <i class="fa fa-check text-navy"></i>
+                    </td>
+                    <td>
+                      <i class="fa fa-check text-navy"></i>
+                    </td>
+                    <td>
+                      <i class="fa fa-check text-navy"></i>
+                    </td>
+                    <td>
+                      <i class="fa fa-header text-warning"></i>
+                    </td>
+                    <td>
+                      <i class="fa fa-check text-navy"></i>
+                    </td>
+                    <td>
+                      <i class="fa fa-check text-navy"></i>
+                    </td>
+                    <td>
+                      <i class="fa fa-check text-navy"></i>
+                    </td>
+                  </tr>
+                  <tr>
+                    <td>
+                      <input type="checkbox" class="i-checks" name="" />
+                    </td>
+                    <td>710311104035</td>
+                    <td>Sathishkumar</td>
+                    <td>25</td>
+                    <td>1</td>
+                    <td>0</td>
+                    <td>
+                      <i class="fa fa-check text-navy"></i>
+                    </td>
+                    <td>
+                      <i class="fa fa-check text-navy"></i>
+                    </td>
+                    <td>
+                      <i class="fa fa-times text-danger"></i>
+                    </td>
+                    <td>
+                      <i class="fa fa-check text-navy"></i>
+                    </td>
+                    <td>
+                      <i class="fa fa-check text-navy"></i>
+                    </td>
+                    <td>
+                      <i class="fa fa-check text-navy"></i>
+                    </td>
+                    <td>
+                      <i class="fa fa-header text-warning"></i>
+                    </td>
+                    <td>
+                      <i class="fa fa-check text-navy"></i>
+                    </td>
+                    <td>
+                      <i class="fa fa-check text-navy"></i>
+                    </td>
+                    <td>
+                      <i class="fa fa-check text-navy"></i>
+                    </td>
+                    <td>
+                      <i class="fa fa-check text-navy"></i>
+                    </td>
+                    <td>
+                      <i class="fa fa-check text-navy"></i>
+                    </td>
+                    <td>
+                      <i class="fa fa-check text-navy"></i>
+                    </td>
+                    <td>
+                      <i class="fa fa-header text-warning"></i>
+                    </td>
+                    <td>
+                      <i class="fa fa-check text-navy"></i>
+                    </td>
+                    <td>
+                      <i class="fa fa-check text-navy"></i>
+                    </td>
+                    <td>
+                      <i class="fa fa-check text-navy"></i>
+                    </td>
+                    <td>
+                      <i class="fa fa-check text-navy"></i>
+                    </td>
+                    <td>
+                      <i class="fa fa-check text-navy"></i>
+                    </td>
+                    <td>
+                      <i class="fa fa-check text-navy"></i>
+                    </td>
+                    <td>
+                      <i class="fa fa-header text-warning"></i>
+                    </td>
+                    <td>
+                      <i class="fa fa-check text-navy"></i>
+                    </td>
+                    <td>
+                      <i class="fa fa-check text-navy"></i>
+                    </td>
+                    <td>
+                      <i class="fa fa-check text-navy"></i>
+                    </td>
+                    <td>
+                      <i class="fa fa-check text-navy"></i>
+                    </td>
+                    <td>
+                      <i class="fa fa-check text-navy"></i>
+                    </td>
+                    <td>
+                      <i class="fa fa-check text-navy"></i>
+                    </td>
+                    <td>
+                      <i class="fa fa-header text-warning"></i>
+                    </td>
+                    <td>
+                      <i class="fa fa-check text-navy"></i>
+                    </td>
+                    <td>
+                      <i class="fa fa-check text-navy"></i>
+                    </td>
+                    <td>
+                      <i class="fa fa-check text-navy"></i>
+                    </td>
+                  </tr>
+                  <tr>
+                    <td>
+                      <input type="checkbox" class="i-checks" name="" />
+                    </td>
+                    <td>710311104035</td>
+                    <td>Sathishkumar</td>
+                    <td>25</td>
+                    <td>1</td>
+                    <td>0</td>
+                    <td>
+                      <i class="fa fa-check text-navy"></i>
+                    </td>
+                    <td>
+                      <i class="fa fa-check text-navy"></i>
+                    </td>
+                    <td>
+                      <i class="fa fa-times text-danger"></i>
+                    </td>
+                    <td>
+                      <i class="fa fa-check text-navy"></i>
+                    </td>
+                    <td>
+                      <i class="fa fa-check text-navy"></i>
+                    </td>
+                    <td>
+                      <i class="fa fa-check text-navy"></i>
+                    </td>
+                    <td>
+                      <i class="fa fa-header text-warning"></i>
+                    </td>
+                    <td>
+                      <i class="fa fa-check text-navy"></i>
+                    </td>
+                    <td>
+                      <i class="fa fa-check text-navy"></i>
+                    </td>
+                    <td>
+                      <i class="fa fa-check text-navy"></i>
+                    </td>
+                    <td>
+                      <i class="fa fa-check text-navy"></i>
+                    </td>
+                    <td>
+                      <i class="fa fa-check text-navy"></i>
+                    </td>
+                    <td>
+                      <i class="fa fa-check text-navy"></i>
+                    </td>
+                    <td>
+                      <i class="fa fa-header text-warning"></i>
+                    </td>
+                    <td>
+                      <i class="fa fa-check text-navy"></i>
+                    </td>
+                    <td>
+                      <i class="fa fa-check text-navy"></i>
+                    </td>
+                    <td>
+                      <i class="fa fa-check text-navy"></i>
+                    </td>
+                    <td>
+                      <i class="fa fa-check text-navy"></i>
+                    </td>
+                    <td>
+                      <i class="fa fa-check text-navy"></i>
+                    </td>
+                    <td>
+                      <i class="fa fa-check text-navy"></i>
+                    </td>
+                    <td>
+                      <i class="fa fa-header text-warning"></i>
+                    </td>
+                    <td>
+                      <i class="fa fa-check text-navy"></i>
+                    </td>
+                    <td>
+                      <i class="fa fa-check text-navy"></i>
+                    </td>
+                    <td>
+                      <i class="fa fa-check text-navy"></i>
+                    </td>
+                    <td>
+                      <i class="fa fa-check text-navy"></i>
+                    </td>
+                    <td>
+                      <i class="fa fa-check text-navy"></i>
+                    </td>
+                    <td>
+                      <i class="fa fa-check text-navy"></i>
+                    </td>
+                    <td>
+                      <i class="fa fa-header text-warning"></i>
+                    </td>
+                    <td>
+                      <i class="fa fa-check text-navy"></i>
+                    </td>
+                    <td>
+                      <i class="fa fa-check text-navy"></i>
+                    </td>
+                    <td>
+                      <i class="fa fa-check text-navy"></i>
+                    </td>
+                  </tr>
+                  <tr>
+                    <td>
+                      <input type="checkbox" class="i-checks" name="" />
+                    </td>
+                    <td>710311104035</td>
+                    <td>Sathishkumar</td>
+                    <td>25</td>
+                    <td>1</td>
+                    <td>0</td>
+                    <td>
+                      <i class="fa fa-check text-navy"></i>
+                    </td>
+                    <td>
+                      <i class="fa fa-check text-navy"></i>
+                    </td>
+                    <td>
+                      <i class="fa fa-times text-danger"></i>
+                    </td>
+                    <td>
+                      <i class="fa fa-check text-navy"></i>
+                    </td>
+                    <td>
+                      <i class="fa fa-check text-navy"></i>
+                    </td>
+                    <td>
+                      <i class="fa fa-check text-navy"></i>
+                    </td>
+                    <td>
+                      <i class="fa fa-header text-warning"></i>
+                    </td>
+                    <td>
+                      <i class="fa fa-check text-navy"></i>
+                    </td>
+                    <td>
+                      <i class="fa fa-check text-navy"></i>
+                    </td>
+                    <td>
+                      <i class="fa fa-check text-navy"></i>
+                    </td>
+                    <td>
+                      <i class="fa fa-check text-navy"></i>
+                    </td>
+                    <td>
+                      <i class="fa fa-check text-navy"></i>
+                    </td>
+                    <td>
+                      <i class="fa fa-check text-navy"></i>
+                    </td>
+                    <td>
+                      <i class="fa fa-header text-warning"></i>
+                    </td>
+                    <td>
+                      <i class="fa fa-check text-navy"></i>
+                    </td>
+                    <td>
+                      <i class="fa fa-check text-navy"></i>
+                    </td>
+                    <td>
+                      <i class="fa fa-check text-navy"></i>
+                    </td>
+                    <td>
+                      <i class="fa fa-check text-navy"></i>
+                    </td>
+                    <td>
+                      <i class="fa fa-check text-navy"></i>
+                    </td>
+                    <td>
+                      <i class="fa fa-check text-navy"></i>
+                    </td>
+                    <td>
+                      <i class="fa fa-header text-warning"></i>
+                    </td>
+                    <td>
+                      <i class="fa fa-check text-navy"></i>
+                    </td>
+                    <td>
+                      <i class="fa fa-check text-navy"></i>
+                    </td>
+                    <td>
+                      <i class="fa fa-check text-navy"></i>
+                    </td>
+                    <td>
+                      <i class="fa fa-check text-navy"></i>
+                    </td>
+                    <td>
+                      <i class="fa fa-check text-navy"></i>
+                    </td>
+                    <td>
+                      <i class="fa fa-check text-navy"></i>
+                    </td>
+                    <td>
+                      <i class="fa fa-header text-warning"></i>
+                    </td>
+                    <td>
+                      <i class="fa fa-check text-navy"></i>
+                    </td>
+                    <td>
+                      <i class="fa fa-check text-navy"></i>
+                    </td>
+                    <td>
+                      <i class="fa fa-check text-navy"></i>
+                    </td>
+                  </tr>
+                  <tr>
+                    <td>
+                      <input type="checkbox" class="i-checks" name="" />
+                    </td>
+                    <td>710311104035</td>
+                    <td>Sathishkumar</td>
+                    <td>25</td>
+                    <td>1</td>
+                    <td>0</td>
+                    <td>
+                      <i class="fa fa-check text-navy"></i>
+                    </td>
+                    <td>
+                      <i class="fa fa-check text-navy"></i>
+                    </td>
+                    <td>
+                      <i class="fa fa-times text-danger"></i>
+                    </td>
+                    <td>
+                      <i class="fa fa-check text-navy"></i>
+                    </td>
+                    <td>
+                      <i class="fa fa-check text-navy"></i>
+                    </td>
+                    <td>
+                      <i class="fa fa-check text-navy"></i>
+                    </td>
+                    <td>
+                      <i class="fa fa-header text-warning"></i>
+                    </td>
+                    <td>
+                      <i class="fa fa-check text-navy"></i>
+                    </td>
+                    <td>
+                      <i class="fa fa-check text-navy"></i>
+                    </td>
+                    <td>
+                      <i class="fa fa-check text-navy"></i>
+                    </td>
+                    <td>
+                      <i class="fa fa-check text-navy"></i>
+                    </td>
+                    <td>
+                      <i class="fa fa-check text-navy"></i>
+                    </td>
+                    <td>
+                      <i class="fa fa-check text-navy"></i>
+                    </td>
+                    <td>
+                      <i class="fa fa-header text-warning"></i>
+                    </td>
+                    <td>
+                      <i class="fa fa-check text-navy"></i>
+                    </td>
+                    <td>
+                      <i class="fa fa-check text-navy"></i>
+                    </td>
+                    <td>
+                      <i class="fa fa-check text-navy"></i>
+                    </td>
+                    <td>
+                      <i class="fa fa-check text-navy"></i>
+                    </td>
+                    <td>
+                      <i class="fa fa-check text-navy"></i>
+                    </td>
+                    <td>
+                      <i class="fa fa-check text-navy"></i>
+                    </td>
+                    <td>
+                      <i class="fa fa-header text-warning"></i>
+                    </td>
+                    <td>
+                      <i class="fa fa-check text-navy"></i>
+                    </td>
+                    <td>
+                      <i class="fa fa-check text-navy"></i>
+                    </td>
+                    <td>
+                      <i class="fa fa-check text-navy"></i>
+                    </td>
+                    <td>
+                      <i class="fa fa-check text-navy"></i>
+                    </td>
+                    <td>
+                      <i class="fa fa-check text-navy"></i>
+                    </td>
+                    <td>
+                      <i class="fa fa-check text-navy"></i>
+                    </td>
+                    <td>
+                      <i class="fa fa-header text-warning"></i>
+                    </td>
+                    <td>
+                      <i class="fa fa-check text-navy"></i>
+                    </td>
+                    <td>
+                      <i class="fa fa-check text-navy"></i>
+                    </td>
+                    <td>
+                      <i class="fa fa-check text-navy"></i>
+                    </td>
+                  </tr>
+                  <tr>
+                    <td>
+                      <input type="checkbox" class="i-checks" name="" />
+                    </td>
+                    <td>710311104035</td>
+                    <td>Sathishkumar</td>
+                    <td>25</td>
+                    <td>1</td>
+                    <td>0</td>
+                    <td>
+                      <i class="fa fa-check text-navy"></i>
+                    </td>
+                    <td>
+                      <i class="fa fa-check text-navy"></i>
+                    </td>
+                    <td>
+                      <i class="fa fa-times text-danger"></i>
+                    </td>
+                    <td>
+                      <i class="fa fa-check text-navy"></i>
+                    </td>
+                    <td>
+                      <i class="fa fa-check text-navy"></i>
+                    </td>
+                    <td>
+                      <i class="fa fa-check text-navy"></i>
+                    </td>
+                    <td>
+                      <i class="fa fa-header text-warning"></i>
+                    </td>
+                    <td>
+                      <i class="fa fa-check text-navy"></i>
+                    </td>
+                    <td>
+                      <i class="fa fa-check text-navy"></i>
+                    </td>
+                    <td>
+                      <i class="fa fa-check text-navy"></i>
+                    </td>
+                    <td>
+                      <i class="fa fa-check text-navy"></i>
+                    </td>
+                    <td>
+                      <i class="fa fa-check text-navy"></i>
+                    </td>
+                    <td>
+                      <i class="fa fa-check text-navy"></i>
+                    </td>
+                    <td>
+                      <i class="fa fa-header text-warning"></i>
+                    </td>
+                    <td>
+                      <i class="fa fa-check text-navy"></i>
+                    </td>
+                    <td>
+                      <i class="fa fa-check text-navy"></i>
+                    </td>
+                    <td>
+                      <i class="fa fa-check text-navy"></i>
+                    </td>
+                    <td>
+                      <i class="fa fa-check text-navy"></i>
+                    </td>
+                    <td>
+                      <i class="fa fa-check text-navy"></i>
+                    </td>
+                    <td>
+                      <i class="fa fa-check text-navy"></i>
+                    </td>
+                    <td>
+                      <i class="fa fa-header text-warning"></i>
+                    </td>
+                    <td>
+                      <i class="fa fa-check text-navy"></i>
+                    </td>
+                    <td>
+                      <i class="fa fa-check text-navy"></i>
+                    </td>
+                    <td>
+                      <i class="fa fa-check text-navy"></i>
+                    </td>
+                    <td>
+                      <i class="fa fa-check text-navy"></i>
+                    </td>
+                    <td>
+                      <i class="fa fa-check text-navy"></i>
+                    </td>
+                    <td>
+                      <i class="fa fa-check text-navy"></i>
+                    </td>
+                    <td>
+                      <i class="fa fa-header text-warning"></i>
+                    </td>
+                    <td>
+                      <i class="fa fa-check text-navy"></i>
+                    </td>
+                    <td>
+                      <i class="fa fa-check text-navy"></i>
+                    </td>
+                    <td>
+                      <i class="fa fa-check text-navy"></i>
+                    </td>
+                  </tr>
+                  <tr>
+                    <td>
+                      <input type="checkbox" class="i-checks" name="" />
+                    </td>
+                    <td>710311104035</td>
+                    <td>Sathishkumar</td>
+                    <td>25</td>
+                    <td>1</td>
+                    <td>0</td>
+                    <td>
+                      <i class="fa fa-check text-navy"></i>
+                    </td>
+                    <td>
+                      <i class="fa fa-check text-navy"></i>
+                    </td>
+                    <td>
+                      <i class="fa fa-times text-danger"></i>
+                    </td>
+                    <td>
+                      <i class="fa fa-check text-navy"></i>
+                    </td>
+                    <td>
+                      <i class="fa fa-check text-navy"></i>
+                    </td>
+                    <td>
+                      <i class="fa fa-check text-navy"></i>
+                    </td>
+                    <td>
+                      <i class="fa fa-header text-warning"></i>
+                    </td>
+                    <td>
+                      <i class="fa fa-check text-navy"></i>
+                    </td>
+                    <td>
+                      <i class="fa fa-check text-navy"></i>
+                    </td>
+                    <td>
+                      <i class="fa fa-check text-navy"></i>
+                    </td>
+                    <td>
+                      <i class="fa fa-check text-navy"></i>
+                    </td>
+                    <td>
+                      <i class="fa fa-check text-navy"></i>
+                    </td>
+                    <td>
+                      <i class="fa fa-check text-navy"></i>
+                    </td>
+                    <td>
+                      <i class="fa fa-header text-warning"></i>
+                    </td>
+                    <td>
+                      <i class="fa fa-check text-navy"></i>
+                    </td>
+                    <td>
+                      <i class="fa fa-check text-navy"></i>
+                    </td>
+                    <td>
+                      <i class="fa fa-check text-navy"></i>
+                    </td>
+                    <td>
+                      <i class="fa fa-check text-navy"></i>
+                    </td>
+                    <td>
+                      <i class="fa fa-check text-navy"></i>
+                    </td>
+                    <td>
+                      <i class="fa fa-check text-navy"></i>
+                    </td>
+                    <td>
+                      <i class="fa fa-header text-warning"></i>
+                    </td>
+                    <td>
+                      <i class="fa fa-check text-navy"></i>
+                    </td>
+                    <td>
+                      <i class="fa fa-check text-navy"></i>
+                    </td>
+                    <td>
+                      <i class="fa fa-check text-navy"></i>
+                    </td>
+                    <td>
+                      <i class="fa fa-check text-navy"></i>
+                    </td>
+                    <td>
+                      <i class="fa fa-check text-navy"></i>
+                    </td>
+                    <td>
+                      <i class="fa fa-check text-navy"></i>
+                    </td>
+                    <td>
+                      <i class="fa fa-header text-warning"></i>
+                    </td>
+                    <td>
+                      <i class="fa fa-check text-navy"></i>
+                    </td>
+                    <td>
+                      <i class="fa fa-check text-navy"></i>
+                    </td>
+                    <td>
+                      <i class="fa fa-check text-navy"></i>
+                    </td>
+                  </tr>
+                  <tr>
+                    <td>
+                      <input type="checkbox" class="i-checks" name="" />
+                    </td>
+                    <td>710311104035</td>
+                    <td>Sathishkumar</td>
+                    <td>25</td>
+                    <td>1</td>
+                    <td>0</td>
+                    <td>
+                      <i class="fa fa-check text-navy"></i>
+                    </td>
+                    <td>
+                      <i class="fa fa-check text-navy"></i>
+                    </td>
+                    <td>
+                      <i class="fa fa-times text-danger"></i>
+                    </td>
+                    <td>
+                      <i class="fa fa-check text-navy"></i>
+                    </td>
+                    <td>
+                      <i class="fa fa-check text-navy"></i>
+                    </td>
+                    <td>
+                      <i class="fa fa-check text-navy"></i>
+                    </td>
+                    <td>
+                      <i class="fa fa-header text-warning"></i>
+                    </td>
+                    <td>
+                      <i class="fa fa-check text-navy"></i>
+                    </td>
+                    <td>
+                      <i class="fa fa-check text-navy"></i>
+                    </td>
+                    <td>
+                      <i class="fa fa-check text-navy"></i>
+                    </td>
+                    <td>
+                      <i class="fa fa-check text-navy"></i>
+                    </td>
+                    <td>
+                      <i class="fa fa-check text-navy"></i>
+                    </td>
+                    <td>
+                      <i class="fa fa-check text-navy"></i>
+                    </td>
+                    <td>
+                      <i class="fa fa-header text-warning"></i>
+                    </td>
+                    <td>
+                      <i class="fa fa-check text-navy"></i>
+                    </td>
+                    <td>
+                      <i class="fa fa-check text-navy"></i>
+                    </td>
+                    <td>
+                      <i class="fa fa-check text-navy"></i>
+                    </td>
+                    <td>
+                      <i class="fa fa-check text-navy"></i>
+                    </td>
+                    <td>
+                      <i class="fa fa-check text-navy"></i>
+                    </td>
+                    <td>
+                      <i class="fa fa-check text-navy"></i>
+                    </td>
+                    <td>
+                      <i class="fa fa-header text-warning"></i>
+                    </td>
+                    <td>
+                      <i class="fa fa-check text-navy"></i>
+                    </td>
+                    <td>
+                      <i class="fa fa-check text-navy"></i>
+                    </td>
+                    <td>
+                      <i class="fa fa-check text-navy"></i>
+                    </td>
+                    <td>
+                      <i class="fa fa-check text-navy"></i>
+                    </td>
+                    <td>
+                      <i class="fa fa-check text-navy"></i>
+                    </td>
+                    <td>
+                      <i class="fa fa-check text-navy"></i>
+                    </td>
+                    <td>
+                      <i class="fa fa-header text-warning"></i>
+                    </td>
+                    <td>
+                      <i class="fa fa-check text-navy"></i>
+                    </td>
+                    <td>
+                      <i class="fa fa-check text-navy"></i>
+                    </td>
+                    <td>
+                      <i class="fa fa-check text-navy"></i>
+                    </td>
+                  </tr>
+                  <tr>
+                    <td>
+                      <input type="checkbox" class="i-checks" name="" />
+                    </td>
+                    <td>710311104035</td>
+                    <td>Sathishkumar</td>
+                    <td>25</td>
+                    <td>1</td>
+                    <td>0</td>
+                    <td>
+                      <i class="fa fa-check text-navy"></i>
+                    </td>
+                    <td>
+                      <i class="fa fa-check text-navy"></i>
+                    </td>
+                    <td>
+                      <i class="fa fa-times text-danger"></i>
+                    </td>
+                    <td>
+                      <i class="fa fa-check text-navy"></i>
+                    </td>
+                    <td>
+                      <i class="fa fa-check text-navy"></i>
+                    </td>
+                    <td>
+                      <i class="fa fa-check text-navy"></i>
+                    </td>
+                    <td>
+                      <i class="fa fa-header text-warning"></i>
+                    </td>
+                    <td>
+                      <i class="fa fa-check text-navy"></i>
+                    </td>
+                    <td>
+                      <i class="fa fa-check text-navy"></i>
+                    </td>
+                    <td>
+                      <i class="fa fa-check text-navy"></i>
+                    </td>
+                    <td>
+                      <i class="fa fa-check text-navy"></i>
+                    </td>
+                    <td>
+                      <i class="fa fa-check text-navy"></i>
+                    </td>
+                    <td>
+                      <i class="fa fa-check text-navy"></i>
+                    </td>
+                    <td>
+                      <i class="fa fa-header text-warning"></i>
+                    </td>
+                    <td>
+                      <i class="fa fa-check text-navy"></i>
+                    </td>
+                    <td>
+                      <i class="fa fa-check text-navy"></i>
+                    </td>
+                    <td>
+                      <i class="fa fa-check text-navy"></i>
+                    </td>
+                    <td>
+                      <i class="fa fa-check text-navy"></i>
+                    </td>
+                    <td>
+                      <i class="fa fa-check text-navy"></i>
+                    </td>
+                    <td>
+                      <i class="fa fa-check text-navy"></i>
+                    </td>
+                    <td>
+                      <i class="fa fa-header text-warning"></i>
+                    </td>
+                    <td>
+                      <i class="fa fa-check text-navy"></i>
+                    </td>
+                    <td>
+                      <i class="fa fa-check text-navy"></i>
+                    </td>
+                    <td>
+                      <i class="fa fa-check text-navy"></i>
+                    </td>
+                    <td>
+                      <i class="fa fa-check text-navy"></i>
+                    </td>
+                    <td>
+                      <i class="fa fa-check text-navy"></i>
+                    </td>
+                    <td>
+                      <i class="fa fa-check text-navy"></i>
+                    </td>
+                    <td>
+                      <i class="fa fa-header text-warning"></i>
+                    </td>
+                    <td>
+                      <i class="fa fa-check text-navy"></i>
+                    </td>
+                    <td>
+                      <i class="fa fa-check text-navy"></i>
+                    </td>
+                    <td>
+                      <i class="fa fa-check text-navy"></i>
+                    </td>
+                  </tr>
+                  <tr>
+                    <td>
+                      <input type="checkbox" class="i-checks" name="" />
+                    </td>
+                    <td>710311104035</td>
+                    <td>Sathishkumar</td>
+                    <td>25</td>
+                    <td>1</td>
+                    <td>0</td>
+                    <td>
+                      <i class="fa fa-check text-navy"></i>
+                    </td>
+                    <td>
+                      <i class="fa fa-check text-navy"></i>
+                    </td>
+                    <td>
+                      <i class="fa fa-times text-danger"></i>
+                    </td>
+                    <td>
+                      <i class="fa fa-check text-navy"></i>
+                    </td>
+                    <td>
+                      <i class="fa fa-check text-navy"></i>
+                    </td>
+                    <td>
+                      <i class="fa fa-check text-navy"></i>
+                    </td>
+                    <td>
+                      <i class="fa fa-header text-warning"></i>
+                    </td>
+                    <td>
+                      <i class="fa fa-check text-navy"></i>
+                    </td>
+                    <td>
+                      <i class="fa fa-check text-navy"></i>
+                    </td>
+                    <td>
+                      <i class="fa fa-check text-navy"></i>
+                    </td>
+                    <td>
+                      <i class="fa fa-check text-navy"></i>
+                    </td>
+                    <td>
+                      <i class="fa fa-check text-navy"></i>
+                    </td>
+                    <td>
+                      <i class="fa fa-check text-navy"></i>
+                    </td>
+                    <td>
+                      <i class="fa fa-header text-warning"></i>
+                    </td>
+                    <td>
+                      <i class="fa fa-check text-navy"></i>
+                    </td>
+                    <td>
+                      <i class="fa fa-check text-navy"></i>
+                    </td>
+                    <td>
+                      <i class="fa fa-check text-navy"></i>
+                    </td>
+                    <td>
+                      <i class="fa fa-check text-navy"></i>
+                    </td>
+                    <td>
+                      <i class="fa fa-check text-navy"></i>
+                    </td>
+                    <td>
+                      <i class="fa fa-check text-navy"></i>
+                    </td>
+                    <td>
+                      <i class="fa fa-header text-warning"></i>
+                    </td>
+                    <td>
+                      <i class="fa fa-check text-navy"></i>
+                    </td>
+                    <td>
+                      <i class="fa fa-check text-navy"></i>
+                    </td>
+                    <td>
+                      <i class="fa fa-check text-navy"></i>
+                    </td>
+                    <td>
+                      <i class="fa fa-check text-navy"></i>
+                    </td>
+                    <td>
+                      <i class="fa fa-check text-navy"></i>
+                    </td>
+                    <td>
+                      <i class="fa fa-check text-navy"></i>
+                    </td>
+                    <td>
+                      <i class="fa fa-header text-warning"></i>
+                    </td>
+                    <td>
+                      <i class="fa fa-check text-navy"></i>
+                    </td>
+                    <td>
+                      <i class="fa fa-check text-navy"></i>
+                    </td>
+                    <td>
+                      <i class="fa fa-check text-navy"></i>
+                    </td>
+                  </tr>
+                  <tr>
+                    <td>
+                      <input type="checkbox" class="i-checks" name="" />
+                    </td>
+                    <td>710311104035</td>
+                    <td>Sathishkumar</td>
+                    <td>25</td>
+                    <td>1</td>
+                    <td>0</td>
+                    <td>
+                      <i class="fa fa-check text-navy"></i>
+                    </td>
+                    <td>
+                      <i class="fa fa-check text-navy"></i>
+                    </td>
+                    <td>
+                      <i class="fa fa-times text-danger"></i>
+                    </td>
+                    <td>
+                      <i class="fa fa-check text-navy"></i>
+                    </td>
+                    <td>
+                      <i class="fa fa-check text-navy"></i>
+                    </td>
+                    <td>
+                      <i class="fa fa-check text-navy"></i>
+                    </td>
+                    <td>
+                      <i class="fa fa-header text-warning"></i>
+                    </td>
+                    <td>
+                      <i class="fa fa-check text-navy"></i>
+                    </td>
+                    <td>
+                      <i class="fa fa-check text-navy"></i>
+                    </td>
+                    <td>
+                      <i class="fa fa-check text-navy"></i>
+                    </td>
+                    <td>
+                      <i class="fa fa-check text-navy"></i>
+                    </td>
+                    <td>
+                      <i class="fa fa-check text-navy"></i>
+                    </td>
+                    <td>
+                      <i class="fa fa-check text-navy"></i>
+                    </td>
+                    <td>
+                      <i class="fa fa-header text-warning"></i>
+                    </td>
+                    <td>
+                      <i class="fa fa-check text-navy"></i>
+                    </td>
+                    <td>
+                      <i class="fa fa-check text-navy"></i>
+                    </td>
+                    <td>
+                      <i class="fa fa-check text-navy"></i>
+                    </td>
+                    <td>
+                      <i class="fa fa-check text-navy"></i>
+                    </td>
+                    <td>
+                      <i class="fa fa-check text-navy"></i>
+                    </td>
+                    <td>
+                      <i class="fa fa-check text-navy"></i>
+                    </td>
+                    <td>
+                      <i class="fa fa-header text-warning"></i>
+                    </td>
+                    <td>
+                      <i class="fa fa-check text-navy"></i>
+                    </td>
+                    <td>
+                      <i class="fa fa-check text-navy"></i>
+                    </td>
+                    <td>
+                      <i class="fa fa-check text-navy"></i>
+                    </td>
+                    <td>
+                      <i class="fa fa-check text-navy"></i>
+                    </td>
+                    <td>
+                      <i class="fa fa-check text-navy"></i>
+                    </td>
+                    <td>
+                      <i class="fa fa-check text-navy"></i>
+                    </td>
+                    <td>
+                      <i class="fa fa-header text-warning"></i>
+                    </td>
+                    <td>
+                      <i class="fa fa-check text-navy"></i>
+                    </td>
+                    <td>
+                      <i class="fa fa-check text-navy"></i>
+                    </td>
+                    <td>
+                      <i class="fa fa-check text-navy"></i>
+                    </td>
+                  </tr>
+                </tbody>
+              </table>
+            </div>
           </div>
         </div>
       </div>

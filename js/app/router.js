@@ -207,6 +207,9 @@ router.on({
   StudentsAttendanceData: () => {
     loadHTML("./views/studentsAttendanceData.html", "app");
   },
+  StudentsAcademics: () => {
+    loadHTML("./views/studentsAcademics.html", "app");
+  },
   StudentsAcademicData: () => {
     loadHTML("./views/studentsAcademicData.html", "app");
   },
