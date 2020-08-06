@@ -12,7 +12,10 @@ function loadHTML(url, id) {
   req.onload = () => {
     if (req.status != 200) console.log(req.statusText);
     $id(id).innerHTML = req.responseText;
-    if (url === "./views/studentsProfileList.html") {
+    if (
+      url === "./views/studentsProfileList.html" ||
+      url === "./views/studentsAcademics.html"
+    ) {
       loadScript();
     }
   };
